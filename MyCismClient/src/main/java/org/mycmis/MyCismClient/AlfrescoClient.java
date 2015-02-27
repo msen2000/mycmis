@@ -21,7 +21,7 @@ import org.apache.chemistry.opencmis.client.runtime.SessionFactoryImpl;
 import org.apache.chemistry.opencmis.commons.SessionParameter;
 import org.apache.chemistry.opencmis.commons.enums.BindingType;
 
-
+//Alfresco
 public class AlfrescoClient {
 
     private static Session cachedCMISSession = null;
