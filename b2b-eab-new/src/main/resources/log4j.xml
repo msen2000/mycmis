@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- set debug="true" to see detail info about log4j configuration -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+        
+  <appender name="R" class="org.apache.log4j.RollingFileAppender">
+     <param name="MaxFileSize" value="10MB"/> 
+     <param name="MaxBackupIndex" value="10"/>
+     <param name="File" value="log/ivr/ivr.log"/> 
+     <layout class="org.apache.log4j.PatternLayout">
+     	<param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n"/> 
+     </layout>
+  </appender>
+  
+        <!-- IBatis -->
+        <logger name="com.ibatis">
+	    <level value="ERROR"/>
+        </logger>
+
+        <logger name="java.sql">
+	    <level value="ERROR"/>
+        </logger>
+
+	<!-- Use DEBUG to log JDBC statements -->	
+	<logger name="org.hibernate.SQL">
+		<level value="ERROR"/>
+	</logger>
+	
+	<!-- use DEBUG to log JDBC bind parameters-->
+	<logger name="org.hibernate.type">
+		<level value="ERROR"/>
+	</logger>
+		
+	 <!-- Spring -->
+	<logger name="org.springframework">
+		<level value="ERROR"/>
+	</logger>
+	
+	<!-- Tapestry -->
+	<logger name="org.apache.tapestry">
+		<level value="ERROR"/>
+	</logger>
+
+	<!-- Delta -->
+	<logger name="org.delta.crossplane.ivr">
+		<level value="ERROR"/>
+	</logger>
+	<logger name="org.delta.crossplane">
+		<level value="DEBUG"/>
+	</logger>
+	<logger name="org.delta">
+		<level value="DEBUG"/>
+	</logger>
+	
+	<logger name="org.delta.crossplane.transport">
+		<level value="DEBUG"/>
+	</logger>
+		
+	<root>
+		<priority value ="ERROR" />
+		<appender-ref ref="R"/>
+	</root>
+
+</log4j:configuration>

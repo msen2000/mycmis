@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceInterface xmlns="http://www.delta.org/A3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ServiceHeader>
+        <Identifier>ContractList</Identifier>
+        <SourceSystem>IVR</SourceSystem>
+        <SourceApplication>CPPIF01</SourceApplication>
+        <DateTime>2007-03-14T10:41:42.136-07:00</DateTime>
+        <TransactionID>6cec43a0a32a8c31eb23fab650ab4abd53cd6951:11151851de500d5d87511745ce8</TransactionID>
+        <ReturnCode>000000</ReturnCode>
+    </ServiceHeader>
+    <Payload>
+        <FamilyEligibilityInquiryResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <PrimaryEnrolleeContract PrimaryEnrolleeContractIdentifier="11001">
+				<PrimaryEnrolleeCoverageTypeSpan>
+					<PrimaryEnrolleeCoverageTypeSpanEffectiveDate>2003-01-01</PrimaryEnrolleeCoverageTypeSpanEffectiveDate>
+					<PrimaryEnrolleeCoverageTypeSpanEndDate>2004-01-01</PrimaryEnrolleeCoverageTypeSpanEndDate>
+					<BenefitCoverageLevelCode>123</BenefitCoverageLevelCode>
+					<Group>
+						<GroupName>Healthy Kids Healthy Future</GroupName>
+						<GroupNumber>1</GroupNumber>
+						<Division>
+							<DivisionNumber>1000</DivisionNumber>
+							<DivisionName>Colusa County</DivisionName>
+						</Division>
+					</Group>
+					<MaintenanceReasonCode>12</MaintenanceReasonCode>
+					<RatePackageCode>223</RatePackageCode>
+					<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>
+				</PrimaryEnrolleeCoverageTypeSpan>					
+					<Enrollee>
+						<EnrolleeNumber>01</EnrolleeNumber>
+						<InsuredIndicator>Y</InsuredIndicator>
+						<Person>
+							<PersonIdentifier>652351024001</PersonIdentifier>
+							<PersonFirstName>John</PersonFirstName>
+							<PersonMiddleName></PersonMiddleName>
+							<PersonLastName>Salazar</PersonLastName>
+							<BirthDate>2002-01-02</BirthDate>
+							<GenderCode>M</GenderCode>
+							<SocialSecurityNumber></SocialSecurityNumber>
+							<PersonAddress>
+								<AddressTypeDescription>Mailing</AddressTypeDescription>
+								<PersonAddressEffectiveDate>2006-01-01-08:00</PersonAddressEffectiveDate>
+								<AddressLine1Text>20121 San Miguel Ave Apt 3</AddressLine1Text>
+								<CityName>Castro Valley</CityName>
+								<PostalZoneOrZipCode>94546426003</PostalZoneOrZipCode>
+								<StateProvinceCode>CA</StateProvinceCode>
+								<County>
+									<CountyCode>USA</CountyCode>
+									<CountyName>United States of America</CountyName>
+								</County>
+							</PersonAddress>
+						<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>						
+						</Person>
+						<EnrolleeEligibility>
+							<EnrolleeEligibilityEffectiveDate>2003-01-01</EnrolleeEligibilityEffectiveDate>
+							<EnrolleeEligibilityEndDate>2003-08-01</EnrolleeEligibilityEndDate>
+							<IndividualRelationshipCode>12</IndividualRelationshipCode>
+							<IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
+							<ProductIdentifier>CPP DENTAL</ProductIdentifier>
+							<FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
+							<HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
+							<GroupTypeIdentifier>GTI</GroupTypeIdentifier>
+							<BenefitPackageIdentifier>CPPBPSJK</BenefitPackageIdentifier>
+							<BenefitPackageDescription>description</BenefitPackageDescription>
+							<MaintenanceReasonCode>DDD</MaintenanceReasonCode>
+							<EnrolleeEligibilityIdentifier>12334</EnrolleeEligibilityIdentifier>
+							<TimelyEnrollmentCode>33</TimelyEnrollmentCode>
+						</EnrolleeEligibility>
+						<EnrolleeEligibility>
+							<EnrolleeEligibilityEffectiveDate>2003-11-01</EnrolleeEligibilityEffectiveDate>
+							<IndividualRelationshipCode>12</IndividualRelationshipCode>
+							<IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
+							<ProductIdentifier>CPP DENTAL</ProductIdentifier>
+							<FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
+							<HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
+							<GroupTypeIdentifier>GTI</GroupTypeIdentifier>
+							<BenefitPackageIdentifier>CPPBPSJK</BenefitPackageIdentifier>
+							<BenefitPackageDescription>description</BenefitPackageDescription>
+							<MaintenanceReasonCode>DDD</MaintenanceReasonCode>
+							<EnrolleeEligibilityIdentifier>12334</EnrolleeEligibilityIdentifier>
+							<TimelyEnrollmentCode>33</TimelyEnrollmentCode>
+						</EnrolleeEligibility>
+						<InternalCaseIdentifier>12121</InternalCaseIdentifier>
+						<LastMaintenanceDateTime>23232</LastMaintenanceDateTime>
+					</Enrollee>
+            </PrimaryEnrolleeContract>
+            <PrimaryEnrolleeContract PrimaryEnrolleeContractIdentifier="11002">
+				<PrimaryEnrolleeCoverageTypeSpan>
+					<PrimaryEnrolleeCoverageTypeSpanEffectiveDate>2005-01-01</PrimaryEnrolleeCoverageTypeSpanEffectiveDate>				
+					<PrimaryEnrolleeCoverageTypeSpanEndDate>2006-01-01</PrimaryEnrolleeCoverageTypeSpanEndDate>
+					<BenefitCoverageLevelCode>123</BenefitCoverageLevelCode>
+					<Group>
+						<GroupName>California Healthy Families</GroupName>
+						<GroupNumber>1</GroupNumber>
+						<Division>
+							<DivisionNumber>1000</DivisionNumber>
+							<DivisionName>Region 1 - Monterey/Tulare</DivisionName>
+						</Division>
+					</Group>
+					<MaintenanceReasonCode>12</MaintenanceReasonCode>
+					<RatePackageCode>223</RatePackageCode>
+					<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>
+				</PrimaryEnrolleeCoverageTypeSpan>
+
+                <Enrollee>
+                    <EnrolleeNumber>01</EnrolleeNumber>
+					<InsuredIndicator>Y</InsuredIndicator>
+                    <Person>
+						<PersonIdentifier>652351024001</PersonIdentifier>
+						<PersonFirstName>John</PersonFirstName>
+						<PersonMiddleName></PersonMiddleName>
+						<PersonLastName>Salazar</PersonLastName>
+						<BirthDate>2002-01-02</BirthDate>
+						<GenderCode>M</GenderCode>
+						<SocialSecurityNumber></SocialSecurityNumber>
+                        <PersonAddress>
+                            <AddressTypeDescription>Mailing</AddressTypeDescription>
+                            <PersonAddressEffectiveDate>2006-01-01-08:00</PersonAddressEffectiveDate>
+                            <AddressLine1Text>20121 San Miguel Ave Apt 3</AddressLine1Text>
+                            <CityName>Castro Valley</CityName>
+                            <PostalZoneOrZipCode>94546426003</PostalZoneOrZipCode>
+                            <StateProvinceCode>CA</StateProvinceCode>
+                            <County>
+                                <CountyCode>USA</CountyCode>
+                                <CountyName>United States of America</CountyName>
+                            </County>
+                        </PersonAddress>
+						<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>						
+                    </Person>
+                    <EnrolleeEligibility>
+                        <EnrolleeEligibilityEffectiveDate>2005-08-01</EnrolleeEligibilityEffectiveDate>
+                        <EnrolleeEligibilityEndDate>2005-09-01</EnrolleeEligibilityEndDate>
+                        <IndividualRelationshipCode>12</IndividualRelationshipCode>
+                        <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
+                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
+                        <HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
+                        <GroupTypeIdentifier>GTI</GroupTypeIdentifier>
+						<BenefitPackageIdentifier>CPPBPSJK</BenefitPackageIdentifier>
+                        <BenefitPackageDescription>description</BenefitPackageDescription>
+							<MaintenanceReasonCode>DDD</MaintenanceReasonCode>
+							<EnrolleeEligibilityIdentifier>12334</EnrolleeEligibilityIdentifier>
+							<TimelyEnrollmentCode>33</TimelyEnrollmentCode>
+                    </EnrolleeEligibility>
+                    <EnrolleeEligibility>
+                        <EnrolleeEligibilityEffectiveDate>2005-08-02</EnrolleeEligibilityEffectiveDate>
+                        <IndividualRelationshipCode>12</IndividualRelationshipCode>
+                        <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
+                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
+                        <HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
+                        <GroupTypeIdentifier>GTI</GroupTypeIdentifier>
+						<BenefitPackageIdentifier>CPPBPSJK</BenefitPackageIdentifier>
+                        <BenefitPackageDescription>description</BenefitPackageDescription>
+							<MaintenanceReasonCode>DDD</MaintenanceReasonCode>
+							<EnrolleeEligibilityIdentifier>12334</EnrolleeEligibilityIdentifier>
+							<TimelyEnrollmentCode>33</TimelyEnrollmentCode>
+                    </EnrolleeEligibility>
+						<InternalCaseIdentifier>12121</InternalCaseIdentifier>
+						<LastMaintenanceDateTime>23232</LastMaintenanceDateTime>
+                </Enrollee>
+            </PrimaryEnrolleeContract>
+		</FamilyEligibilityInquiryResponse>
+    </Payload>
+</ServiceInterface>

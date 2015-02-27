@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!--
+  - Spring context file for IVRFacade.
+  - 
+ -->
+<beans> 
+	<!-- This properties file defines ldap properties that identityService depends on -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/ivr_application.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	<!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"><value>${jdbc.driverClassName}</value></property>
+		<property name="url"><value>${jdbc.url}</value></property>
+		<property name="username"><value>${jdbc.username}</value></property>
+		<property name="password"><value>${jdbc.password}</value></property>
+	</bean>-->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="jdbc/a3_ds"/>
+	</bean>	
+
+	<!-- A non-pooling based JMS provider. Will pool later by borrowing code from ActiveMQ -->
+	<bean id="jmsClient" class="org.delta.crossplane.transport.impl.JmsClientImpl">
+		<property name="ipAddress">
+			<value>${jms.ip.address}</value>
+		</property>			
+		<property name="port">
+			<value>${jms.port}</value>
+		</property>
+		<property name="timeOut">
+			<value>${jms.timeout}</value>
+		</property>
+		<property name="queueName">
+			<value>${jms.queue.name}</value>
+		</property>
+	</bean>
+
+	<import resource="classpath:/org/delta/crossplane/eligibility/service/EligibilityService.ctx.xml"/>
+	<import resource="classpath:/org/delta/crossplane/benefits/service/BenefitsService.ctx.xml"/>
+	<import resource="classpath:/org/delta/crossplane/claim/service/ClaimService.ctx.xml"/>
+
+	<bean id="ivrLoggingInterceptor" class="org.delta.services.interceptor.IVRLoggingInterceptor"/>
+
+	<bean id="eligibilityIVRFacade" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>org.delta.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade</value>
+		</property>
+		<property name="target">
+			<bean id="eligibilityIVRFacadeTarget" class="org.delta.services.eligibilityAndBenefits.facade.impl.EligibilityAndBenefitsIVRFacadeImpl">
+				<property name="eligibilityService">
+					<ref bean="eligibilityService"/>
+				</property>
+				<property name="benefitsService">
+					<ref bean="benefitsService"/>
+				</property>
+			</bean>
+		</property>
+		<property name="interceptorNames">
+			<list>				
+				<value>ivrLoggingInterceptor</value>
+			</list>
+		</property>
+	</bean>		
+		
+</beans>

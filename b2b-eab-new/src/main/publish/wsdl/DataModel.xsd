@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:data="http://schemas.delta.org/data" targetNamespace="http://schemas.delta.org/data" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="tPerson">
+		<xs:annotation>
+			<xs:documentation>The definition of a person object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="firstName" type="xs:string" nillable="true">
+				<xs:annotation>
+					<xs:documentation>The first name of person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lastName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The last name of the person</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tEnrolleeList">
+		<xs:annotation>
+			<xs:documentation>A list of enrollee</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="enrollee" type="data:tEnrollee" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tEnrollee">
+		<xs:annotation>
+			<xs:documentation>The definition of an enrollee object</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="data:tPerson">
+				<xs:sequence>
+					<xs:element name="enrolleeIdentifier" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The metavance enrollee identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="personIdentifier" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The MetaVance Person Identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="relationshipCode" type="data:sEnrolleeType">
+						<xs:annotation>
+							<xs:documentation>The relation type (Relationship to primary enrollee)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="memberNumber" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The member number associated with the contract.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dateOfBirth" type="xs:date">
+						<xs:annotation>
+							<xs:documentation>The date of birth of the person</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="emailAddress" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The email Address of the enrollee</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="address" type="data:tAddress" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The addresses associated with the enrollee</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="privacyFlag" type="xs:boolean">
+						<xs:annotation>
+							<xs:documentation>The HIPPA privacy flag</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="eligibilityStatus" type="data:sStatusType">
+						<xs:annotation>
+							<xs:documentation>The status of the eligibility. (Active/Pending/Inactive)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="effectiveDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date covearge begin</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="terminationDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The date coverage will end (Term date).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="benefitPackageIdentifier" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The benefit Package identifier in string format</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tProviderList">
+		<xs:annotation>
+			<xs:documentation>A list of providers</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="provider" type="data:tProvider" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tProvider">
+		<xs:annotation>
+			<xs:documentation>The definition of a provider object</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="data:tPerson">
+				<xs:sequence>
+					<xs:element name="providerType" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Maps to the Provider Category, either M or I for Multiple and Individual, respectively.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="providerIdentifier" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The MetaVance Provider Identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="secondaryIdentifiers" type="data:tSecondaryProviderIdentifier" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The secondary identifiers</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="practiceLocations" type="data:tPracticeLocation" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The practice location/facilities the provider works at</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="contracts" type="data:tProviderContract" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The contracts this provider has</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="affiliatedProviders" type="data:tProvider" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The affiliated providers</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tSecondaryProviderIdentifier">
+		<xs:annotation>
+			<xs:documentation>A provider identifier object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="idValue" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The value of the identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="idType" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="tPracticeLocation">
+		<xs:annotation>
+			<xs:documentation>The definition of a practice Location object</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="data:tAddress">
+				<xs:sequence>
+					<xs:element name="practiceLocationId" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The practice location identifier</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="county" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The county</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="country" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The country</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="phone" type="data:tPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The phone contacts for this practice location</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="email" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>The email address</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tProviderContract">
+		<xs:annotation>
+			<xs:documentation>A provider contract object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="providerStatus">
+				<xs:annotation>
+					<xs:documentation>The status of this provider</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="active"/>
+						<xs:enumeration value="inactive"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="participationStatus" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The participation status of this provider</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="specialties" type="data:sSpecialtyCode" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>The specialties of this provider</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tPhoneNumber">
+		<xs:annotation>
+			<xs:documentation>The definition of a phone number object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="phoneNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The phoneNumber</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="phoneType" type="data:sPhoneType" use="required">
+			<xs:annotation>
+				<xs:documentation>The type of phone number</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="tAddress">
+		<xs:annotation>
+			<xs:documentation>The definition of an address object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="addressLine1" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The address line 1</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addressLine2" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The address Line 2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="city" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The city</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zipCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The ZIp code</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="state" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The state</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="addressType" type="data:sAddressType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="tContract">
+		<xs:annotation>
+			<xs:documentation>The definition of a contract object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="coverageStartDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The date coverage began</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageEndDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date coverage will end (Term date).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The Contract ID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enrolleeList" type="data:tEnrolleeList"/>
+			<xs:element name="group" type="data:tGroup">
+				<xs:annotation>
+					<xs:documentation>The group/contract holder associated with the contract/member</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="businessUnit" type="data:tBusinessUnit">
+				<xs:annotation>
+					<xs:documentation>The Delta Dental Business Unit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coverageStatus" type="data:sStatusType">
+				<xs:annotation>
+					<xs:documentation>The status of this contract</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tContractListResponses">
+		<xs:annotation>
+			<xs:documentation>The response of the eligibility requests</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contractList" type="data:tContractList"/>
+			<xs:element name="contractResponseStatus" type="data:sContractResponseStatusType"/>
+			<xs:element name="benefitPackage" type="data:tBenefitPackageInquiryResponse"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tContractListResponse">
+		<xs:annotation>
+			<xs:documentation>The response of the eligibility requests</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contractList" type="data:tContractList"/>
+			<xs:element name="contractResponseStatus" type="data:sContractResponseStatusType"/>			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tContractList">
+		<xs:annotation>
+			<xs:documentation>The definition of a contract List</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="contract" type="data:tContract" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tBusinessUnit">
+		<xs:annotation>
+			<xs:documentation>The definition of a Delta Dental Business Unit</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="healthCareContractHolderIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Specifies the plan such as DDC, DDIC, PMI, etc (business Level 5)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>PPO, Premier, HMO (Business Level 7)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="groupTypeIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>(Business Level 4)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="financialReportingStateIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The state the business is operating on. (Business Level 6)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="holderToAvoidCodeGenerationError" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Do not use this element; it is added to get around a weird problem in code generation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tBenefitPackageInquiryResponse">
+		<xs:annotation>
+			<xs:documentation>The response of the benefits inquiry</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="benefitPackage" type="data:tBenefitPackage" minOccurs="0"/>
+			<xs:element name="status" type="data:sSearchResultType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tProviderInquiryResponse">
+		<xs:annotation>
+			<xs:documentation>The response of the provider inquiry</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="provider" type="data:tProviderList" minOccurs="0"/>
+			<xs:element name="status" type="data:sSearchResultType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tClaimByIdResponse">
+		<xs:annotation>
+			<xs:documentation>The response of the get claim by id service call</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="claim" type="data:tClaim" nillable="true"/>
+			<xs:element name="claimResponseStatus" type="data:sClaimByIdResponseStatusType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tClaimListResponse">
+		<xs:annotation>
+			<xs:documentation>The response of the get claim list call</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="claimList" type="data:tClaimList" minOccurs="0"/>
+			<xs:element name="claimResponseStatus" type="data:sClaimListResponseStatusType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tClaimList">
+		<xs:annotation>
+			<xs:documentation>The definition of a claim list</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="claim" type="data:tClaim" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tClaim">
+		<xs:annotation>
+			<xs:documentation>The definition of a claim object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="claimIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>A unique claim identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="claimCaseNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Claim Case Number used for CPP only</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="claimReceivedTime" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>The date the claim was received by Delta Dental and was entered into the claims processor. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="claimFromDate" type="xs:date">
+			    <xs:annotation>
+			        <xs:documentation>Claim From Date</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="ClaimToDate" type="xs:date">
+			    <xs:annotation>
+			        <xs:documentation>Claim To Date</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="contractIdentifier" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Contract Identifier</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="productIdentifier" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Product Identifier</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="claimSource" type="xs:string" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Claim Source</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="claimNetworkIndicator" type="xs:string" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Claim Network Indicator</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="enrolleeId" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Enrollee Id</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="primaryFirstName" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Primary First Name</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="primaryLastName" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Primary Last Name</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="primaryPersonId" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Primary Person Id</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="claimPredeterminationFlag" type="data:sClaimPredeterminationFlag" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Claim Predetermination Flage</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="groupName" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Group Name</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="groupNumber" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Group Number</xs:documentation>
+			    </xs:annotation>
+			</xs:element>			
+			<xs:element name="divisionName" type="xs:string" minOccurs="0">			
+			    <xs:annotation>			
+			        <xs:documentation>Division Name</xs:documentation>			
+			    </xs:annotation>			
+			</xs:element>
+			<xs:element name="divisionNumber" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Division Number</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="divisionSelfFunded" type="xs:boolean">
+			    <xs:annotation>
+			        <xs:documentation>Division Self Funded</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="claimStatus">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="In-Progress"/>
+						<xs:enumeration value="Processed"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="summaryPayment" type="data:tSummaryPayment" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The summary payment gives high  level information about the whole claim.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="patient">
+				<xs:annotation>
+					<xs:documentation>The patient that is one the claim</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="data:tPerson">
+							<xs:sequence>
+								<xs:element name="memberNumber" type="xs:string"/>
+								<xs:element name="relationshipCode" type="data:sEnrolleeType">
+									<xs:annotation>
+										<xs:documentation>The relation type (Relationship to primary enrollee)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dateOfBirth" type="xs:date">
+									<xs:annotation>
+										<xs:documentation>The date of birth of the person</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="privacyFlag" type="xs:boolean">
+									<xs:annotation>
+										<xs:documentation>The HIPPA privacy flag</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="billingProvider">
+				<xs:annotation>
+					<xs:documentation>The provider that submitted the claim</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="data:tPerson">
+							<xs:sequence>
+								<xs:element name="providerIdentifier" type="xs:string"/>
+								<xs:element name="providerSuffix" type="xs:string" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>			
+			<xs:element name="claimServiceLines" type="data:tLineItem" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>A detailed list of all individual line items on the Claim. Each line item is associated with a procedure and a tooth code as well as lineItem payment information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="claimBusinessLevels" type="data:tBusinessUnit">
+			    <xs:annotation>
+			        <xs:documentation>Claim Business Levels</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="claimType" type="data:sClaimType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="tSummaryPayment">
+		<xs:annotation>
+			<xs:documentation>The definition of a claim payment object (whole claim)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="deltaPaidAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The total amount paid for the claim</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="patientPaidAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The total amount the patient paid for the claim</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="totalSubmittedAmount" type="xs:double" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Total Submitted Amount</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="totalApprovedAmount" type="xs:double" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Total Approved Amount</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="totalOtherInsuranceCarrierPaidAmount" type="xs:double" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Derived summary total to support claims faxBack</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tPayment">
+		<xs:annotation>
+			<xs:documentation>Check Summary Payment Object (A/P)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="paymentNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The check or EFT number associated with the payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The check or EFT payment date associated with the payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentAmount" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Amount of payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentStatus" type="data:sPaymentStatusType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Status of payment:</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentStatusDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>As of date for status: Date paid/cashed or printed/sent.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccountsPayableCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Accounts payable code associated to the payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="taxIdentifer" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tax number for provider payees </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="payToIndicatorCode" type="data:sPayToCode">
+				<xs:annotation>
+					<xs:documentation>Indicator that denotes the type of payee</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="paymentType" type="data:sPaymentType" use="required">
+			<xs:annotation>
+				<xs:documentation>The type of payment associated with the lineItem (EFT or Check)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="tLineItem">
+		<xs:annotation>
+			<xs:documentation>The definition of a line item payment</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="toothCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The ToothCode associated with the lineItem on the Claim</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="toothSurfaceCodes" type="data:sToothSurfaceCodeType" maxOccurs="unbounded">
+			    <xs:annotation>
+			        <xs:documentation>Tooth Surface Codese</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="procedureCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The procedure code that was performed on this individual lineItem</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureCodeName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The procedure code name on this individual lineItem</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="submittedAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The submitted amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deltaPaidAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The Delta Dental paid amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deltaPercentageAmount" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Delta Dental paid percentage amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="patientPaidPayment" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The Patient payment amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="primePaidAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The prime Payment amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deductible" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The deductable amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="approvedAmount" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The Delta Dental approved amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="allowedAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The Delta Dental approved amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="patientCopayPercentage" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The co-payment amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="patientCopayAmount" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The co payment amount associated with the line item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateOfService" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>The date the procedure (line item) was performed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="processingDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date the line item was adjudicated</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explanationCodes" type="data:tExCode" maxOccurs="unbounded">
+			    <xs:annotation>
+			        <xs:documentation>Explanation Codes</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="serviceLineStatusIndicator" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The service line status indicator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="servicingProviderIdentifier" type="xs:string" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Servicing Provider Identifier</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="otherInsurancePaidAmount" type="xs:double" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Other Insurance Paid Amount</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="payment" type="data:tPayment" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The payment associated with the lineItem. The full payment is referenced in the check payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sequenceNumber" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>Sequence Number</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="servicingProviderFirstName" type="xs:string" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Servicing Provider First Name</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+			<xs:element name="servicingProviderLastName" type="xs:string" minOccurs="0">
+			    <xs:annotation>
+			        <xs:documentation>Servicing Provider Last Name</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tExCode">
+		<xs:annotation>
+			<xs:documentation>The explanation code associated with the line item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="explanationCategory" type="data:sServiceLineExplanationCategoryType">
+				<xs:annotation>
+					<xs:documentation>The explanation Category</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explanationCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The explanation code</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="explanationCodeDescription" type="xs:string">
+			    <xs:annotation>
+			        <xs:documentation>The explanation code Description</xs:documentation>
+			    </xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tBenefitPackage">
+		<xs:annotation>
+			<xs:documentation>The definition of a benefit package object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="benefitPackageIdentifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The benefit package identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="treatmentList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="treatment" type="data:tTreatment" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="deductibles" minOccurs="0"> 
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="deductible" type="data:tMaximumDeductible" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="maximums" minOccurs="0"> 
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="maximum" type="data:tMaximumDeductible" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="coverageDetail" type="data:tCoverageDetail" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tTreatment">
+		<xs:annotation>
+			<xs:documentation>The definition of a treatment object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="treatmentTypeCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The treatment type code</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="treatmentTypeDescription" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The description of the treatment Type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="treatmentSummaries">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="treatmentSummary" type="data:tTreatmentSummary" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element> 
+			<xs:element name="procedureClassList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="procedureClass" type="data:tProcedureClass" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tTreatmentSummary">
+		<xs:annotation>
+			<xs:documentation>The summary info (mostly derived from the procedure code level) of treatment in a particular tier</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tierType" type="xs:string"/>
+			<xs:element name="copayment" type="data:tCopayment"/>
+			<xs:element name="frequencyLimitationType" type="xs:boolean"/>
+			<xs:element name="waitingPeriod" type="data:tWaitingPeriod" minOccurs="0"/>
+			<xs:element name="preApprovalRequired" type="xs:boolean"/>
+			<xs:element name="deductibleExemption" type="xs:boolean"/>
+			<xs:element name="maximumExemption" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tCopayment">
+		<xs:annotation>
+			<xs:documentation>The definition of a copayment object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="minimum" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The minimum copay amount or percentage. Zero indicates no copay</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maximum" type="xs:double">
+				<xs:annotation>
+					<xs:documentation>The maximum copay amount or percentage. Zero indicates no copay</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="copaymentType" type="data:sCopaymentType">
+			<xs:annotation>
+				<xs:documentation>The copayment type, specifies the amounts to be in real dollars or as a percentage</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="tLimitation">
+		<xs:annotation>
+			<xs:documentation>The definition of a limitation object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="quantity" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The overall limitation quantity</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timePeriodQuantity" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time period quantity</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="timePeriodUnit" type="data:sTimeUnitType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The overall time period associated with the limitation</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="limitationQualifier" type="data:sLimitationQualifier" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Additional qualification of time limit</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tWaitingPeriod">
+		<xs:annotation>
+			<xs:documentation>The definition of a waiting period object</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="data:tDateRange"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tMaximumDeductible">
+		<xs:annotation>
+			<xs:documentation>The base type for maximums or deductibles</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="tierType" type="xs:string" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="level" type="xs:string" minOccurs="0"/>
+			<xs:element name="appliesTo" type="xs:string" minOccurs="0"/>
+			<xs:element name="timeUnit" type="xs:string" minOccurs="0"/>
+			<xs:element name="intervalNumber" type="xs:int" minOccurs="0"/>
+			<xs:element name="intervalUnitDescription" type="xs:string" minOccurs="0"/>			
+			<xs:element name="amount" type="xs:double" minOccurs="0"/>
+			<xs:element name="accumulationBeginDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="accumulationEndDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="remaining" type="xs:double" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tProcedureClass">
+		<xs:annotation>
+			<xs:documentation>The definition of a procedure class object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="procedureClassificationCode" type="xs:string"/>
+			<xs:element name="procedureClassificationDescription" type="xs:string"/>
+			<xs:element name="procedureCodeList">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="procedureCode" type="data:tProcedureCode" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tProcedureCodeAndName">
+		<xs:annotation>
+			<xs:documentation>The definition of a procedure code object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="procedureCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The procedure code identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureCodeName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The procedure code name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tProcedureCode">
+		<xs:annotation>
+			<xs:documentation>The definition of a procedure code object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="procedureCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The procedure code identifier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureCodeName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>The procedure code name</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="copayType" type="data:sCopaymentType"/>
+			<xs:element name="copayAmount" type="xs:double" minOccurs="0"/>
+			<xs:element name="frequencyLimitation" type="data:tLimitation" minOccurs="0"/>
+			<xs:element name="waitingPeriod" type="data:tWaitingPeriod" minOccurs="0"/>
+			<xs:element name="preApprovalRequired" type="xs:boolean"/>
+			<xs:element name="deductibleExemption" type="xs:boolean"/>
+			<xs:element name="maximumExemption" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="tierType" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="tProcedureCodeAndNameList">
+		<xs:annotation>
+			<xs:documentation>The definition of a procedure code list</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="procedureCodesAndNames" type="data:tProcedureCodeAndName" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tGroup">
+		<xs:annotation>
+			<xs:documentation>The definition of a group object (covered entity)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="groupNumber" type="xs:string"/>
+			<xs:element name="groupName" type="xs:string"/>
+			<xs:element name="division" type="data:tDivision"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tDivision">
+		<xs:annotation>
+			<xs:documentation>The definition of a group-devision object (covered entity)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="divisionNumber" type="xs:string"/>
+			<xs:element name="divisionName" type="xs:string" minOccurs="0"/>
+			<xs:element name="divisionSelfFunded" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tCoverageDetail">
+		<xs:annotation>
+			<xs:documentation>The definition of coverage detail</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="coordinationOfBenefit" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="S">
+							<xs:annotation><xs:documentation>Standard</xs:documentation></xs:annotation>
+						</xs:enumeration>
+						<xs:enumeration value="N">
+							<xs:annotation><xs:documentation>Non-Standard</xs:documentation></xs:annotation>
+						</xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="childCoveredAge" type="xs:int" minOccurs="0"/>
+			<xs:element name="studentCoveredAge" type="xs:int" minOccurs="0"/>
+			<xs:element name="childOrthoCoveredAge" type="xs:int" minOccurs="0"/>
+			<xs:element name="studentOrthoCoveredAge" type="xs:int" minOccurs="0"/>
+			<xs:element name="adultOrthoCoveredAge" type="xs:int" minOccurs="0"/>
+			<xs:element name="incentivePlan" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The incentive plan</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="planCode" type="xs:string"/>
+						<xs:element name="planDescription" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="programType" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tDateRange">
+		<xs:annotation>
+			<xs:documentation>The definition of a date range</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fromDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="toDate" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="sPersonType">
+		<xs:annotation>
+			<xs:documentation>A simple type for persons</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="enrollee"/>
+			<xs:enumeration value="provider"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sClaimPredeterminationFlag">
+		<xs:annotation>
+			<xs:documentation>A Claim Predetermination Flag</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Y"/>
+			<xs:enumeration value="N"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sEnrolleeType">
+		<xs:annotation>
+			<xs:documentation>A simple type for enrollees</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Self"/>
+			<xs:enumeration value="Subscriber"/>
+			<xs:enumeration value="Spouse"/>
+			<xs:enumeration value="Domestic Partner"/>
+			<xs:enumeration value="Dependent"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sProviderType">
+		<xs:annotation>
+			<xs:documentation>A simple type for providers</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="billing"/>
+			<xs:enumeration value="rendering"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sAddressType">
+		<xs:annotation>
+			<xs:documentation>A simple type of addresses (home, office, etc)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="home"/>
+			<xs:enumeration value="office"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sPhoneType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the phone (home, office, fax, cell)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="home"/>
+			<xs:enumeration value="office"/>
+			<xs:enumeration value="fax"/>
+			<xs:enumeration value="other"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sStatusType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the status active, future active, inactive</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="active"/>
+			<xs:enumeration value="pending"/>
+			<xs:enumeration value="inactive"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sContractResponseStatusType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the status of the contract list response</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OK">
+				<xs:annotation>
+					<xs:documentation>Found active/pending contracts that are date of birth matches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NO_MATCHING_ENROLLEE">
+				<xs:annotation>
+					<xs:documentation>No matching enrollee found for the specified id</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MULTI_MATCHING_ENROLLEE">
+				<xs:annotation>
+					<xs:documentation>Two or more primary enrollee matches, date of birth also match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DOB_MISMATCH">
+				<xs:annotation>
+					<xs:documentation>One or more person with contracts but date of birth do not match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MORE_THAN_2">
+				<xs:annotation>
+					<xs:documentation>One primary and more than two active/pending contracts</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DOB_FILTERED">
+				<xs:annotation>
+					<xs:documentation>One primary, date of birth found in the non-return contracts, but not in the return contracts</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CONTRACT_FILTERED">
+				<xs:annotation>
+					<xs:documentation>No contract left after filtering by status</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CONTRACT_TERMINATED">
+				<xs:annotation>
+					<xs:documentation>One primary, and one inactive contract</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sClaimByIdResponseStatusType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the status of the claim by id response</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OK">
+				<xs:annotation>
+					<xs:documentation>Claim is returned if found; or empty array is returned if not found</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CLAIM_NOT_IN_RANGE">
+				<xs:annotation>
+					<xs:documentation>Claim found for the specified id, but it is not within the 6 month time frame</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CLAIM_FILTERED">
+				<xs:annotation>
+					<xs:documentation>Claim found for the specified id, but the provider id mismatches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sServiceLineExplanationCategoryType">
+		<xs:annotation>
+			<xs:documentation>A explanation category in the service line item</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SERVICELINE">
+				<xs:annotation>
+					<xs:documentation>Service Line</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DENIED">
+				<xs:annotation>
+					<xs:documentation>Denied</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DISCOUNT">
+				<xs:annotation>
+					<xs:documentation>Discount</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ALLOWED">
+				<xs:annotation>
+					<xs:documentation>Allowed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RISK">
+				<xs:annotation>
+					<xs:documentation>Risk</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DEDUCTIBLE">
+				<xs:annotation>
+					<xs:documentation>Deductible</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="COPAY">
+				<xs:annotation>
+					<xs:documentation>Copay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="COINSURANCE">
+				<xs:annotation>
+					<xs:documentation>Coinsurance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="APPROVED">
+				<xs:annotation>
+					<xs:documentation>Approved</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PAID">
+				<xs:annotation>
+					<xs:documentation>Paid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OUTLIER">
+				<xs:annotation>
+					<xs:documentation>Outlier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OTHERCARRIERLIABILITY">
+				<xs:annotation>
+					<xs:documentation>OtherCarrierLiability</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PRICINGPENALTY">
+				<xs:annotation>
+					<xs:documentation>PricingPenalty</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BENEFITSPENALTY">
+				<xs:annotation>
+					<xs:documentation>BenefitsPenalty</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sClaimListResponseStatusType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the status of the claim list response</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OK">
+				<xs:annotation>
+					<xs:documentation>Found matching claim/claims</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NOT_FOUND">
+				<xs:annotation>
+					<xs:documentation>No matching claim is found</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NO_MATCHING_ENROLLEE">
+				<xs:annotation>
+					<xs:documentation>No matching enrollee found for the specified id</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MULTI_MATCHING_ENROLLEE">
+				<xs:annotation>
+					<xs:documentation>Two or more primary enrollee matches, date of birth also match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DOB_MISMATCH">
+				<xs:annotation>
+					<xs:documentation>One or more person with contracts but date of birth do not match</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sSearchResultType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the result of the inquiry</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OK">
+				<xs:annotation>
+					<xs:documentation>Search returned with result</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NOT_FOUND">
+				<xs:annotation>
+					<xs:documentation>Search returned with nothing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FILTERED">
+				<xs:annotation>
+					<xs:documentation>Search result is filtered out</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sClaimType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the type of claim (pre-authorization, claim)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Pre-Treatment"/>
+			<xs:enumeration value="Claim"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sCopaymentType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the copayment value (percent, dollar)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="%" id="percentage"/>
+			<xs:enumeration value="$" id="dollar"/>
+			<xs:enumeration value="All" id="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sTimeUnitType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying a time unit (D-Days, M-Months, Y-Years, L-Lifetime)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>Days</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:documentation>Months</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Y">
+				<xs:annotation>
+					<xs:documentation>Years</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="L">
+				<xs:annotation>
+					<xs:documentation>Lifetime</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:documentation>Calendar Year
+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S">
+				<xs:annotation>
+					<xs:documentation>Date of Service
+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sPaymentType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the payment method</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CHK">
+				<xs:annotation>
+					<xs:documentation>Check</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ACH">
+				<xs:annotation>
+					<xs:documentation>Automated Clearing House</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="REM">
+				<xs:annotation>
+					<xs:documentation>Remittance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EOB">
+				<xs:annotation>
+					<xs:documentation>Explanation of Benefits</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MAN">
+				<xs:annotation>
+					<xs:documentation>Manual</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PDT">
+				<xs:annotation>
+					<xs:documentation>Predetermination</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RFC">
+				<xs:annotation>
+					<xs:documentation>Refund Check Payment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RFA">
+				<xs:annotation>
+					<xs:documentation>Refund Automatic Clearing House Payment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sPaymentStatusType">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the payment status</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="I">
+				<xs:annotation>
+					<xs:documentation>Issued</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:documentation>Cleared</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:documentation>Outstanding</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation>
+					<xs:documentation>Reconciled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="V">
+				<xs:annotation>
+					<xs:documentation>Voided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P">
+				<xs:annotation>
+					<xs:documentation>PendReissue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S">
+				<xs:annotation>
+					<xs:documentation>Reissued</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="X">
+				<xs:annotation>
+					<xs:documentation>VoidedReissue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T">
+				<xs:annotation>
+					<xs:documentation>StaleDate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Z">
+				<xs:annotation>
+					<xs:documentation>SopPay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="E">
+				<xs:annotation>
+					<xs:documentation>Escheat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sLimitationQualifier">
+		<xs:annotation>
+			<xs:documentation>A simple type identifying the limitation qualifier</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="T">
+				<xs:annotation>
+					<xs:documentation>Tooth
+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P">
+				<xs:annotation>
+					<xs:documentation>Provider
+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TP">
+				<xs:annotation>
+					<xs:documentation>Tooth / Provider
+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:documentation>O - limited to Oral Surgery procedures only</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>D - benefit is based on dental determination</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="E">
+				<xs:annotation>
+					<xs:documentation>E - Any combination of oral evaluations, consultations or office visit procedures is included together in this limitation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="L">
+				<xs:annotation>
+					<xs:documentation>L - Benefit is limited by other services performed on the same date.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="X21">
+				<xs:annotation>
+					<xs:documentation>Benefit is limited to 1st and 2nd molars without caries. Procedure is a benefit for children only. Limitations apply.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PE">
+				<xs:annotation>
+					<xs:documentation>PE - per provider. Additional evaluations or any combination of oral evaluations, consultations or office visit procedures is included together in this limitation.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A">
+				<xs:annotation><xs:documentation>Arch</xs:documentation></xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Q">
+				<xs:annotation><xs:documentation>Quadrant</xs:documentation></xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation><xs:documentation>Root</xs:documentation></xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sToothSurfaceCodeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:documentation>Mesial</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>Distal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="L">
+				<xs:annotation>
+					<xs:documentation>Lingual</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="B">
+				<xs:annotation>
+					<xs:documentation>Buccal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="F">
+				<xs:annotation>
+					<xs:documentation>Facial</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="I">
+				<xs:annotation>
+					<xs:documentation>Incisal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:documentation>Occlusal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sPayToCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:documentation>Alternate Payee</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P">
+				<xs:annotation>
+					<xs:documentation>Individual Provider</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="G">
+				<xs:annotation>
+					<xs:documentation>Provider Group</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S">
+				<xs:annotation>
+					<xs:documentation>Practice Location</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:documentation>Provider Organization</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:documentation>Member</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="I">
+				<xs:annotation>
+					<xs:documentation>Invoice Recipient</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sProviderParticipationStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01">
+				<xs:annotation>
+					<xs:documentation>Premier</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="20">
+				<xs:annotation>
+					<xs:documentation>PPO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="22">
+				<xs:annotation>
+					<xs:documentation>Boeing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="50">
+				<xs:annotation>
+					<xs:documentation>PPO Flex</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A1">
+				<xs:annotation>
+					<xs:documentation>Howard</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="A2">
+				<xs:annotation>
+					<xs:documentation>Benefits Unlimited</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CP">
+				<xs:annotation>
+					<xs:documentation>Community Partnership Programs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NP">
+				<xs:annotation>
+					<xs:documentation>Non-Participating</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="OO">
+				<xs:annotation>
+					<xs:documentation>CPP Opt Out</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R1">
+				<xs:annotation>
+					<xs:documentation>CPP Non-Contracted Providers Accept</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TP">
+				<xs:annotation>
+					<xs:documentation>Texas CHIP</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sSpecialtyCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="00">
+				<xs:annotation>
+					<xs:documentation>General Dentist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation>Oral Surgeon</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="15">
+				<xs:annotation>
+					<xs:documentation>Endodontist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="20">
+				<xs:annotation>
+					<xs:documentation>Orthodontist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="30">
+				<xs:annotation>
+					<xs:documentation>Pediatric Dentist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="40">
+				<xs:annotation>
+					<xs:documentation>Periodontist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="50">
+				<xs:annotation>
+					<xs:documentation>Prosthodontist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="60">
+				<xs:annotation>
+					<xs:documentation>Oral Pathologist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="70">
+				<xs:annotation>
+					<xs:documentation>Public Health Dentist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="80">
+				<xs:annotation>
+					<xs:documentation>Full Time Faculty</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DT">
+				<xs:annotation>
+					<xs:documentation>Denturist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HY">
+				<xs:annotation>
+					<xs:documentation>Hygienist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>	
+	
+	<xs:element name="B2BEligibilityAndBenefitsResponse">
+	    <xs:complexType>
+	      <xs:sequence>
+	            <xs:element ref="data:EligibilityInformation"/>
+	            <xs:element ref="data:BenefitsInformation"/>
+	      </xs:sequence>
+	    </xs:complexType>
+    </xs:element>
+	<xs:element name="B2BEligibilityAndBenefitsRequest">
+	    <xs:complexType>
+	      <xs:sequence>
+	            <xs:element name="DOB" type="xs:date"/>
+	            <xs:element name="FirstName" type="xs:string"/>
+	            <xs:element name="LastName" type="xs:string"/>
+	            <xs:element name="PersonIdentifier" type="xs:string"/>
+	            <xs:element name="EnrolleeIdentifier" type="xs:string"/>
+	            <xs:element name="EnrolleeType" type="xs:string"/>
+	      </xs:sequence>
+	    </xs:complexType>
+    </xs:element>
+  
+	<xs:element name="EligibilityInformation">
+  		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="CoverageStartDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>
+						The date coverage began
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoverageEndDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>
+						The date coverage will end (Term date).
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BenefitCoverageLevelCode"	type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Benefit Coverage Level code
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enrollee" type="data:tEnrollee"/>
+			
+			<xs:element name="GroupList" type="data:tGroupList">
+				<xs:annotation>
+					<xs:documentation>
+						The group/contract holder associated with the contract/member
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CoverageDetail" type="data:tCoverageDetail">
+				<xs:annotation>
+					<xs:documentation>
+						The Coverage Detail of the contract
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PlanCoverageDescription"
+				type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The Coverage Detail of the contract
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BasisOfPaymentURL" type="xs:string"></xs:element>
+			<xs:element name="CustomerSvcTelephone" type="xs:string"></xs:element>
+		</xs:sequence>
+		</xs:complexType>
+  	</xs:element>
+  	 	  
+	<xs:complexType name="tcoAmountType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="amountType" type="data:sCopaymentType">
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="tAmountType">
+		<xs:simpleContent>
+			<xs:extension base="xs:double">
+				<xs:attribute name="amountType" type="data:sCopaymentType">
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="tLifeTimeAnnualType">
+		<xs:annotation>
+			<xs:documentation>
+				A simple type for enrollees
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LifeTime" />
+			<xs:enumeration value="Annual" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tFamilyIndividualType">
+		<xs:annotation>
+			<xs:documentation>
+				A simple type for enrollees
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Individual" />
+			<xs:enumeration value="Family" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tGroupList">
+		<xs:annotation>
+			<xs:documentation>
+				The definition of a group list object (covered entity)
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Group" type="data:tGroup" maxOccurs="unbounded" minOccurs="0">
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+  	<xs:element name="BenefitsInformation">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="NetworkTier" type="data:tNetworkTier" maxOccurs="unbounded" minOccurs="1">
+				</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+  	</xs:element>
+	<xs:complexType name="tNetworkTier">
+		<xs:annotation>
+			<xs:documentation>
+				The definition of a Network tier package object
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NetworkDescription" type="xs:string" />
+			<xs:element name="BenefitClass" type="data:tBenefitInfo" maxOccurs="unbounded" minOccurs="1">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tException">
+		<xs:sequence>
+			<xs:element name="Exception" type="data:tExceptionType" nillable="true" />				
+			<xs:element name="ExceptionDescription" type="xs:string" nillable="true" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tExceptionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PRIVACY_RESTRICTION"/>
+			<xs:enumeration value="NO_ACTIVE_COVERAGE_FOUND"/>
+			<xs:enumeration value="REQUEST_GD_NOT_FOUND"/>
+			<xs:enumeration value="NO_GD_FOUND"/>
+			<xs:enumeration value="GROUP_ACTIVE_PATIENT_INACTIVE"/>
+			<xs:enumeration value="MISSING_REQUIRED_ELEMENT"/>
+			<xs:enumeration value="SUBSCRIBER_NOT_FOUND"/>
+			<xs:enumeration value="DEPENDENT_NOT_FOUND"/>
+			<xs:enumeration value="GROUP_EXCEPTION"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tBenefitClassCodeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Diagnostic"/>
+			<xs:enumeration value="Crowns"/>
+			<xs:enumeration value="Prosthodontics"/>
+			<xs:enumeration value="Orthodontic"/>
+			<xs:enumeration value="Basic"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tBenefitInfo">
+		<xs:sequence>
+			<xs:element name="CoPaymentAmount" type="data:tcoAmountType"/>
+			<xs:element name="ContractYearOrCalendar" type="xs:boolean" />
+			<xs:element name="LifeTimeAnnual" type="data:tLifeTimeAnnualType" />
+			<xs:element name="FamilyIndividual" type="data:tFamilyIndividualType" />
+			<xs:element name="IsDeductibleExemption" type="xs:boolean"></xs:element>
+			<xs:element name="WaitingPeriod" type="xs:int"></xs:element>
+			<xs:element name="MaximumAmount" type="data:tAmountType"></xs:element>
+			<xs:element name="RemainingMaximumAmount" type="data:tAmountType"></xs:element>
+			<xs:element name="DeductiblesAmount" type="data:tAmountType"></xs:element>
+			<xs:element name="DeductiblesRemainingAmount" type="data:tAmountType"></xs:element>
+			<xs:element name="BenefitClassCode" type="data:tBenefitClassCodeType"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EnBExceptionResponse" type="data:tException"></xs:element>
+</xs:schema>

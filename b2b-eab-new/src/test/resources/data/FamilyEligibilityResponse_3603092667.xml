@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceInterface xmlns="http://www.delta.org/A3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ServiceHeader>
+        <Identifier>FamilyEligibilityInquiry001001001</Identifier>
+        <SourceSystem>A3CrossPlane</SourceSystem>
+        <SourceApplication>E&amp;B</SourceApplication>
+        <DateTime>2008-01-17T18:45:08.5Z</DateTime>
+        <TransactionID>3796f087ae4268d880e9bf9aed56898c15b7facf:117891187f900a9b678b2e2539e</TransactionID>
+        <ReturnCode>000000</ReturnCode>
+    </ServiceHeader>
+    <Payload>
+        <FamilyEligibilityInquiryResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <PrimaryEnrolleeContract PrimaryEnrolleeContractIdentifier="3603092667">
+                <PrimaryEnrolleeCoverageTypeSpan>
+                    <PrimaryEnrolleeCoverageTypeSpanEffectiveDate>2003-01-01-08:00</PrimaryEnrolleeCoverageTypeSpanEffectiveDate>
+                    <PrimaryEnrolleeCoverageTypeSpanEndDate>2004-01-01-08:00</PrimaryEnrolleeCoverageTypeSpanEndDate>
+                     <BenefitCoverageLevelCode>123</BenefitCoverageLevelCode>
+                    <Group>
+                        <GroupName>Alameda Healthy Kids</GroupName>
+                        <GroupNumber>AHK</GroupNumber>
+                        <Division>
+                            <DivisionNumber>60</DivisionNumber>
+                            <DivisionName>Alameda Healthy Kids</DivisionName>
+                        </Division>
+                    </Group>
+ 					<MaintenanceReasonCode>12</MaintenanceReasonCode>
+					<RatePackageCode>223</RatePackageCode>
+					<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>
+                </PrimaryEnrolleeCoverageTypeSpan>
+                <Enrollee>
+                    <EnrolleeNumber>01</EnrolleeNumber>
+                    <InsuredIndicator>Y</InsuredIndicator>
+                    <Person>
+                        <PersonIdentifier>0663810915095172</PersonIdentifier>
+                        <PersonFirstName>tuesday</PersonFirstName>
+                        <PersonLastName>testtwo</PersonLastName>
+                        <BirthDate>2002-01-01-08:00</BirthDate>
+                        <GenderCode>F</GenderCode>
+                        <PersonAddress>
+                            <AddressTypeDescription>Mailing</AddressTypeDescription>
+                            <PersonAddressEffectiveDate>2003-01-01-08:00</PersonAddressEffectiveDate>
+                            <AddressLine1Text>100 main st</AddressLine1Text>
+                            <CityName>fremont</CityName>
+                            <PostalZoneOrZipCode>95444</PostalZoneOrZipCode>
+                            <StateProvinceCode>CA</StateProvinceCode>
+                        </PersonAddress>
+						<LastMaintenanceDateTime>12121</LastMaintenanceDateTime>						
+                    </Person>
+                    <EnrolleeEligibility>
+                        <EnrolleeEligibilityEffectiveDate>2003-01-01-08:00</EnrolleeEligibilityEffectiveDate>
+                        <EnrolleeEligibilityEndDate>2004-01-01-08:00</EnrolleeEligibilityEndDate>
+                        <IndividualRelationshipCode>12</IndividualRelationshipCode>
+                        <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
+                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
+                        <HealthCareContractHolderIdentifier>DDC</HealthCareContractHolderIdentifier>
+                        <GroupTypeIdentifier>CPP OTHER</GroupTypeIdentifier>
+                        <BenefitPackageIdentifier>CPP00001</BenefitPackageIdentifier>
+                        <BenefitPackageDescription>CCA,AHK,SJK,SMK,FSN,HKHF,KHK,KIN,MER,PHC,SBH,SCH,SLO,TUL, HFP, SFK</BenefitPackageDescription>
+							<MaintenanceReasonCode>DDD</MaintenanceReasonCode>
+							<EnrolleeEligibilityIdentifier>12334</EnrolleeEligibilityIdentifier>
+							<TimelyEnrollmentCode>33</TimelyEnrollmentCode>
+                    </EnrolleeEligibility>
+						<InternalCaseIdentifier>12121</InternalCaseIdentifier>
+						<LastMaintenanceDateTime>23232</LastMaintenanceDateTime>
+                </Enrollee>
+            </PrimaryEnrolleeContract>
+        </FamilyEligibilityInquiryResponse>
+    </Payload>
+</ServiceInterface>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Darrell R Thurmond (KoolKode Technologies, LLC) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:error="http://schemas.delta.org/error" targetNamespace="http://schemas.delta.org/error" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="tError">
+		<xs:annotation>
+			<xs:documentation>The definition of an error object</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="errorCode" type="error:sErrorCode"/>
+			<xs:element name="errorDetail" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tInquiryError">
+		<xs:annotation>
+			<xs:documentation>The definition of an inquiry error</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="error:tError">
+				<xs:attribute name="domainType" type="error:sDomainType" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="sDomainType">
+		<xs:annotation>
+			<xs:documentation>A simple type indicating the type of inquiry (domain)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="claim"/>
+			<xs:enumeration value="eligibility"/>
+			<xs:enumeration value="benefit"/>
+			<xs:enumeration value="provider"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sErrorCode">
+		<xs:annotation>
+			<xs:documentation>An error code indicating the type of error (cause)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CP-0000">
+				<xs:annotation><xs:documentation>Missing required input parameter</xs:documentation></xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CP-0001">
+				<xs:annotation><xs:documentation>Unrecognized data returned from back-end</xs:documentation></xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CP-0002">
+				<xs:annotation><xs:documentation>Fatal error occured</xs:documentation></xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
