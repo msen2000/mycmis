@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Save to Drive Demo: Async Load</title>
+    <link rel="canonical" href="http://localhost:8888">
+  </head>
+  <body>
+    <div class="g-savetodrive"
+         data-src="//localhost:8888/mobilecell.pdf"
+         data-filename="My Statement.pdf"
+         data-sitename="My Company Name">
+    </div>
+
+    <script type="text/javascript">
+      (function(w) {
+        if (!(w.gapi && w.gapi._pl)) {
+        var d = w.document;
+        var po = d.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      }})(window);
+    </script>
+
+  </body>
+</html>
