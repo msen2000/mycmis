@@ -57,7 +57,7 @@
 							<EnrolleeEligibilityEndDate>2009-08-01</EnrolleeEligibilityEndDate>
 							<IndividualRelationshipCode>12</IndividualRelationshipCode>
 							<IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
-							<ProductIdentifier>CPP DENTAL</ProductIdentifier>
+							<ProductIdentifier>CPP senden</ProductIdentifier>
 							<FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
 							<HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
 							<GroupTypeIdentifier>GTI</GroupTypeIdentifier>
@@ -72,7 +72,7 @@
 							<EnrolleeEligibilityEndDate>2006-08-01</EnrolleeEligibilityEndDate>
 							<IndividualRelationshipCode>12</IndividualRelationshipCode>
 							<IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
-							<ProductIdentifier>CPP DENTAL</ProductIdentifier>
+							<ProductIdentifier>CPP senden</ProductIdentifier>
 							<FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
 							<HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
 							<GroupTypeIdentifier>GTI</GroupTypeIdentifier>
@@ -133,7 +133,7 @@
                         <EnrolleeEligibilityEndDate>2009-08-01</EnrolleeEligibilityEndDate>
                         <IndividualRelationshipCode>12</IndividualRelationshipCode>
                         <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
-                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <ProductIdentifier>CPP senden</ProductIdentifier>
                         <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
                         <HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
                         <GroupTypeIdentifier>GTI</GroupTypeIdentifier>
@@ -148,7 +148,7 @@
 						<EnrolleeEligibilityEndDate>2007-08-01</EnrolleeEligibilityEndDate>
                         <IndividualRelationshipCode>12</IndividualRelationshipCode>
                         <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
-                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <ProductIdentifier>CPP senden</ProductIdentifier>
                         <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
                         <HealthCareContractHolderIdentifier>HCCHI</HealthCareContractHolderIdentifier>
                         <GroupTypeIdentifier>GTI</GroupTypeIdentifier>

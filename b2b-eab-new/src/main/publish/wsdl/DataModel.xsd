@@ -1568,7 +1568,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>D - benefit is based on dental determination</xs:documentation>
+					<xs:documentation>D - benefit is based on senden determination</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="E">

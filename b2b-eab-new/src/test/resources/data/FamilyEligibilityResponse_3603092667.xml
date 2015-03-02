@@ -51,7 +51,7 @@
                         <EnrolleeEligibilityEndDate>2004-01-01-08:00</EnrolleeEligibilityEndDate>
                         <IndividualRelationshipCode>12</IndividualRelationshipCode>
                         <IndividualRelationshipDescription>Child Subscriber</IndividualRelationshipDescription>
-                        <ProductIdentifier>CPP DENTAL</ProductIdentifier>
+                        <ProductIdentifier>CPP senden</ProductIdentifier>
                         <FinancialReportingStateIdentifier>CA</FinancialReportingStateIdentifier>
                         <HealthCareContractHolderIdentifier>DDC</HealthCareContractHolderIdentifier>
                         <GroupTypeIdentifier>CPP OTHER</GroupTypeIdentifier>

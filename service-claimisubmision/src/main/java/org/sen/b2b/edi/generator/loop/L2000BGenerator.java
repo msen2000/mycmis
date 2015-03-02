@@ -33,7 +33,7 @@ public class L2000BGenerator {
 	}
 	
 	
-	//NM1*1P*2*DESIGNER DENTAL*****XX*1316993660~
+	//NM1*1P*2*DESIGNER senden*****XX*1316993660~
 	public String generateSNM1InformationReceiverName(SNM1InformationReceiverName nm1) {
 		StringBuilder strBul = new StringBuilder();	
 		if(null != nm1) {

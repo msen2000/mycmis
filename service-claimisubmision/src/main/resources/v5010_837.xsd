@@ -35,7 +35,7 @@
 			</xsd:sequence>
 			<xsd:attribute name="Type" default="Transaction" type="xsd:string"/>
 			<xsd:attribute name="ID" default="837" type="xsd:string"/>
-			<xsd:attribute name="Name" default="Health Care Claim : Dental" type="xsd:string"/>
+			<xsd:attribute name="Name" default="Health Care Claim : senden" type="xsd:string"/>
 			<xsd:attribute name="XDataVersion" fixed="2.0" type="xsd:string"/>
 			<xsd:attribute name="Standard" fixed="HIPAA" use="required" type="xsd:string"/>
 			<xsd:attribute name="Version" default="V5010X224A2" type="xsd:string"/>
@@ -2787,7 +2787,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="E-CLM01-Facility_Code_Value">
 		<xsd:annotation>
-			<xsd:documentation>Code identifying where services were, or may be, performed; the first and second positions of the Uniform Bill Type Code for Institutional Services or the Place of Service Codes for Professional or Dental Services. </xsd:documentation>
+			<xsd:documentation>Code identifying where services were, or may be, performed; the first and second positions of the Uniform Bill Type Code for Institutional Services or the Place of Service Codes for Professional or senden Services. </xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:restriction base="EDI-Element-String-Type">
@@ -6126,7 +6126,7 @@
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="S-LX-Service_Line_Number" type="S-LX-Service_Line_Number" minOccurs="1"/>
-			<xsd:element name="S-SV3-Dental_Service" type="S-SV3-Dental_Service"/>
+			<xsd:element name="S-SV3-senden_Service" type="S-SV3-senden_Service"/>
 			<xsd:element name="S-TOO-Tooth_Information" type="S-TOO-Tooth_Information" minOccurs="0" maxOccurs="32" nillable="true"/>
 			<xsd:choice maxOccurs="6" minOccurs="0">
 				<xsd:element name="S-DTP-Date_-_Service_Date" type="S-DTP-Date_-_Service_Date_1" minOccurs="0" nillable="true"/>
@@ -6183,9 +6183,9 @@
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<xsd:complexType name="S-SV3-Dental_Service">
+	<xsd:complexType name="S-SV3-senden_Service">
 		<xsd:annotation>
-			<xsd:documentation>To specify the service line item detail for dental work</xsd:documentation>
+			<xsd:documentation>To specify the service line item detail for senden work</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
 			<xsd:element name="C-C003-Composite_Medical_Procedure_Identifier" type="C-C003-Composite_Medical_Procedure_Identifier"/>
@@ -6202,7 +6202,7 @@
 		</xsd:sequence>
 		<xsd:attribute name="Type" default="Segment" type="xsd:string"/>
 		<xsd:attribute name="ID" default="SV3" type="xsd:string"/>
-		<xsd:attribute name="Name" default="Dental Service" type="xsd:string"/>
+		<xsd:attribute name="Name" default="senden Service" type="xsd:string"/>
 	</xsd:complexType>
 	<xsd:complexType name="C-C003-Composite_Medical_Procedure_Identifier">
 		<xsd:annotation>
@@ -6339,7 +6339,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="E-SV303-Facility_Code_Value">
 		<xsd:annotation>
-			<xsd:documentation>Code identifying where services were, or may be, performed; the first and second positions of the Uniform Bill Type Code for Institutional Services or the Place of Service Codes for Professional or Dental Services. </xsd:documentation>
+			<xsd:documentation>Code identifying where services were, or may be, performed; the first and second positions of the Uniform Bill Type Code for Institutional Services or the Place of Service Codes for Professional or senden Services. </xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:restriction base="EDI-Element-String-Type">
@@ -6439,7 +6439,7 @@
 	</xsd:complexType>
 	<xsd:complexType name="E-SV305-Prosthesis__Crown_or_Inlay_Code">
 		<xsd:annotation>
-			<xsd:documentation>Code specifying the placement status for the dental work </xsd:documentation>
+			<xsd:documentation>Code specifying the placement status for the senden work </xsd:documentation>
 		</xsd:annotation>
 		<xsd:simpleContent>
 			<xsd:restriction base="EDI-Element-String-Type">
