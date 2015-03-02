@@ -22,7 +22,7 @@ public class L2000AGenerator {
 	}
 	
 	/*
-	//NM1*PR*2*Delta Dental District of Columbia*****PI*52147~
+	//NM1*PR*2*Sen Den District of Columbia*****PI*52147~
 	public String generateL2100A(L2100A l2100a) {
 		SNM1PayerName snm1 = l2100a.getSNM1PayerName();
 		StringBuilder strBul = new StringBuilder();

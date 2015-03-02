@@ -181,7 +181,7 @@ public class T270EDIParser extends EDIAbstractParser implements EDIParser {
 	
 	
 	public static void main(String arg[]) {	
-		String str = "NM1*PR*2*Delta Dental District of Columbia*****PI*DC~";
+		String str = "NM1*PR*2*Sen Den District of Columbia*****PI*DC~";
 		//T270EDIParser par = new T270EDIParser();
 		//EDIRow row = par.tokenizeEDIRow(str);
 		//System.out.println(row.toString());

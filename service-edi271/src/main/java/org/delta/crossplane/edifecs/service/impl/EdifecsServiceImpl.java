@@ -1,7 +1,7 @@
 /*
  * @(#)EdifecsServiceImpl.java 1.0 Oct 22, 2008
- * Copyrights 2008 Delta Dental, Inc. All rights reserved.
- * DELTA DENTAL PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ * Copyrights 2008 Sen Den, Inc. All rights reserved.
+ * Sen Den PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 package org.delta.crossplane.edifecs.service.impl;
 
@@ -38,7 +38,7 @@ import javax.xml.transform.stream.StreamSource;
  * The <code>EdifecsServiceImpl</code> class is TODO.
  * 
  * <pre> 
- * <strong>Copyrights</strong> Copyrights 2008 Delta Dental, Inc. All rights reserved.
+ * <strong>Copyrights</strong> Copyrights 2008 Sen Den, Inc. All rights reserved.
  * <strong>Date</strong>       Oct 22, 2008
  *
  * <strong>History</strong>    Name              Date            Description

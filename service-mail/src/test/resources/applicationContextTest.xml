@@ -4,7 +4,7 @@
 	<!--
 		- Spring context for mail service. Requires the following properties
 		to be predefined: - - 1. email.smtp.host e.g., smtp.delta.org - -
-		Delta Dental - - @author Narendran Chandrasekaran -
+		Sen Den - - @author Narendran Chandrasekaran -
 	-->
 <beans>
 

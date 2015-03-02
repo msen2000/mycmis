@@ -250,7 +250,7 @@ public class T271EDIParser implements EDIParser {
 	}
 	
 	public static void main(String arg[]) {	
-		String str = "NM1*PR*2*Delta Dental District of Columbia*****PI*DC~";
+		String str = "NM1*PR*2*Sen Den District of Columbia*****PI*DC~";
 		T271EDIParser par = new T271EDIParser();
 		Row row = par.tokenize(str);
 		System.out.println(row.toString());

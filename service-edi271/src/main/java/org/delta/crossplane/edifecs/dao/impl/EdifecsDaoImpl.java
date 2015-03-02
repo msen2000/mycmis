@@ -1,7 +1,7 @@
 /*
  * @(#)EdifecsDaoImpl.java 1.0 Oct 22, 2008
- * Copyrights 2008 Delta Dental, Inc. All rights reserved.
- * DELTA DENTAL PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ * Copyrights 2008 Sen Den, Inc. All rights reserved.
+ * Sen Den PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
 package org.delta.crossplane.edifecs.dao.impl;
 
@@ -35,7 +35,7 @@ import com.edifecs.xengine.xeobjects.XESource;
  * 
  * <pre>
  *  
- * &lt;strong&gt;Copyrights&lt;/strong&gt; Copyrights 2008 Delta Dental, Inc. All rights reserved.
+ * &lt;strong&gt;Copyrights&lt;/strong&gt; Copyrights 2008 Sen Den, Inc. All rights reserved.
  * &lt;strong&gt;Date&lt;/strong&gt;       Oct 22, 2008
  * 
  * &lt;strong&gt;History&lt;/strong&gt;    Name              Date            Description

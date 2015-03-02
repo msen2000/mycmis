@@ -227,7 +227,7 @@ public class T837EDIParser implements EDIParser {
 	}
 	
 	public static void main(String arg[]) {	
-		String str = "NM1*PR*2*Delta Dental District of Columbia*****PI*DC~";
+		String str = "NM1*PR*2*Sen Den District of Columbia*****PI*DC~";
 		T837EDIParser par = new T837EDIParser();
 		Row row = par.tokenize(str);
 		System.out.println(row.toString());

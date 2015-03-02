@@ -18,7 +18,7 @@ public class TClaim  implements java.io.Serializable {
     /* The Claim Case Number used for CPP only */
     private java.lang.String claimCaseNumber;
 
-    /* The date the claim was received by Delta Dental and was entered
+    /* The date the claim was received by Sen Den and was entered
      * into the claims processor. */
     private java.util.Calendar claimReceivedTime;
 
@@ -194,7 +194,7 @@ public class TClaim  implements java.io.Serializable {
     /**
      * Gets the claimReceivedTime value for this TClaim.
      * 
-     * @return claimReceivedTime   * The date the claim was received by Delta Dental and was entered
+     * @return claimReceivedTime   * The date the claim was received by Sen Den and was entered
      * into the claims processor.
      */
     public java.util.Calendar getClaimReceivedTime() {
@@ -205,7 +205,7 @@ public class TClaim  implements java.io.Serializable {
     /**
      * Sets the claimReceivedTime value for this TClaim.
      * 
-     * @param claimReceivedTime   * The date the claim was received by Delta Dental and was entered
+     * @param claimReceivedTime   * The date the claim was received by Sen Den and was entered
      * into the claims processor.
      */
     public void setClaimReceivedTime(java.util.Calendar claimReceivedTime) {

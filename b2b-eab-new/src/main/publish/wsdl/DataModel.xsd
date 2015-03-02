@@ -300,7 +300,7 @@
 			</xs:element>
 			<xs:element name="businessUnit" type="data:tBusinessUnit">
 				<xs:annotation>
-					<xs:documentation>The Delta Dental Business Unit</xs:documentation>
+					<xs:documentation>The Sen Den Business Unit</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="coverageStatus" type="data:sStatusType">
@@ -339,7 +339,7 @@
 	</xs:complexType>
 	<xs:complexType name="tBusinessUnit">
 		<xs:annotation>
-			<xs:documentation>The definition of a Delta Dental Business Unit</xs:documentation>
+			<xs:documentation>The definition of a Sen Den Business Unit</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="healthCareContractHolderIdentifier" type="xs:string">
@@ -430,7 +430,7 @@
 			</xs:element>
 			<xs:element name="claimReceivedTime" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>The date the claim was received by Delta Dental and was entered into the claims processor. </xs:documentation>
+					<xs:documentation>The date the claim was received by Sen Den and was entered into the claims processor. </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="claimFromDate" type="xs:date">
@@ -699,12 +699,12 @@
 			</xs:element>
 			<xs:element name="deltaPaidAmount" type="xs:double">
 				<xs:annotation>
-					<xs:documentation>The Delta Dental paid amount associated with the line item</xs:documentation>
+					<xs:documentation>The Sen Den paid amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="deltaPercentageAmount" type="xs:double" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Delta Dental paid percentage amount associated with the line item</xs:documentation>
+					<xs:documentation>The Sen Den paid percentage amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="patientPaidPayment" type="xs:double">
@@ -724,12 +724,12 @@
 			</xs:element>
 			<xs:element name="approvedAmount" type="xs:double" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The Delta Dental approved amount associated with the line item</xs:documentation>
+					<xs:documentation>The Sen Den approved amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="allowedAmount" type="xs:double">
 				<xs:annotation>
-					<xs:documentation>The Delta Dental approved amount associated with the line item</xs:documentation>
+					<xs:documentation>The Sen Den approved amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="patientCopayPercentage" type="xs:double">

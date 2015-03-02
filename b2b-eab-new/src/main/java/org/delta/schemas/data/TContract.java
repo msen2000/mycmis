@@ -26,7 +26,7 @@ public class TContract  implements java.io.Serializable {
     /* The group/contract holder associated with the contract/member */
     private org.delta.schemas.data.TGroup group;
 
-    /* The Delta Dental Business Unit */
+    /* The Sen Den Business Unit */
     private org.delta.schemas.data.TBusinessUnit businessUnit;
 
     /* The status of this contract */
@@ -156,7 +156,7 @@ public class TContract  implements java.io.Serializable {
     /**
      * Gets the businessUnit value for this TContract.
      * 
-     * @return businessUnit   * The Delta Dental Business Unit
+     * @return businessUnit   * The Sen Den Business Unit
      */
     public org.delta.schemas.data.TBusinessUnit getBusinessUnit() {
         return businessUnit;
@@ -166,7 +166,7 @@ public class TContract  implements java.io.Serializable {
     /**
      * Sets the businessUnit value for this TContract.
      * 
-     * @param businessUnit   * The Delta Dental Business Unit
+     * @param businessUnit   * The Sen Den Business Unit
      */
     public void setBusinessUnit(org.delta.schemas.data.TBusinessUnit businessUnit) {
         this.businessUnit = businessUnit;

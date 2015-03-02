@@ -11,7 +11,7 @@
 			</head>
 			<body>
 				Dear Customer,<br>				
-				<p>Your are ready to use Delta Dental Online Billing Bump and Compare feature.</p>
+				<p>Your are ready to use Sen Den Online Billing Bump and Compare feature.</p>
 				
 				<p>
 				Uploaded sample file name : {1} <br>
@@ -23,7 +23,7 @@
 					If you have any questions, please e-mail: <a href="mailto:{4}">Your Billing Representative</a>
     			</p>
 				<p>
-					Thanks,<br>Delta Dental
+					Thanks,<br>Sen Den
 				</p>
 			</body>
 		</html>

@@ -9,7 +9,7 @@ package org.delta.schemas.data;
 
 
 /**
- * The definition of a Delta Dental Business Unit
+ * The definition of a Sen Den Business Unit
  */
 public class TBusinessUnit  implements java.io.Serializable {
     /* Specifies the plan such as DDC, DDIC, PMI, etc (business Level

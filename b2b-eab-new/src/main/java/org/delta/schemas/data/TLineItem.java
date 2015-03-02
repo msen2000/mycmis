@@ -27,10 +27,10 @@ public class TLineItem  implements java.io.Serializable {
     /* The submitted amount associated with the line item */
     private double submittedAmount;
 
-    /* The Delta Dental paid amount associated with the line item */
+    /* The Sen Den paid amount associated with the line item */
     private double deltaPaidAmount;
 
-    /* The Delta Dental paid percentage amount associated with the
+    /* The Sen Den paid percentage amount associated with the
      * line item */
     private java.lang.Double deltaPercentageAmount;
 
@@ -43,10 +43,10 @@ public class TLineItem  implements java.io.Serializable {
     /* The deductable amount associated with the line item */
     private double deductible;
 
-    /* The Delta Dental approved amount associated with the line item */
+    /* The Sen Den approved amount associated with the line item */
     private java.lang.Double approvedAmount;
 
-    /* The Delta Dental approved amount associated with the line item */
+    /* The Sen Den approved amount associated with the line item */
     private double allowedAmount;
 
     /* The co-payment amount associated with the line item */
@@ -252,7 +252,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Gets the deltaPaidAmount value for this TLineItem.
      * 
-     * @return deltaPaidAmount   * The Delta Dental paid amount associated with the line item
+     * @return deltaPaidAmount   * The Sen Den paid amount associated with the line item
      */
     public double getDeltaPaidAmount() {
         return deltaPaidAmount;
@@ -262,7 +262,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Sets the deltaPaidAmount value for this TLineItem.
      * 
-     * @param deltaPaidAmount   * The Delta Dental paid amount associated with the line item
+     * @param deltaPaidAmount   * The Sen Den paid amount associated with the line item
      */
     public void setDeltaPaidAmount(double deltaPaidAmount) {
         this.deltaPaidAmount = deltaPaidAmount;
@@ -272,7 +272,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Gets the deltaPercentageAmount value for this TLineItem.
      * 
-     * @return deltaPercentageAmount   * The Delta Dental paid percentage amount associated with the
+     * @return deltaPercentageAmount   * The Sen Den paid percentage amount associated with the
      * line item
      */
     public java.lang.Double getDeltaPercentageAmount() {
@@ -283,7 +283,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Sets the deltaPercentageAmount value for this TLineItem.
      * 
-     * @param deltaPercentageAmount   * The Delta Dental paid percentage amount associated with the
+     * @param deltaPercentageAmount   * The Sen Den paid percentage amount associated with the
      * line item
      */
     public void setDeltaPercentageAmount(java.lang.Double deltaPercentageAmount) {
@@ -354,7 +354,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Gets the approvedAmount value for this TLineItem.
      * 
-     * @return approvedAmount   * The Delta Dental approved amount associated with the line item
+     * @return approvedAmount   * The Sen Den approved amount associated with the line item
      */
     public java.lang.Double getApprovedAmount() {
         return approvedAmount;
@@ -364,7 +364,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Sets the approvedAmount value for this TLineItem.
      * 
-     * @param approvedAmount   * The Delta Dental approved amount associated with the line item
+     * @param approvedAmount   * The Sen Den approved amount associated with the line item
      */
     public void setApprovedAmount(java.lang.Double approvedAmount) {
         this.approvedAmount = approvedAmount;
@@ -374,7 +374,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Gets the allowedAmount value for this TLineItem.
      * 
-     * @return allowedAmount   * The Delta Dental approved amount associated with the line item
+     * @return allowedAmount   * The Sen Den approved amount associated with the line item
      */
     public double getAllowedAmount() {
         return allowedAmount;
@@ -384,7 +384,7 @@ public class TLineItem  implements java.io.Serializable {
     /**
      * Sets the allowedAmount value for this TLineItem.
      * 
-     * @param allowedAmount   * The Delta Dental approved amount associated with the line item
+     * @param allowedAmount   * The Sen Den approved amount associated with the line item
      */
     public void setAllowedAmount(double allowedAmount) {
         this.allowedAmount = allowedAmount;
