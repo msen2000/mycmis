@@ -1,6 +1,6 @@
-package org.delta.b2b.edi.parser;
+package org.sen.b2b.edi.parser;
 
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.t271.T271;
 
 public interface EDIParser {
 	public String convertEDI2XML () throws Exception;

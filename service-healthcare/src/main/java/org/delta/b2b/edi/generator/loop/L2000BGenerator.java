@@ -1,15 +1,15 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t270.L2000B;
-import org.delta.b2b.edi.t270.L2100B;
-import org.delta.b2b.edi.t270.SHLInformationReceiverLevel;
-import org.delta.b2b.edi.t270.SN3InformationReceiverAddress;
-import org.delta.b2b.edi.t270.SN4InformationReceiverCityStateZIPCode;
-import org.delta.b2b.edi.t270.SNM1InformationReceiverName;
-import org.delta.b2b.edi.t270.SPRVInformationReceiverProviderInformation;
-import org.delta.b2b.edi.t270.SREFInformationReceiverAdditionalIdentification;
+import org.sen.b2b.edi.t270.L2000B;
+import org.sen.b2b.edi.t270.L2100B;
+import org.sen.b2b.edi.t270.SHLInformationReceiverLevel;
+import org.sen.b2b.edi.t270.SN3InformationReceiverAddress;
+import org.sen.b2b.edi.t270.SN4InformationReceiverCityStateZIPCode;
+import org.sen.b2b.edi.t270.SNM1InformationReceiverName;
+import org.sen.b2b.edi.t270.SPRVInformationReceiverProviderInformation;
+import org.sen.b2b.edi.t270.SREFInformationReceiverAdditionalIdentification;
 
 public class L2000BGenerator {
 

@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.transaction;
+package org.sen.b2b.edi.transaction;
 
 public interface EDIProcessor {
 

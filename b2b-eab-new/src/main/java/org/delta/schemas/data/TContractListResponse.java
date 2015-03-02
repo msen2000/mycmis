@@ -5,23 +5,23 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The response of the eligibility requests
  */
 public class TContractListResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TContract[] contractList;
+    private org.sen.schemas.data.TContract[] contractList;
 
-    private org.delta.schemas.data.SContractResponseStatusType contractResponseStatus;
+    private org.sen.schemas.data.SContractResponseStatusType contractResponseStatus;
 
     public TContractListResponse() {
     }
 
     public TContractListResponse(
-           org.delta.schemas.data.TContract[] contractList,
-           org.delta.schemas.data.SContractResponseStatusType contractResponseStatus) {
+           org.sen.schemas.data.TContract[] contractList,
+           org.sen.schemas.data.SContractResponseStatusType contractResponseStatus) {
            this.contractList = contractList;
            this.contractResponseStatus = contractResponseStatus;
     }
@@ -32,7 +32,7 @@ public class TContractListResponse  implements java.io.Serializable {
      * 
      * @return contractList
      */
-    public org.delta.schemas.data.TContract[] getContractList() {
+    public org.sen.schemas.data.TContract[] getContractList() {
         return contractList;
     }
 
@@ -42,7 +42,7 @@ public class TContractListResponse  implements java.io.Serializable {
      * 
      * @param contractList
      */
-    public void setContractList(org.delta.schemas.data.TContract[] contractList) {
+    public void setContractList(org.sen.schemas.data.TContract[] contractList) {
         this.contractList = contractList;
     }
 
@@ -52,7 +52,7 @@ public class TContractListResponse  implements java.io.Serializable {
      * 
      * @return contractResponseStatus
      */
-    public org.delta.schemas.data.SContractResponseStatusType getContractResponseStatus() {
+    public org.sen.schemas.data.SContractResponseStatusType getContractResponseStatus() {
         return contractResponseStatus;
     }
 
@@ -62,7 +62,7 @@ public class TContractListResponse  implements java.io.Serializable {
      * 
      * @param contractResponseStatus
      */
-    public void setContractResponseStatus(org.delta.schemas.data.SContractResponseStatusType contractResponseStatus) {
+    public void setContractResponseStatus(org.sen.schemas.data.SContractResponseStatusType contractResponseStatus) {
         this.contractResponseStatus = contractResponseStatus;
     }
 
@@ -118,18 +118,18 @@ public class TContractListResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TContractListResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tContractListResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tContractListResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contractList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contractList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tContract"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contractList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tContract"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contract"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contract"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contractResponseStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contractResponseStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sContractResponseStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contractResponseStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sContractResponseStatusType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -1,36 +1,36 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.handler.element.NM1ReceiverHandler;
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.CC035ProviderSpecialtyInformation;
-import org.delta.b2b.edi.t270.CC040ReferenceIdentifier;
-import org.delta.b2b.edi.t270.EN301AddressInformation;
-import org.delta.b2b.edi.t270.EN302AddressInformation;
-import org.delta.b2b.edi.t270.EN401CityName;
-import org.delta.b2b.edi.t270.EN402StateOrProvinceCode;
-import org.delta.b2b.edi.t270.EN403PostalCode;
-import org.delta.b2b.edi.t270.EN404CountryCode;
-import org.delta.b2b.edi.t270.EPRV01ProviderCode;
-import org.delta.b2b.edi.t270.EPRV02ReferenceIdentificationQualifier;
-import org.delta.b2b.edi.t270.EPRV03ReferenceIdentification;
-import org.delta.b2b.edi.t270.EPRV04StateOrProvinceCode;
-import org.delta.b2b.edi.t270.EPRV06ProviderOrganizationCode;
-import org.delta.b2b.edi.t270.EREF01ReferenceIdentificationQualifier;
-import org.delta.b2b.edi.t270.EREF02ReferenceIdentification;
-import org.delta.b2b.edi.t270.EREF03Description;
-import org.delta.b2b.edi.t270.L2000B;
-import org.delta.b2b.edi.t270.L2100B;
-import org.delta.b2b.edi.t270.ObjectFactory;
-import org.delta.b2b.edi.t270.SN3InformationReceiverAddress;
-import org.delta.b2b.edi.t270.SN4InformationReceiverCityStateZIPCode;
-import org.delta.b2b.edi.t270.SNM1InformationReceiverName;
-import org.delta.b2b.edi.t270.SPRVInformationReceiverProviderInformation;
-import org.delta.b2b.edi.t270.SREFInformationReceiverAdditionalIdentification;
+import org.sen.b2b.edi.handler.element.NM1ReceiverHandler;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.CC035ProviderSpecialtyInformation;
+import org.sen.b2b.edi.t270.CC040ReferenceIdentifier;
+import org.sen.b2b.edi.t270.EN301AddressInformation;
+import org.sen.b2b.edi.t270.EN302AddressInformation;
+import org.sen.b2b.edi.t270.EN401CityName;
+import org.sen.b2b.edi.t270.EN402StateOrProvinceCode;
+import org.sen.b2b.edi.t270.EN403PostalCode;
+import org.sen.b2b.edi.t270.EN404CountryCode;
+import org.sen.b2b.edi.t270.EPRV01ProviderCode;
+import org.sen.b2b.edi.t270.EPRV02ReferenceIdentificationQualifier;
+import org.sen.b2b.edi.t270.EPRV03ReferenceIdentification;
+import org.sen.b2b.edi.t270.EPRV04StateOrProvinceCode;
+import org.sen.b2b.edi.t270.EPRV06ProviderOrganizationCode;
+import org.sen.b2b.edi.t270.EREF01ReferenceIdentificationQualifier;
+import org.sen.b2b.edi.t270.EREF02ReferenceIdentification;
+import org.sen.b2b.edi.t270.EREF03Description;
+import org.sen.b2b.edi.t270.L2000B;
+import org.sen.b2b.edi.t270.L2100B;
+import org.sen.b2b.edi.t270.ObjectFactory;
+import org.sen.b2b.edi.t270.SN3InformationReceiverAddress;
+import org.sen.b2b.edi.t270.SN4InformationReceiverCityStateZIPCode;
+import org.sen.b2b.edi.t270.SNM1InformationReceiverName;
+import org.sen.b2b.edi.t270.SPRVInformationReceiverProviderInformation;
+import org.sen.b2b.edi.t270.SREFInformationReceiverAdditionalIdentification;
 
 public class L2000BHandler {
 	private L2000B l2000b;

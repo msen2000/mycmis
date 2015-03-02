@@ -1,17 +1,17 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t270.EEQ01ServiceTypeCode;
-import org.delta.b2b.edi.t270.L2000D;
-import org.delta.b2b.edi.t270.L2100D;
-import org.delta.b2b.edi.t270.L2110D;
-import org.delta.b2b.edi.t270.SDMGDependentDemographicInformation;
-import org.delta.b2b.edi.t270.SEQDependentEligibilityOrBenefitInquiry;
-import org.delta.b2b.edi.t270.SHLDependentLevel;
-import org.delta.b2b.edi.t270.SNM1DependentName;
-import org.delta.b2b.edi.t270.SREFDependentAdditionalIdentification;
-import org.delta.b2b.edi.t270.STRNDependentTraceNumber;
+import org.sen.b2b.edi.t270.EEQ01ServiceTypeCode;
+import org.sen.b2b.edi.t270.L2000D;
+import org.sen.b2b.edi.t270.L2100D;
+import org.sen.b2b.edi.t270.L2110D;
+import org.sen.b2b.edi.t270.SDMGDependentDemographicInformation;
+import org.sen.b2b.edi.t270.SEQDependentEligibilityOrBenefitInquiry;
+import org.sen.b2b.edi.t270.SHLDependentLevel;
+import org.sen.b2b.edi.t270.SNM1DependentName;
+import org.sen.b2b.edi.t270.SREFDependentAdditionalIdentification;
+import org.sen.b2b.edi.t270.STRNDependentTraceNumber;
 
 public class L2000DGenerator {
 

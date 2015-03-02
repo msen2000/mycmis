@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.parser;
+package org.sen.b2b.edi.parser;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,21 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import org.delta.b2b.edi.generator.T270EDIGenerator;
-import org.delta.b2b.edi.handler.element.HLHandler;
-import org.delta.b2b.edi.handler.header.GSHandler;
-import org.delta.b2b.edi.handler.header.ISAHandler;
-import org.delta.b2b.edi.handler.header.STHandler;
-import org.delta.b2b.edi.handler.loop.L2000AHandler;
-import org.delta.b2b.edi.handler.loop.L2000BHandler;
-import org.delta.b2b.edi.handler.loop.L2000CHandler;
-import org.delta.b2b.edi.handler.loop.L2000DHandler;
-import org.delta.b2b.edi.handler.segment.BHTHandler;
-import org.delta.b2b.edi.handler.trailer.GEHandler;
-import org.delta.b2b.edi.handler.trailer.IEAHandler;
-import org.delta.b2b.edi.handler.trailer.SEHandler;
-import org.delta.b2b.edi.t271.*;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.generator.T270EDIGenerator;
+import org.sen.b2b.edi.handler.element.HLHandler;
+import org.sen.b2b.edi.handler.header.GSHandler;
+import org.sen.b2b.edi.handler.header.ISAHandler;
+import org.sen.b2b.edi.handler.header.STHandler;
+import org.sen.b2b.edi.handler.loop.L2000AHandler;
+import org.sen.b2b.edi.handler.loop.L2000BHandler;
+import org.sen.b2b.edi.handler.loop.L2000CHandler;
+import org.sen.b2b.edi.handler.loop.L2000DHandler;
+import org.sen.b2b.edi.handler.segment.BHTHandler;
+import org.sen.b2b.edi.handler.trailer.GEHandler;
+import org.sen.b2b.edi.handler.trailer.IEAHandler;
+import org.sen.b2b.edi.handler.trailer.SEHandler;
+import org.sen.b2b.edi.t271.*;
+import org.sen.b2b.edi.t271.T271;
 import org.xml.sax.SAXException;
 
 public class T271EDIParser extends EDIAbstractParser implements EDIParser {

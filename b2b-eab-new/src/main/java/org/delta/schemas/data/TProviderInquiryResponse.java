@@ -5,23 +5,23 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The response of the provider inquiry
  */
 public class TProviderInquiryResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TProvider[] provider;
+    private org.sen.schemas.data.TProvider[] provider;
 
-    private org.delta.schemas.data.SSearchResultType status;
+    private org.sen.schemas.data.SSearchResultType status;
 
     public TProviderInquiryResponse() {
     }
 
     public TProviderInquiryResponse(
-           org.delta.schemas.data.TProvider[] provider,
-           org.delta.schemas.data.SSearchResultType status) {
+           org.sen.schemas.data.TProvider[] provider,
+           org.sen.schemas.data.SSearchResultType status) {
            this.provider = provider;
            this.status = status;
     }
@@ -32,7 +32,7 @@ public class TProviderInquiryResponse  implements java.io.Serializable {
      * 
      * @return provider
      */
-    public org.delta.schemas.data.TProvider[] getProvider() {
+    public org.sen.schemas.data.TProvider[] getProvider() {
         return provider;
     }
 
@@ -42,7 +42,7 @@ public class TProviderInquiryResponse  implements java.io.Serializable {
      * 
      * @param provider
      */
-    public void setProvider(org.delta.schemas.data.TProvider[] provider) {
+    public void setProvider(org.sen.schemas.data.TProvider[] provider) {
         this.provider = provider;
     }
 
@@ -52,7 +52,7 @@ public class TProviderInquiryResponse  implements java.io.Serializable {
      * 
      * @return status
      */
-    public org.delta.schemas.data.SSearchResultType getStatus() {
+    public org.sen.schemas.data.SSearchResultType getStatus() {
         return status;
     }
 
@@ -62,7 +62,7 @@ public class TProviderInquiryResponse  implements java.io.Serializable {
      * 
      * @param status
      */
-    public void setStatus(org.delta.schemas.data.SSearchResultType status) {
+    public void setStatus(org.sen.schemas.data.SSearchResultType status) {
         this.status = status;
     }
 
@@ -118,19 +118,19 @@ public class TProviderInquiryResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TProviderInquiryResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProviderInquiryResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProviderInquiryResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("provider");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "provider"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProvider"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "provider"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProvider"));
         elemField.setNillable(false);
         elemField.setMinOccurs(0);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "provider"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "provider"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("status");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "status"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sSearchResultType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "status"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sSearchResultType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

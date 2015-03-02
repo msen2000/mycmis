@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -18,9 +18,9 @@ public class TTreatment  implements java.io.Serializable {
     /* The description of the treatment Type. */
     private java.lang.String treatmentTypeDescription;
 
-    private org.delta.schemas.data.TTreatmentSummary[] treatmentSummaries;
+    private org.sen.schemas.data.TTreatmentSummary[] treatmentSummaries;
 
-    private org.delta.schemas.data.TProcedureClass[] procedureClassList;
+    private org.sen.schemas.data.TProcedureClass[] procedureClassList;
 
     public TTreatment() {
     }
@@ -28,8 +28,8 @@ public class TTreatment  implements java.io.Serializable {
     public TTreatment(
            java.lang.String treatmentTypeCode,
            java.lang.String treatmentTypeDescription,
-           org.delta.schemas.data.TTreatmentSummary[] treatmentSummaries,
-           org.delta.schemas.data.TProcedureClass[] procedureClassList) {
+           org.sen.schemas.data.TTreatmentSummary[] treatmentSummaries,
+           org.sen.schemas.data.TProcedureClass[] procedureClassList) {
            this.treatmentTypeCode = treatmentTypeCode;
            this.treatmentTypeDescription = treatmentTypeDescription;
            this.treatmentSummaries = treatmentSummaries;
@@ -82,7 +82,7 @@ public class TTreatment  implements java.io.Serializable {
      * 
      * @return treatmentSummaries
      */
-    public org.delta.schemas.data.TTreatmentSummary[] getTreatmentSummaries() {
+    public org.sen.schemas.data.TTreatmentSummary[] getTreatmentSummaries() {
         return treatmentSummaries;
     }
 
@@ -92,7 +92,7 @@ public class TTreatment  implements java.io.Serializable {
      * 
      * @param treatmentSummaries
      */
-    public void setTreatmentSummaries(org.delta.schemas.data.TTreatmentSummary[] treatmentSummaries) {
+    public void setTreatmentSummaries(org.sen.schemas.data.TTreatmentSummary[] treatmentSummaries) {
         this.treatmentSummaries = treatmentSummaries;
     }
 
@@ -102,7 +102,7 @@ public class TTreatment  implements java.io.Serializable {
      * 
      * @return procedureClassList
      */
-    public org.delta.schemas.data.TProcedureClass[] getProcedureClassList() {
+    public org.sen.schemas.data.TProcedureClass[] getProcedureClassList() {
         return procedureClassList;
     }
 
@@ -112,7 +112,7 @@ public class TTreatment  implements java.io.Serializable {
      * 
      * @param procedureClassList
      */
-    public void setProcedureClassList(org.delta.schemas.data.TProcedureClass[] procedureClassList) {
+    public void setProcedureClassList(org.sen.schemas.data.TProcedureClass[] procedureClassList) {
         this.procedureClassList = procedureClassList;
     }
 
@@ -188,32 +188,32 @@ public class TTreatment  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TTreatment.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tTreatment"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tTreatment"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("treatmentTypeCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatmentTypeCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatmentTypeCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("treatmentTypeDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatmentTypeDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatmentTypeDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("treatmentSummaries");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatmentSummaries"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tTreatmentSummary"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatmentSummaries"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tTreatmentSummary"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatmentSummary"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatmentSummary"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureClassList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureClassList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProcedureClass"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureClassList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProcedureClass"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureClass"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureClass"));
         typeDesc.addFieldDesc(elemField);
     }
 

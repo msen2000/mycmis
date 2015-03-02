@@ -1,10 +1,10 @@
 /**
  * 
  */
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
-import org.delta.b2b.edi.t271.T271;
-import org.delta.b2b.edi.util.FileUtil;
+import org.sen.b2b.edi.t271.T271;
+import org.sen.b2b.edi.util.FileUtil;
 
 /**
  * @author ca31085

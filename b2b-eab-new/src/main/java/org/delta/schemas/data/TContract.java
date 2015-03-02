@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -21,16 +21,16 @@ public class TContract  implements java.io.Serializable {
     /* The Contract ID */
     private java.lang.String contractIdentifier;
 
-    private org.delta.schemas.data.TEnrollee[] enrolleeList;
+    private org.sen.schemas.data.TEnrollee[] enrolleeList;
 
     /* The group/contract holder associated with the contract/member */
-    private org.delta.schemas.data.TGroup group;
+    private org.sen.schemas.data.TGroup group;
 
     /* The Sen Den Business Unit */
-    private org.delta.schemas.data.TBusinessUnit businessUnit;
+    private org.sen.schemas.data.TBusinessUnit businessUnit;
 
     /* The status of this contract */
-    private org.delta.schemas.data.SStatusType coverageStatus;
+    private org.sen.schemas.data.SStatusType coverageStatus;
 
     public TContract() {
     }
@@ -39,10 +39,10 @@ public class TContract  implements java.io.Serializable {
            java.util.Date coverageStartDate,
            java.util.Date coverageEndDate,
            java.lang.String contractIdentifier,
-           org.delta.schemas.data.TEnrollee[] enrolleeList,
-           org.delta.schemas.data.TGroup group,
-           org.delta.schemas.data.TBusinessUnit businessUnit,
-           org.delta.schemas.data.SStatusType coverageStatus) {
+           org.sen.schemas.data.TEnrollee[] enrolleeList,
+           org.sen.schemas.data.TGroup group,
+           org.sen.schemas.data.TBusinessUnit businessUnit,
+           org.sen.schemas.data.SStatusType coverageStatus) {
            this.coverageStartDate = coverageStartDate;
            this.coverageEndDate = coverageEndDate;
            this.contractIdentifier = contractIdentifier;
@@ -118,7 +118,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @return enrolleeList
      */
-    public org.delta.schemas.data.TEnrollee[] getEnrolleeList() {
+    public org.sen.schemas.data.TEnrollee[] getEnrolleeList() {
         return enrolleeList;
     }
 
@@ -128,7 +128,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @param enrolleeList
      */
-    public void setEnrolleeList(org.delta.schemas.data.TEnrollee[] enrolleeList) {
+    public void setEnrolleeList(org.sen.schemas.data.TEnrollee[] enrolleeList) {
         this.enrolleeList = enrolleeList;
     }
 
@@ -138,7 +138,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @return group   * The group/contract holder associated with the contract/member
      */
-    public org.delta.schemas.data.TGroup getGroup() {
+    public org.sen.schemas.data.TGroup getGroup() {
         return group;
     }
 
@@ -148,7 +148,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @param group   * The group/contract holder associated with the contract/member
      */
-    public void setGroup(org.delta.schemas.data.TGroup group) {
+    public void setGroup(org.sen.schemas.data.TGroup group) {
         this.group = group;
     }
 
@@ -158,7 +158,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @return businessUnit   * The Sen Den Business Unit
      */
-    public org.delta.schemas.data.TBusinessUnit getBusinessUnit() {
+    public org.sen.schemas.data.TBusinessUnit getBusinessUnit() {
         return businessUnit;
     }
 
@@ -168,7 +168,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @param businessUnit   * The Sen Den Business Unit
      */
-    public void setBusinessUnit(org.delta.schemas.data.TBusinessUnit businessUnit) {
+    public void setBusinessUnit(org.sen.schemas.data.TBusinessUnit businessUnit) {
         this.businessUnit = businessUnit;
     }
 
@@ -178,7 +178,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @return coverageStatus   * The status of this contract
      */
-    public org.delta.schemas.data.SStatusType getCoverageStatus() {
+    public org.sen.schemas.data.SStatusType getCoverageStatus() {
         return coverageStatus;
     }
 
@@ -188,7 +188,7 @@ public class TContract  implements java.io.Serializable {
      * 
      * @param coverageStatus   * The status of this contract
      */
-    public void setCoverageStatus(org.delta.schemas.data.SStatusType coverageStatus) {
+    public void setCoverageStatus(org.sen.schemas.data.SStatusType coverageStatus) {
         this.coverageStatus = coverageStatus;
     }
 
@@ -274,49 +274,49 @@ public class TContract  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TContract.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tContract"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tContract"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coverageStartDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "coverageStartDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "coverageStartDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coverageEndDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "coverageEndDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "coverageEndDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contractIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contractIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contractIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "enrolleeList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tEnrollee"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "enrolleeList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tEnrollee"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "enrollee"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "enrollee"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("group");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "group"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tGroup"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "group"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tGroup"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("businessUnit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "businessUnit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBusinessUnit"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "businessUnit"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBusinessUnit"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coverageStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "coverageStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "coverageStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sStatusType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

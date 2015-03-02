@@ -1,21 +1,21 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.handler.element.NM1DependetHandler;
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.EDMG01DateTimePeriodFormatQualifier;
-import org.delta.b2b.edi.t276.EDMG02DateTimePeriod;
-import org.delta.b2b.edi.t276.EREF01ReferenceIdentificationQualifier4;
-import org.delta.b2b.edi.t276.EREF02ReferenceIdentification;
-import org.delta.b2b.edi.t276.L2000D;
-import org.delta.b2b.edi.t276.L2100D;
-import org.delta.b2b.edi.t276.ObjectFactory;
-import org.delta.b2b.edi.t276.SDMGDependentDemographicInformation;
-import org.delta.b2b.edi.t276.SNM1DependentName;
+import org.sen.b2b.edi.handler.element.NM1DependetHandler;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.EDMG01DateTimePeriodFormatQualifier;
+import org.sen.b2b.edi.t276.EDMG02DateTimePeriod;
+import org.sen.b2b.edi.t276.EREF01ReferenceIdentificationQualifier4;
+import org.sen.b2b.edi.t276.EREF02ReferenceIdentification;
+import org.sen.b2b.edi.t276.L2000D;
+import org.sen.b2b.edi.t276.L2100D;
+import org.sen.b2b.edi.t276.ObjectFactory;
+import org.sen.b2b.edi.t276.SDMGDependentDemographicInformation;
+import org.sen.b2b.edi.t276.SNM1DependentName;
 
 public class L2000DHandler {
 

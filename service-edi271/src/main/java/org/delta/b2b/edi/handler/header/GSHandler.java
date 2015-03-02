@@ -1,21 +1,21 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.header;
+package org.sen.b2b.edi.handler.header;
 
 import java.math.BigInteger;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.EGS01FunctionalIdentifierCode;
-import org.delta.b2b.edi.t271.EGS02ApplicationSenderSCode;
-import org.delta.b2b.edi.t271.EGS03ApplicationReceiverSCode;
-import org.delta.b2b.edi.t271.EGS04Date;
-import org.delta.b2b.edi.t271.EGS05Time;
-import org.delta.b2b.edi.t271.EGS06GroupControlNumber;
-import org.delta.b2b.edi.t271.EGS07ResponsibleAgencyCode;
-import org.delta.b2b.edi.t271.EGS08VersionReleaseIndustryIdentifierCode;
-import org.delta.b2b.edi.t271.SGSFunctionalGroupHeader;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.EGS01FunctionalIdentifierCode;
+import org.sen.b2b.edi.t271.EGS02ApplicationSenderSCode;
+import org.sen.b2b.edi.t271.EGS03ApplicationReceiverSCode;
+import org.sen.b2b.edi.t271.EGS04Date;
+import org.sen.b2b.edi.t271.EGS05Time;
+import org.sen.b2b.edi.t271.EGS06GroupControlNumber;
+import org.sen.b2b.edi.t271.EGS07ResponsibleAgencyCode;
+import org.sen.b2b.edi.t271.EGS08VersionReleaseIndustryIdentifierCode;
+import org.sen.b2b.edi.t271.SGSFunctionalGroupHeader;
+import org.sen.b2b.edi.t271.T271;
 
 /**
  * @author ca31085

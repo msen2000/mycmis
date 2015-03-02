@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package org.delta.mobile.linearlayout;
+package org.sen.mobile.linearlayout;
 
 public final class R {
     public static final class attr {

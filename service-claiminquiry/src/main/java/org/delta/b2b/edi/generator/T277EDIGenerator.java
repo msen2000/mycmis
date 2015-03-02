@@ -1,31 +1,31 @@
-package org.delta.b2b.edi.generator;
+package org.sen.b2b.edi.generator;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t276.L2000A;
-import org.delta.b2b.edi.t276.L2000B;
-import org.delta.b2b.edi.t276.L2000C;
-import org.delta.b2b.edi.t276.L2000D;
-import org.delta.b2b.edi.t276.L2100A;
-import org.delta.b2b.edi.t276.L2100B;
-import org.delta.b2b.edi.t276.L2100C;
-import org.delta.b2b.edi.t276.L2100D;
-import org.delta.b2b.edi.t276.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t276.SGEFunctionalGroupTrailer;
-import org.delta.b2b.edi.t276.SGSFunctionalGroupHeader;
-import org.delta.b2b.edi.t276.SHLDependentLevel;
-import org.delta.b2b.edi.t276.SHLInformationReceiverLevel;
-import org.delta.b2b.edi.t276.SHLInformationSourceLevel;
-import org.delta.b2b.edi.t276.SHLSubscriberLevel;
-import org.delta.b2b.edi.t276.SIEAInterchangeControlTrailer;
-import org.delta.b2b.edi.t276.SISAInterchangeControlHeader;
-import org.delta.b2b.edi.t276.SNM1DependentName;
-import org.delta.b2b.edi.t276.SNM1InformationReceiverName;
-import org.delta.b2b.edi.t276.SNM1SubscriberName;
-import org.delta.b2b.edi.t276.SSETransactionSetTrailer;
-import org.delta.b2b.edi.t276.SSTTransactionSetHeader;
-import org.delta.b2b.edi.t276.T276;
-import org.delta.b2b.edi.t276.*;
+import org.sen.b2b.edi.t276.L2000A;
+import org.sen.b2b.edi.t276.L2000B;
+import org.sen.b2b.edi.t276.L2000C;
+import org.sen.b2b.edi.t276.L2000D;
+import org.sen.b2b.edi.t276.L2100A;
+import org.sen.b2b.edi.t276.L2100B;
+import org.sen.b2b.edi.t276.L2100C;
+import org.sen.b2b.edi.t276.L2100D;
+import org.sen.b2b.edi.t276.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t276.SGEFunctionalGroupTrailer;
+import org.sen.b2b.edi.t276.SGSFunctionalGroupHeader;
+import org.sen.b2b.edi.t276.SHLDependentLevel;
+import org.sen.b2b.edi.t276.SHLInformationReceiverLevel;
+import org.sen.b2b.edi.t276.SHLInformationSourceLevel;
+import org.sen.b2b.edi.t276.SHLSubscriberLevel;
+import org.sen.b2b.edi.t276.SIEAInterchangeControlTrailer;
+import org.sen.b2b.edi.t276.SISAInterchangeControlHeader;
+import org.sen.b2b.edi.t276.SNM1DependentName;
+import org.sen.b2b.edi.t276.SNM1InformationReceiverName;
+import org.sen.b2b.edi.t276.SNM1SubscriberName;
+import org.sen.b2b.edi.t276.SSETransactionSetTrailer;
+import org.sen.b2b.edi.t276.SSTTransactionSetHeader;
+import org.sen.b2b.edi.t276.T276;
+import org.sen.b2b.edi.t276.*;
 
 public class T277EDIGenerator implements EDIGenerator { 
 

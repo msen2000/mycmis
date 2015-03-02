@@ -5,23 +5,23 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The response of the get claim by id service call
  */
 public class TClaimByIdResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TClaim claim;
+    private org.sen.schemas.data.TClaim claim;
 
-    private org.delta.schemas.data.SClaimByIdResponseStatusType claimResponseStatus;
+    private org.sen.schemas.data.SClaimByIdResponseStatusType claimResponseStatus;
 
     public TClaimByIdResponse() {
     }
 
     public TClaimByIdResponse(
-           org.delta.schemas.data.TClaim claim,
-           org.delta.schemas.data.SClaimByIdResponseStatusType claimResponseStatus) {
+           org.sen.schemas.data.TClaim claim,
+           org.sen.schemas.data.SClaimByIdResponseStatusType claimResponseStatus) {
            this.claim = claim;
            this.claimResponseStatus = claimResponseStatus;
     }
@@ -32,7 +32,7 @@ public class TClaimByIdResponse  implements java.io.Serializable {
      * 
      * @return claim
      */
-    public org.delta.schemas.data.TClaim getClaim() {
+    public org.sen.schemas.data.TClaim getClaim() {
         return claim;
     }
 
@@ -42,7 +42,7 @@ public class TClaimByIdResponse  implements java.io.Serializable {
      * 
      * @param claim
      */
-    public void setClaim(org.delta.schemas.data.TClaim claim) {
+    public void setClaim(org.sen.schemas.data.TClaim claim) {
         this.claim = claim;
     }
 
@@ -52,7 +52,7 @@ public class TClaimByIdResponse  implements java.io.Serializable {
      * 
      * @return claimResponseStatus
      */
-    public org.delta.schemas.data.SClaimByIdResponseStatusType getClaimResponseStatus() {
+    public org.sen.schemas.data.SClaimByIdResponseStatusType getClaimResponseStatus() {
         return claimResponseStatus;
     }
 
@@ -62,7 +62,7 @@ public class TClaimByIdResponse  implements java.io.Serializable {
      * 
      * @param claimResponseStatus
      */
-    public void setClaimResponseStatus(org.delta.schemas.data.SClaimByIdResponseStatusType claimResponseStatus) {
+    public void setClaimResponseStatus(org.sen.schemas.data.SClaimByIdResponseStatusType claimResponseStatus) {
         this.claimResponseStatus = claimResponseStatus;
     }
 
@@ -110,17 +110,17 @@ public class TClaimByIdResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TClaimByIdResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tClaimByIdResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tClaimByIdResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claim");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claim"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tClaim"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claim"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tClaim"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimResponseStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimResponseStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sClaimByIdResponseStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimResponseStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sClaimByIdResponseStatusType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

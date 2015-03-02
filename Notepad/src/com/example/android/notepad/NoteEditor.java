@@ -16,7 +16,7 @@
 
 package com.example.android.notepad;
 
-import org.delta.mobile.notepad.R;
+import org.sen.mobile.notepad.R;
 
 import android.app.Activity;
 import android.content.ClipData;

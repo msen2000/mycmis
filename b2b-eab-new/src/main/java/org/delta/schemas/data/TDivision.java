@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -136,23 +136,23 @@ public class TDivision  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TDivision.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tDivision"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tDivision"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionSelfFunded");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionSelfFunded"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionSelfFunded"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

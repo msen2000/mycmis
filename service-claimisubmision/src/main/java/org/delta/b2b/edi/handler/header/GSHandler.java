@@ -1,12 +1,12 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.header;
+package org.sen.b2b.edi.handler.header;
 
 import java.math.BigInteger;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t837.*;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t837.*;
 
 /**
  * @author ca31085

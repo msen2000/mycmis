@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -16,7 +16,7 @@ public class TProcedureClass  implements java.io.Serializable {
 
     private java.lang.String procedureClassificationDescription;
 
-    private org.delta.schemas.data.TProcedureCode[] procedureCodeList;
+    private org.sen.schemas.data.TProcedureCode[] procedureCodeList;
 
     public TProcedureClass() {
     }
@@ -24,7 +24,7 @@ public class TProcedureClass  implements java.io.Serializable {
     public TProcedureClass(
            java.lang.String procedureClassificationCode,
            java.lang.String procedureClassificationDescription,
-           org.delta.schemas.data.TProcedureCode[] procedureCodeList) {
+           org.sen.schemas.data.TProcedureCode[] procedureCodeList) {
            this.procedureClassificationCode = procedureClassificationCode;
            this.procedureClassificationDescription = procedureClassificationDescription;
            this.procedureCodeList = procedureCodeList;
@@ -76,7 +76,7 @@ public class TProcedureClass  implements java.io.Serializable {
      * 
      * @return procedureCodeList
      */
-    public org.delta.schemas.data.TProcedureCode[] getProcedureCodeList() {
+    public org.sen.schemas.data.TProcedureCode[] getProcedureCodeList() {
         return procedureCodeList;
     }
 
@@ -86,7 +86,7 @@ public class TProcedureClass  implements java.io.Serializable {
      * 
      * @param procedureCodeList
      */
-    public void setProcedureCodeList(org.delta.schemas.data.TProcedureCode[] procedureCodeList) {
+    public void setProcedureCodeList(org.sen.schemas.data.TProcedureCode[] procedureCodeList) {
         this.procedureCodeList = procedureCodeList;
     }
 
@@ -148,25 +148,25 @@ public class TProcedureClass  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TProcedureClass.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProcedureClass"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProcedureClass"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureClassificationCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureClassificationCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureClassificationCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureClassificationDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureClassificationDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureClassificationDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureCodeList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureCodeList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProcedureCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureCodeList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProcedureCode"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureCode"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureCode"));
         typeDesc.addFieldDesc(elemField);
     }
 

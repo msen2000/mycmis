@@ -1,14 +1,14 @@
-package org.delta.services;
+package org.sen.services;
 
-import org.delta.schemas.error.SDomainType;
-import org.delta.schemas.error.SErrorCode;
-import org.delta.schemas.error.TInquiryError;
+import org.sen.schemas.error.SDomainType;
+import org.sen.schemas.error.SErrorCode;
+import org.sen.schemas.error.TInquiryError;
 
 public final class TInquiryErrorConverter {
 //  public TInquiryError(
-//    org.delta.schemas.error.SErrorCode errorCode,
+//    org.sen.schemas.error.SErrorCode errorCode,
 //    java.lang.String errorDetail,
-//    org.delta.schemas.error.SDomainType domainType) {
+//    org.sen.schemas.error.SDomainType domainType) {
 		
 	public static TInquiryError convertToTInquiryError(Throwable e, SDomainType domainType) {
 	  if ( e instanceof MissingParameterException )

@@ -1,9 +1,9 @@
-package org.delta.b2b.edi.handler.trailer;
+package org.sen.b2b.edi.handler.trailer;
 
 import java.math.BigInteger;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.*;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.*;
 
 public class GEHandler {
 

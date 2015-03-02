@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -18,7 +18,7 @@ public class TCopayment  implements java.io.Serializable {
     /* The maximum copay amount or percentage. Zero indicates no copay */
     private double maximum;
 
-    private org.delta.schemas.data.SCopaymentType copaymentType;  // attribute
+    private org.sen.schemas.data.SCopaymentType copaymentType;  // attribute
 
     public TCopayment() {
     }
@@ -26,7 +26,7 @@ public class TCopayment  implements java.io.Serializable {
     public TCopayment(
            double minimum,
            double maximum,
-           org.delta.schemas.data.SCopaymentType copaymentType) {
+           org.sen.schemas.data.SCopaymentType copaymentType) {
            this.minimum = minimum;
            this.maximum = maximum;
            this.copaymentType = copaymentType;
@@ -78,7 +78,7 @@ public class TCopayment  implements java.io.Serializable {
      * 
      * @return copaymentType
      */
-    public org.delta.schemas.data.SCopaymentType getCopaymentType() {
+    public org.sen.schemas.data.SCopaymentType getCopaymentType() {
         return copaymentType;
     }
 
@@ -88,7 +88,7 @@ public class TCopayment  implements java.io.Serializable {
      * 
      * @param copaymentType
      */
-    public void setCopaymentType(org.delta.schemas.data.SCopaymentType copaymentType) {
+    public void setCopaymentType(org.sen.schemas.data.SCopaymentType copaymentType) {
         this.copaymentType = copaymentType;
     }
 
@@ -134,21 +134,21 @@ public class TCopayment  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TCopayment.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tCopayment"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tCopayment"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("copaymentType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "copaymentType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sCopaymentType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sCopaymentType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("minimum");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "minimum"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "minimum"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("maximum");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "maximum"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "maximum"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -1,6 +1,6 @@
-package org.delta.services;
+package org.sen.services;
 
-import org.delta.crossplane.common.test.AbstractSpringContextTests;
+import org.sen.crossplane.common.test.AbstractSpringContextTests;
 
 public class AbstractTestBase extends AbstractSpringContextTests {
 	private String configLocation = "classpath:/applicationContextTest.xml";

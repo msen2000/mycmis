@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2007 sp1 (http://www.altova.com) by Darrell R Thurmond (KoolKode Technologies, LLC) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:error="http://schemas.delta.org/error" targetNamespace="http://schemas.delta.org/error" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:error="http://schemas.sen.org/error" targetNamespace="http://schemas.sen.org/error" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:complexType name="tError">
 		<xs:annotation>
 			<xs:documentation>The definition of an error object</xs:documentation>

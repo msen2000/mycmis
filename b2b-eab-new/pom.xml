@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<artifactId>crossplane</artifactId>
-		<groupId>org.delta.crossplane</groupId>
+		<groupId>org.sen.crossplane</groupId>
 		<version>3.0.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.delta.crossplane</groupId>
+	<groupId>org.sen.crossplane</groupId>
 	<artifactId>b2b</artifactId>
 	<packaging>war</packaging>
-	<name>Delta A3 B2B</name>
+	<name>sen A3 B2B</name>
 	<version>3.0.0</version>
 	<build>
 		<testResources>
@@ -96,30 +96,30 @@
 		</dependency>
 		<!-- A3 Services Dependencies -->
 		<dependency>
-			<groupId>org.delta.crossplane</groupId>
+			<groupId>org.sen.crossplane</groupId>
 			<artifactId>common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.delta.crossplane</groupId>
+			<groupId>org.sen.crossplane</groupId>
 			<artifactId>service-eligibility</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.delta.crossplane</groupId>
+			<groupId>org.sen.crossplane</groupId>
 			<artifactId>service-benefits</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.delta.crossplane</groupId>
+			<groupId>org.sen.crossplane</groupId>
 			<artifactId>service-claim</artifactId>
 			<version>${project.version}</version>
 		</dependency>      
 	</dependencies>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>maven.delta.org</id>
-			<name>Delta internal Maven Repository</name>
+			<id>maven.sen.org</id>
+			<name>sen internal Maven Repository</name>
 			<url>scp://10.4.65.135/opt/apache-2.2.0/htdocs</url>
 		</snapshotRepository>
 	</distributionManagement>

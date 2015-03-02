@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -110,17 +110,17 @@ public class TDateRange  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TDateRange.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tDateRange"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tDateRange"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fromDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "fromDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "fromDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("toDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "toDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "toDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

@@ -1,4 +1,4 @@
-package org.delta.b2b.test;
+package org.sen.b2b.test;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

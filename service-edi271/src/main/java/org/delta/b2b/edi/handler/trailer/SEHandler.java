@@ -1,10 +1,10 @@
-package org.delta.b2b.edi.handler.trailer;
+package org.sen.b2b.edi.handler.trailer;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.ESE01NumberOfIncludedSegments;
-import org.delta.b2b.edi.t271.ESE02TransactionSetControlNumber;
-import org.delta.b2b.edi.t271.SSETransactionSetTrailer;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.ESE01NumberOfIncludedSegments;
+import org.sen.b2b.edi.t271.ESE02TransactionSetControlNumber;
+import org.sen.b2b.edi.t271.SSETransactionSetTrailer;
+import org.sen.b2b.edi.t271.T271;
 
 public class SEHandler {
 

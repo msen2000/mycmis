@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -14,14 +14,14 @@ package org.delta.schemas.data;
 public class TNetworkTier  implements java.io.Serializable {
     private java.lang.String networkDescription;
 
-    private org.delta.schemas.data.TBenefitInfo[] benefitClass;
+    private org.sen.schemas.data.TBenefitInfo[] benefitClass;
 
     public TNetworkTier() {
     }
 
     public TNetworkTier(
            java.lang.String networkDescription,
-           org.delta.schemas.data.TBenefitInfo[] benefitClass) {
+           org.sen.schemas.data.TBenefitInfo[] benefitClass) {
            this.networkDescription = networkDescription;
            this.benefitClass = benefitClass;
     }
@@ -52,7 +52,7 @@ public class TNetworkTier  implements java.io.Serializable {
      * 
      * @return benefitClass
      */
-    public org.delta.schemas.data.TBenefitInfo[] getBenefitClass() {
+    public org.sen.schemas.data.TBenefitInfo[] getBenefitClass() {
         return benefitClass;
     }
 
@@ -62,15 +62,15 @@ public class TNetworkTier  implements java.io.Serializable {
      * 
      * @param benefitClass
      */
-    public void setBenefitClass(org.delta.schemas.data.TBenefitInfo[] benefitClass) {
+    public void setBenefitClass(org.sen.schemas.data.TBenefitInfo[] benefitClass) {
         this.benefitClass = benefitClass;
     }
 
-    public org.delta.schemas.data.TBenefitInfo getBenefitClass(int i) {
+    public org.sen.schemas.data.TBenefitInfo getBenefitClass(int i) {
         return this.benefitClass[i];
     }
 
-    public void setBenefitClass(int i, org.delta.schemas.data.TBenefitInfo _value) {
+    public void setBenefitClass(int i, org.sen.schemas.data.TBenefitInfo _value) {
         this.benefitClass[i] = _value;
     }
 
@@ -126,17 +126,17 @@ public class TNetworkTier  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TNetworkTier.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tNetworkTier"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tNetworkTier"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("networkDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "NetworkDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "NetworkDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitClass");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "BenefitClass"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitInfo"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "BenefitClass"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitInfo"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);

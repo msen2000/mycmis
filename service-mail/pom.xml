@@ -4,7 +4,7 @@
 	<groupId>org.sen.service</groupId>
 	<artifactId>service-mail</artifactId>
 	<packaging>jar</packaging>
-	<name>Delta A3 Mail Service</name>
+	<name>sen A3 Mail Service</name>
 	<version>1.0</version>
 	<build>
 		<testResources>
@@ -24,7 +24,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.delta.plugins.maven</groupId>
+				<groupId>org.sen.plugins.maven</groupId>
 				<artifactId>xjc</artifactId>
 				<executions>
 					<execution>
@@ -37,7 +37,7 @@
 				<configuration>
 					<task>
 						<![CDATA[
-							<xjc schema="src/main/resources/email/xsd/emailservice.xsd" package="org.delta.crossplane.messages.mail.request" target="/src/main/java"/>
+							<xjc schema="src/main/resources/email/xsd/emailservice.xsd" package="org.sen.crossplane.messages.mail.request" target="/src/main/java"/>
 						]]>
 					</task>
 				</configuration>

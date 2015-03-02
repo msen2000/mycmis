@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -112,16 +112,16 @@ public class TPerson  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TPerson.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPerson"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPerson"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "firstName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "firstName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "lastName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "lastName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

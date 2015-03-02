@@ -1,4 +1,4 @@
-package org.delta.mobile.linearlayout;
+package org.sen.mobile.linearlayout;
 
 import android.app.Activity;
 import android.content.Context;

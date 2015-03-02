@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.delta.b2b.xml.marshaller;
+package org.sen.b2b.xml.marshaller;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,8 +13,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 
-import org.delta.b2b.edi.generator.T837EDIGenerator;
-import org.delta.b2b.edi.t837.T837;
+import org.sen.b2b.edi.generator.T837EDIGenerator;
+import org.sen.b2b.edi.t837.T837;
 
 /**
  * @author ca31085
@@ -26,7 +26,7 @@ public class XML837Marshaller implements XMLMarshaller {
 	String contextPath = "";
 
 	public XML837Marshaller() {
-		contextPath = "org.delta.b2b.edi.t837";
+		contextPath = "org.sen.b2b.edi.t837";
 	}
 	
 	public String marshall(T837 dObject) throws Exception {

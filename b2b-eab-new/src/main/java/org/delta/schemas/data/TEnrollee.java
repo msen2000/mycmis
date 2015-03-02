@@ -5,13 +5,13 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The definition of an enrollee object
  */
-public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.io.Serializable {
+public class TEnrollee  extends org.sen.schemas.data.TPerson  implements java.io.Serializable {
     /* The metavance enrollee identifier */
     private java.lang.String enrolleeIdentifier;
 
@@ -19,7 +19,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
     private java.lang.String personIdentifier;
 
     /* The relation type (Relationship to primary enrollee) */
-    private org.delta.schemas.data.SEnrolleeType relationshipCode;
+    private org.sen.schemas.data.SEnrolleeType relationshipCode;
 
     /* The member number associated with the contract. */
     private java.lang.String memberNumber;
@@ -31,13 +31,13 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
     private java.lang.String emailAddress;
 
     /* The addresses associated with the enrollee */
-    private org.delta.schemas.data.TAddress[] address;
+    private org.sen.schemas.data.TAddress[] address;
 
     /* The HIPPA privacy flag */
     private boolean privacyFlag;
 
     /* The status of the eligibility. (Active/Pending/Inactive) */
-    private org.delta.schemas.data.SStatusType eligibilityStatus;
+    private org.sen.schemas.data.SStatusType eligibilityStatus;
 
     /* The date covearge begin */
     private java.util.Date effectiveDate;
@@ -56,13 +56,13 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
            java.lang.String lastName,
            java.lang.String enrolleeIdentifier,
            java.lang.String personIdentifier,
-           org.delta.schemas.data.SEnrolleeType relationshipCode,
+           org.sen.schemas.data.SEnrolleeType relationshipCode,
            java.lang.String memberNumber,
            java.util.Date dateOfBirth,
            java.lang.String emailAddress,
-           org.delta.schemas.data.TAddress[] address,
+           org.sen.schemas.data.TAddress[] address,
            boolean privacyFlag,
-           org.delta.schemas.data.SStatusType eligibilityStatus,
+           org.sen.schemas.data.SStatusType eligibilityStatus,
            java.util.Date effectiveDate,
            java.util.Date terminationDate,
            java.lang.String benefitPackageIdentifier) {
@@ -129,7 +129,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return relationshipCode   * The relation type (Relationship to primary enrollee)
      */
-    public org.delta.schemas.data.SEnrolleeType getRelationshipCode() {
+    public org.sen.schemas.data.SEnrolleeType getRelationshipCode() {
         return relationshipCode;
     }
 
@@ -139,7 +139,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param relationshipCode   * The relation type (Relationship to primary enrollee)
      */
-    public void setRelationshipCode(org.delta.schemas.data.SEnrolleeType relationshipCode) {
+    public void setRelationshipCode(org.sen.schemas.data.SEnrolleeType relationshipCode) {
         this.relationshipCode = relationshipCode;
     }
 
@@ -209,7 +209,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return address   * The addresses associated with the enrollee
      */
-    public org.delta.schemas.data.TAddress[] getAddress() {
+    public org.sen.schemas.data.TAddress[] getAddress() {
         return address;
     }
 
@@ -219,15 +219,15 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param address   * The addresses associated with the enrollee
      */
-    public void setAddress(org.delta.schemas.data.TAddress[] address) {
+    public void setAddress(org.sen.schemas.data.TAddress[] address) {
         this.address = address;
     }
 
-    public org.delta.schemas.data.TAddress getAddress(int i) {
+    public org.sen.schemas.data.TAddress getAddress(int i) {
         return this.address[i];
     }
 
-    public void setAddress(int i, org.delta.schemas.data.TAddress _value) {
+    public void setAddress(int i, org.sen.schemas.data.TAddress _value) {
         this.address[i] = _value;
     }
 
@@ -257,7 +257,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return eligibilityStatus   * The status of the eligibility. (Active/Pending/Inactive)
      */
-    public org.delta.schemas.data.SStatusType getEligibilityStatus() {
+    public org.sen.schemas.data.SStatusType getEligibilityStatus() {
         return eligibilityStatus;
     }
 
@@ -267,7 +267,7 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param eligibilityStatus   * The status of the eligibility. (Active/Pending/Inactive)
      */
-    public void setEligibilityStatus(org.delta.schemas.data.SStatusType eligibilityStatus) {
+    public void setEligibilityStatus(org.sen.schemas.data.SStatusType eligibilityStatus) {
         this.eligibilityStatus = eligibilityStatus;
     }
 
@@ -439,81 +439,81 @@ public class TEnrollee  extends org.delta.schemas.data.TPerson  implements java.
         new org.apache.axis.description.TypeDesc(TEnrollee.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tEnrollee"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tEnrollee"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "enrolleeIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "enrolleeIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("personIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "personIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "personIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("relationshipCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "relationshipCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sEnrolleeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "relationshipCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sEnrolleeType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("memberNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "memberNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "memberNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dateOfBirth");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "dateOfBirth"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "dateOfBirth"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("emailAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "emailAddress"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "emailAddress"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("address");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAddress"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "address"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAddress"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("privacyFlag");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "privacyFlag"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "privacyFlag"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("eligibilityStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "eligibilityStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "eligibilityStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sStatusType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("effectiveDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "effectiveDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "effectiveDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("terminationDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "terminationDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "terminationDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitPackageIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "benefitPackageIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "benefitPackageIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -5,19 +5,19 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.EligibilityInformation eligibilityInformation;
+    private org.sen.schemas.data.EligibilityInformation eligibilityInformation;
 
-    private org.delta.schemas.data.TNetworkTier[] benefitsInformation;
+    private org.sen.schemas.data.TNetworkTier[] benefitsInformation;
 
     public B2BEligibilityAndBenefitsResponse() {
     }
 
     public B2BEligibilityAndBenefitsResponse(
-           org.delta.schemas.data.EligibilityInformation eligibilityInformation,
-           org.delta.schemas.data.TNetworkTier[] benefitsInformation) {
+           org.sen.schemas.data.EligibilityInformation eligibilityInformation,
+           org.sen.schemas.data.TNetworkTier[] benefitsInformation) {
            this.eligibilityInformation = eligibilityInformation;
            this.benefitsInformation = benefitsInformation;
     }
@@ -28,7 +28,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @return eligibilityInformation
      */
-    public org.delta.schemas.data.EligibilityInformation getEligibilityInformation() {
+    public org.sen.schemas.data.EligibilityInformation getEligibilityInformation() {
         return eligibilityInformation;
     }
 
@@ -38,7 +38,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @param eligibilityInformation
      */
-    public void setEligibilityInformation(org.delta.schemas.data.EligibilityInformation eligibilityInformation) {
+    public void setEligibilityInformation(org.sen.schemas.data.EligibilityInformation eligibilityInformation) {
         this.eligibilityInformation = eligibilityInformation;
     }
 
@@ -48,7 +48,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @return benefitsInformation
      */
-    public org.delta.schemas.data.TNetworkTier[] getBenefitsInformation() {
+    public org.sen.schemas.data.TNetworkTier[] getBenefitsInformation() {
         return benefitsInformation;
     }
 
@@ -58,7 +58,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @param benefitsInformation
      */
-    public void setBenefitsInformation(org.delta.schemas.data.TNetworkTier[] benefitsInformation) {
+    public void setBenefitsInformation(org.sen.schemas.data.TNetworkTier[] benefitsInformation) {
         this.benefitsInformation = benefitsInformation;
     }
 
@@ -114,17 +114,17 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
         new org.apache.axis.description.TypeDesc(B2BEligibilityAndBenefitsResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">B2BEligibilityAndBenefitsResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">B2BEligibilityAndBenefitsResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("eligibilityInformation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "EligibilityInformation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">EligibilityInformation"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "EligibilityInformation"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">EligibilityInformation"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitsInformation");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "BenefitsInformation"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">BenefitsInformation"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "BenefitsInformation"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">BenefitsInformation"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

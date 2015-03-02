@@ -1,14 +1,14 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 /**
  * 
  * 324 2600 III Subscriber Eligibility or Benefit Additional Information S 1
  * 
  */
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.EIII01CodeListQualifierCode;
-import org.delta.b2b.edi.t271.L2115C;
-import org.delta.b2b.edi.t271.SIIISubscriberEligibilityOrBenefitAdditionalInformation;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.EIII01CodeListQualifierCode;
+import org.sen.b2b.edi.t271.L2115C;
+import org.sen.b2b.edi.t271.SIIISubscriberEligibilityOrBenefitAdditionalInformation;
+import org.sen.b2b.edi.t271.T271;
 
 public class L2115CHandler {
 	private L2115C l2115c;

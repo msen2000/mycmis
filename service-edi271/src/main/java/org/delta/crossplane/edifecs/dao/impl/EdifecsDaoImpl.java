@@ -3,7 +3,7 @@
  * Copyrights 2008 Sen Den, Inc. All rights reserved.
  * Sen Den PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package org.delta.crossplane.edifecs.dao.impl;
+package org.sen.crossplane.edifecs.dao.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -14,11 +14,11 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.delta.crossplane.domain.EdifecsReport;
-import org.delta.crossplane.domain.EdifecsRequestResponse;
-import org.delta.crossplane.edifecs.dao.EdifecsDao;
-import org.delta.crossplane.edifecs.util.StartXEServer;
-import org.delta.crossplane.transport.CrossPlaneTransportException;
+import org.sen.crossplane.domain.EdifecsReport;
+import org.sen.crossplane.domain.EdifecsRequestResponse;
+import org.sen.crossplane.edifecs.dao.EdifecsDao;
+import org.sen.crossplane.edifecs.util.StartXEServer;
+import org.sen.crossplane.transport.CrossPlaneTransportException;
 
 import com.edifecs.xengine.XEConsts;
 import com.edifecs.xengine.XEException;

@@ -1,8 +1,8 @@
-package org.delta.b2b.edi.handler.element;
+package org.sen.b2b.edi.handler.element;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t837.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t837.T837;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t837.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t837.T837;
 
 public class REFHandler {
 

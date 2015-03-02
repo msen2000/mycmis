@@ -42,18 +42,18 @@
 		<level value="ERROR"/>
 	</logger>
 
-	<!-- Delta -->
-	<logger name="org.delta.crossplane.ivr">
+	<!-- sen -->
+	<logger name="org.sen.crossplane.ivr">
 		<level value="ERROR"/>
 	</logger>
-	<logger name="org.delta.crossplane">
+	<logger name="org.sen.crossplane">
 		<level value="DEBUG"/>
 	</logger>
-	<logger name="org.delta">
+	<logger name="org.sen">
 		<level value="DEBUG"/>
 	</logger>
 	
-	<logger name="org.delta.crossplane.transport">
+	<logger name="org.sen.crossplane.transport">
 		<level value="DEBUG"/>
 	</logger>
 		

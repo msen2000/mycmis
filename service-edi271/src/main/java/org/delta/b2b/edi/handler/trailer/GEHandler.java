@@ -1,12 +1,12 @@
-package org.delta.b2b.edi.handler.trailer;
+package org.sen.b2b.edi.handler.trailer;
 
 import java.math.BigInteger;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.EGE01NumberOfTransactionSetsIncluded;
-import org.delta.b2b.edi.t271.EGE02GroupControlNumber;
-import org.delta.b2b.edi.t271.SGEFunctionalGroupTrailer;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.EGE01NumberOfTransactionSetsIncluded;
+import org.sen.b2b.edi.t271.EGE02GroupControlNumber;
+import org.sen.b2b.edi.t271.SGEFunctionalGroupTrailer;
+import org.sen.b2b.edi.t271.T271;
 
 public class GEHandler {
 

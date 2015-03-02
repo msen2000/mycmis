@@ -1,7 +1,7 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t837.L2000A;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t837.L2000A;
 
 public class L2000AHandler {
 	

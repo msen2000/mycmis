@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
 public interface EDITranslator {
 	public String convertEDI2XML (String ediFileName) throws Exception;

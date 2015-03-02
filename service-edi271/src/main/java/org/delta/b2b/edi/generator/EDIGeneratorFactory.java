@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.generator;
+package org.sen.b2b.edi.generator;
 
 
 public class EDIGeneratorFactory {

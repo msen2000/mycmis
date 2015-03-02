@@ -1,7 +1,7 @@
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
-import org.delta.b2b.edi.t270.T270;
-import org.delta.b2b.edi.util.FileUtil;
+import org.sen.b2b.edi.t270.T270;
+import org.sen.b2b.edi.util.FileUtil;
 
 public class T270EDITranslator extends EDIAbstractTranslator implements EDITranslator {
 	

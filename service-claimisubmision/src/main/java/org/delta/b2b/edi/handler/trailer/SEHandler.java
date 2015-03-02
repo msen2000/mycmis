@@ -1,8 +1,8 @@
-package org.delta.b2b.edi.handler.trailer;
+package org.sen.b2b.edi.handler.trailer;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t837.SSETransactionSetTrailer;
-import org.delta.b2b.edi.t837.*;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t837.SSETransactionSetTrailer;
+import org.sen.b2b.edi.t837.*;
 
 public class SEHandler {
 

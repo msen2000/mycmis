@@ -1,4 +1,4 @@
-package org.delta.crossplane.mail.template;
+package org.sen.crossplane.mail.template;
 
 //import org.apache.commons.lang.StringUtils;
 

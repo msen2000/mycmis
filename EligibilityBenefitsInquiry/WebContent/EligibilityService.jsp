@@ -7,7 +7,7 @@
 <title>Senthil ! Eligibility and Benefits </title>
 </head>
 <body>
-<!-- <form action="mailto:SMadhaiyan@delta.org?subject=mailing list" method=post enctype="text/plain"> -->
+<!-- <form action="mailto:SMadhaiyan@sen.org?subject=mailing list" method=post enctype="text/plain"> -->
 <form action="EABServlet" method=post enctype="text/plain"> 
 Last name: <input type="text" name="Last Name" size=40 value=""> 
 <br> 

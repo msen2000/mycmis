@@ -41,7 +41,7 @@
 		</layout>
 	</appender>
   
-  <logger name="org.delta">
+  <logger name="org.sen">
 	<level value="DEBUG"/>
   </logger>
   <logger name="com.ibatis">

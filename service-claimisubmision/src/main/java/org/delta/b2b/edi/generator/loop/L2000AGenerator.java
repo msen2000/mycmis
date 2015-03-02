@@ -1,8 +1,8 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
-import org.delta.b2b.edi.t837.L2000A;
-import org.delta.b2b.edi.t837.SHLBillingProviderHierarchicalLevel;
-import org.delta.b2b.edi.t837.SNM1PayerName;
+import org.sen.b2b.edi.t837.L2000A;
+import org.sen.b2b.edi.t837.SHLBillingProviderHierarchicalLevel;
+import org.sen.b2b.edi.t837.SNM1PayerName;
 
 public class L2000AGenerator {
 

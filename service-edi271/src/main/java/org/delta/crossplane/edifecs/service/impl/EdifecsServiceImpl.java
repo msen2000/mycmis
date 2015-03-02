@@ -3,10 +3,10 @@
  * Copyrights 2008 Sen Den, Inc. All rights reserved.
  * Sen Den PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package org.delta.crossplane.edifecs.service.impl;
+package org.sen.crossplane.edifecs.service.impl;
 
-import org.delta.crossplane.common.service.AbstractService;
-import org.delta.crossplane.domain.EdifecsRequestResponse;
+import org.sen.crossplane.common.service.AbstractService;
+import org.sen.crossplane.domain.EdifecsRequestResponse;
 
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
@@ -17,13 +17,13 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.delta.crossplane.edifecs.service.EdifecsService;
+import org.sen.crossplane.edifecs.service.EdifecsService;
 
-import org.delta.crossplane.edifecs.dao.EdifecsDao;
-import org.delta.crossplane.edifecs.request.ReportType;
-import org.delta.crossplane.edifecs.request.impl.*;
+import org.sen.crossplane.edifecs.dao.EdifecsDao;
+import org.sen.crossplane.edifecs.request.ReportType;
+import org.sen.crossplane.edifecs.request.impl.*;
 
-import org.delta.crossplane.transport.CrossPlaneTransportException;
+import org.sen.crossplane.transport.CrossPlaneTransportException;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -56,7 +56,7 @@ public class EdifecsServiceImpl implements EdifecsService {
 	private static final Log logger = LogFactory
 			.getLog(EdifecsServiceImpl.class);
 
-	private static final String EDIFECS_PACKAGE_PREFIX = "org.delta.crossplane.edifecs.";
+	private static final String EDIFECS_PACKAGE_PREFIX = "org.sen.crossplane.edifecs.";
 
 	private static final String EDIFECS_PACKAGE_REQUEST_PACKAGE = EDIFECS_PACKAGE_PREFIX
 	+ "request";
@@ -122,28 +122,28 @@ public class EdifecsServiceImpl implements EdifecsService {
 		}
 		try {
 			// Set validate and tranform detail in response
-			org.delta.crossplane.edifecs.response.Operation operation = new org.delta.crossplane.edifecs.response.impl.OperationImpl();
+			org.sen.crossplane.edifecs.response.Operation operation = new org.sen.crossplane.edifecs.response.impl.OperationImpl();
 			operation.setValidate(edifecsRequestResponse.isValidate());
 			operation.setTransform(edifecsRequestResponse.isTransform());
 
-			org.delta.crossplane.edifecs.response.Header header = new org.delta.crossplane.edifecs.response.impl.HeaderImpl();
+			org.sen.crossplane.edifecs.response.Header header = new org.sen.crossplane.edifecs.response.impl.HeaderImpl();
 			header.setOperation(operation);
 
 			// Set Output tag values in response
-			org.delta.crossplane.edifecs.response.Output output = new org.delta.crossplane.edifecs.response.impl.OutputImpl();
-			List<org.delta.crossplane.edifecs.response.Report> lReports = output.getReport();
+			org.sen.crossplane.edifecs.response.Output output = new org.sen.crossplane.edifecs.response.impl.OutputImpl();
+			List<org.sen.crossplane.edifecs.response.Report> lReports = output.getReport();
 			// Set individual report name, type and audit result data in response
-			List<org.delta.crossplane.domain.EdifecsReport> lVoReports = edifecsRequestResponse.getReports();
-			for(Iterator<org.delta.crossplane.domain.EdifecsReport> itReport = lVoReports.iterator(); itReport.hasNext();) {
-				org.delta.crossplane.domain.EdifecsReport voReport = (org.delta.crossplane.domain.EdifecsReport)itReport.next();
-				org.delta.crossplane.edifecs.response.Report report = new org.delta.crossplane.edifecs.response.impl.ReportImpl();
+			List<org.sen.crossplane.domain.EdifecsReport> lVoReports = edifecsRequestResponse.getReports();
+			for(Iterator<org.sen.crossplane.domain.EdifecsReport> itReport = lVoReports.iterator(); itReport.hasNext();) {
+				org.sen.crossplane.domain.EdifecsReport voReport = (org.sen.crossplane.domain.EdifecsReport)itReport.next();
+				org.sen.crossplane.edifecs.response.Report report = new org.sen.crossplane.edifecs.response.impl.ReportImpl();
 				report.setName(voReport.getReportName());
 				report.setType(voReport.getReportType());
 				report.setData(CDATA_START + voReport.getReportData() + CDATA_END);
 				lReports.add(report);
 			}
 			
-			org.delta.crossplane.edifecs.response.EdifecsServiceResponse response = new org.delta.crossplane.edifecs.response.impl.EdifecsServiceResponseImpl();
+			org.sen.crossplane.edifecs.response.EdifecsServiceResponse response = new org.sen.crossplane.edifecs.response.impl.EdifecsServiceResponseImpl();
 			response.setHeader(header);
 			response.setOutput(output);
 
@@ -183,7 +183,7 @@ public class EdifecsServiceImpl implements EdifecsService {
 							.getClassLoader());
 			Unmarshaller u = requestJc.createUnmarshaller();
 
-			org.delta.crossplane.edifecs.request.EdifecsServiceRequest requestMessage = (org.delta.crossplane.edifecs.request.EdifecsServiceRequest) u
+			org.sen.crossplane.edifecs.request.EdifecsServiceRequest requestMessage = (org.sen.crossplane.edifecs.request.EdifecsServiceRequest) u
 					.unmarshal(new StreamSource(new StringReader(xmlRequest)));
 
 			if (logger.isDebugEnabled()) {
@@ -203,12 +203,12 @@ public class EdifecsServiceImpl implements EdifecsService {
 			
 			// Set list of Report Requests in VO
 			List<ReportType> reports = requestMessage.getOutput().getReport(); // This ReportType is from jaxb generated classes
-			List<org.delta.crossplane.domain.EdifecsReport> voReports = new ArrayList<org.delta.crossplane.domain.EdifecsReport>(); // This Report class is value object
+			List<org.sen.crossplane.domain.EdifecsReport> voReports = new ArrayList<org.sen.crossplane.domain.EdifecsReport>(); // This Report class is value object
 			
 			for (Iterator<ReportType> itReport =  reports.iterator(); 
 													   itReport.hasNext();){
 				ReportType report = itReport.next();
-				org.delta.crossplane.domain.EdifecsReport voReport = new org.delta.crossplane.domain.EdifecsReport();
+				org.sen.crossplane.domain.EdifecsReport voReport = new org.sen.crossplane.domain.EdifecsReport();
 				voReport.setReportName(report.getName());
 				voReport.setReportType(report.getType());
 				voReports.add(voReport);

@@ -54,7 +54,7 @@
 					</execution>
 				</executions>
 				<configuration>					
-					<!-- <generatePackage>org.delta.edi.v270</generatePackage>  -->
+					<!-- <generatePackage>org.sen.edi.v270</generatePackage>  -->
 					<includeSchemas>
 						<includeSchema>**/*.xsd</includeSchema>
 					</includeSchemas>

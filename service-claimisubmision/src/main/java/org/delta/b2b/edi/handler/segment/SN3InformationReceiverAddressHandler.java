@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.handler.segment;
+package org.sen.b2b.edi.handler.segment;
 
 public class SN3InformationReceiverAddressHandler {
 

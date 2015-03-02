@@ -1,11 +1,11 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.header;
+package org.sen.b2b.edi.handler.header;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.SSTTransactionSetHeader;
-import org.delta.b2b.edi.t276.*;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.SSTTransactionSetHeader;
+import org.sen.b2b.edi.t276.*;
 
 /**
  * @author ca31085

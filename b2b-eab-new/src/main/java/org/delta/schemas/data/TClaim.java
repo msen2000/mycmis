@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -53,7 +53,7 @@ public class TClaim  implements java.io.Serializable {
     private java.lang.String primaryPersonId;
 
     /* Claim Predetermination Flage */
-    private org.delta.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag;
+    private org.sen.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag;
 
     /* Group Name */
     private java.lang.String groupName;
@@ -70,27 +70,27 @@ public class TClaim  implements java.io.Serializable {
     /* Division Self Funded */
     private boolean divisionSelfFunded;
 
-    private org.delta.schemas.data.TClaimClaimStatus claimStatus;
+    private org.sen.schemas.data.TClaimClaimStatus claimStatus;
 
     /* The summary payment gives high  level information about the
      * whole claim. */
-    private org.delta.schemas.data.TSummaryPayment summaryPayment;
+    private org.sen.schemas.data.TSummaryPayment summaryPayment;
 
     /* The patient that is one the claim */
-    private org.delta.schemas.data.TClaimPatient patient;
+    private org.sen.schemas.data.TClaimPatient patient;
 
     /* The provider that submitted the claim */
-    private org.delta.schemas.data.TClaimBillingProvider billingProvider;
+    private org.sen.schemas.data.TClaimBillingProvider billingProvider;
 
     /* A detailed list of all individual line items on the Claim.
      * Each line item is associated with a procedure and a tooth code as
      * well as lineItem payment information. */
-    private org.delta.schemas.data.TLineItem[] claimServiceLines;
+    private org.sen.schemas.data.TLineItem[] claimServiceLines;
 
     /* Claim Business Levels */
-    private org.delta.schemas.data.TBusinessUnit claimBusinessLevels;
+    private org.sen.schemas.data.TBusinessUnit claimBusinessLevels;
 
-    private org.delta.schemas.data.SClaimType claimType;  // attribute
+    private org.sen.schemas.data.SClaimType claimType;  // attribute
 
     public TClaim() {
     }
@@ -109,19 +109,19 @@ public class TClaim  implements java.io.Serializable {
            java.lang.String primaryFirstName,
            java.lang.String primaryLastName,
            java.lang.String primaryPersonId,
-           org.delta.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag,
+           org.sen.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag,
            java.lang.String groupName,
            java.lang.String groupNumber,
            java.lang.String divisionName,
            java.lang.String divisionNumber,
            boolean divisionSelfFunded,
-           org.delta.schemas.data.TClaimClaimStatus claimStatus,
-           org.delta.schemas.data.TSummaryPayment summaryPayment,
-           org.delta.schemas.data.TClaimPatient patient,
-           org.delta.schemas.data.TClaimBillingProvider billingProvider,
-           org.delta.schemas.data.TLineItem[] claimServiceLines,
-           org.delta.schemas.data.TBusinessUnit claimBusinessLevels,
-           org.delta.schemas.data.SClaimType claimType) {
+           org.sen.schemas.data.TClaimClaimStatus claimStatus,
+           org.sen.schemas.data.TSummaryPayment summaryPayment,
+           org.sen.schemas.data.TClaimPatient patient,
+           org.sen.schemas.data.TClaimBillingProvider billingProvider,
+           org.sen.schemas.data.TLineItem[] claimServiceLines,
+           org.sen.schemas.data.TBusinessUnit claimBusinessLevels,
+           org.sen.schemas.data.SClaimType claimType) {
            this.claimIdentifier = claimIdentifier;
            this.claimCaseNumber = claimCaseNumber;
            this.claimReceivedTime = claimReceivedTime;
@@ -418,7 +418,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return claimPredeterminationFlag   * Claim Predetermination Flage
      */
-    public org.delta.schemas.data.SClaimPredeterminationFlag getClaimPredeterminationFlag() {
+    public org.sen.schemas.data.SClaimPredeterminationFlag getClaimPredeterminationFlag() {
         return claimPredeterminationFlag;
     }
 
@@ -428,7 +428,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param claimPredeterminationFlag   * Claim Predetermination Flage
      */
-    public void setClaimPredeterminationFlag(org.delta.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag) {
+    public void setClaimPredeterminationFlag(org.sen.schemas.data.SClaimPredeterminationFlag claimPredeterminationFlag) {
         this.claimPredeterminationFlag = claimPredeterminationFlag;
     }
 
@@ -538,7 +538,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return claimStatus
      */
-    public org.delta.schemas.data.TClaimClaimStatus getClaimStatus() {
+    public org.sen.schemas.data.TClaimClaimStatus getClaimStatus() {
         return claimStatus;
     }
 
@@ -548,7 +548,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param claimStatus
      */
-    public void setClaimStatus(org.delta.schemas.data.TClaimClaimStatus claimStatus) {
+    public void setClaimStatus(org.sen.schemas.data.TClaimClaimStatus claimStatus) {
         this.claimStatus = claimStatus;
     }
 
@@ -559,7 +559,7 @@ public class TClaim  implements java.io.Serializable {
      * @return summaryPayment   * The summary payment gives high  level information about the
      * whole claim.
      */
-    public org.delta.schemas.data.TSummaryPayment getSummaryPayment() {
+    public org.sen.schemas.data.TSummaryPayment getSummaryPayment() {
         return summaryPayment;
     }
 
@@ -570,7 +570,7 @@ public class TClaim  implements java.io.Serializable {
      * @param summaryPayment   * The summary payment gives high  level information about the
      * whole claim.
      */
-    public void setSummaryPayment(org.delta.schemas.data.TSummaryPayment summaryPayment) {
+    public void setSummaryPayment(org.sen.schemas.data.TSummaryPayment summaryPayment) {
         this.summaryPayment = summaryPayment;
     }
 
@@ -580,7 +580,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return patient   * The patient that is one the claim
      */
-    public org.delta.schemas.data.TClaimPatient getPatient() {
+    public org.sen.schemas.data.TClaimPatient getPatient() {
         return patient;
     }
 
@@ -590,7 +590,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param patient   * The patient that is one the claim
      */
-    public void setPatient(org.delta.schemas.data.TClaimPatient patient) {
+    public void setPatient(org.sen.schemas.data.TClaimPatient patient) {
         this.patient = patient;
     }
 
@@ -600,7 +600,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return billingProvider   * The provider that submitted the claim
      */
-    public org.delta.schemas.data.TClaimBillingProvider getBillingProvider() {
+    public org.sen.schemas.data.TClaimBillingProvider getBillingProvider() {
         return billingProvider;
     }
 
@@ -610,7 +610,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param billingProvider   * The provider that submitted the claim
      */
-    public void setBillingProvider(org.delta.schemas.data.TClaimBillingProvider billingProvider) {
+    public void setBillingProvider(org.sen.schemas.data.TClaimBillingProvider billingProvider) {
         this.billingProvider = billingProvider;
     }
 
@@ -622,7 +622,7 @@ public class TClaim  implements java.io.Serializable {
      * Each line item is associated with a procedure and a tooth code as
      * well as lineItem payment information.
      */
-    public org.delta.schemas.data.TLineItem[] getClaimServiceLines() {
+    public org.sen.schemas.data.TLineItem[] getClaimServiceLines() {
         return claimServiceLines;
     }
 
@@ -634,15 +634,15 @@ public class TClaim  implements java.io.Serializable {
      * Each line item is associated with a procedure and a tooth code as
      * well as lineItem payment information.
      */
-    public void setClaimServiceLines(org.delta.schemas.data.TLineItem[] claimServiceLines) {
+    public void setClaimServiceLines(org.sen.schemas.data.TLineItem[] claimServiceLines) {
         this.claimServiceLines = claimServiceLines;
     }
 
-    public org.delta.schemas.data.TLineItem getClaimServiceLines(int i) {
+    public org.sen.schemas.data.TLineItem getClaimServiceLines(int i) {
         return this.claimServiceLines[i];
     }
 
-    public void setClaimServiceLines(int i, org.delta.schemas.data.TLineItem _value) {
+    public void setClaimServiceLines(int i, org.sen.schemas.data.TLineItem _value) {
         this.claimServiceLines[i] = _value;
     }
 
@@ -652,7 +652,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return claimBusinessLevels   * Claim Business Levels
      */
-    public org.delta.schemas.data.TBusinessUnit getClaimBusinessLevels() {
+    public org.sen.schemas.data.TBusinessUnit getClaimBusinessLevels() {
         return claimBusinessLevels;
     }
 
@@ -662,7 +662,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param claimBusinessLevels   * Claim Business Levels
      */
-    public void setClaimBusinessLevels(org.delta.schemas.data.TBusinessUnit claimBusinessLevels) {
+    public void setClaimBusinessLevels(org.sen.schemas.data.TBusinessUnit claimBusinessLevels) {
         this.claimBusinessLevels = claimBusinessLevels;
     }
 
@@ -672,7 +672,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @return claimType
      */
-    public org.delta.schemas.data.SClaimType getClaimType() {
+    public org.sen.schemas.data.SClaimType getClaimType() {
         return claimType;
     }
 
@@ -682,7 +682,7 @@ public class TClaim  implements java.io.Serializable {
      * 
      * @param claimType
      */
-    public void setClaimType(org.delta.schemas.data.SClaimType claimType) {
+    public void setClaimType(org.sen.schemas.data.SClaimType claimType) {
         this.claimType = claimType;
     }
 
@@ -878,168 +878,168 @@ public class TClaim  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TClaim.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tClaim"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tClaim"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("claimType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "claimType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sClaimType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sClaimType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimCaseNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimCaseNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimCaseNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimReceivedTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimReceivedTime"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimReceivedTime"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimFromDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimFromDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimFromDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimToDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "ClaimToDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "ClaimToDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contractIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contractIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contractIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "productIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "productIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimSource");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimSource"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimSource"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimNetworkIndicator");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimNetworkIndicator"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimNetworkIndicator"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "enrolleeId"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "enrolleeId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("primaryFirstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "primaryFirstName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "primaryFirstName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("primaryLastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "primaryLastName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "primaryLastName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("primaryPersonId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "primaryPersonId"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "primaryPersonId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimPredeterminationFlag");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimPredeterminationFlag"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sClaimPredeterminationFlag"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimPredeterminationFlag"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sClaimPredeterminationFlag"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("groupName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "groupName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "groupName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("groupNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "groupNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "groupNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("divisionSelfFunded");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "divisionSelfFunded"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "divisionSelfFunded"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tClaim>claimStatus"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tClaim>claimStatus"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("summaryPayment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "summaryPayment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tSummaryPayment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "summaryPayment"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tSummaryPayment"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("patient");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "patient"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tClaim>patient"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "patient"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tClaim>patient"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("billingProvider");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "billingProvider"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tClaim>billingProvider"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "billingProvider"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tClaim>billingProvider"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimServiceLines");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimServiceLines"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tLineItem"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimServiceLines"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tLineItem"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimBusinessLevels");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimBusinessLevels"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBusinessUnit"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimBusinessLevels"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBusinessUnit"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

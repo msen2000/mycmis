@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
-public class TClaimBillingProvider  extends org.delta.schemas.data.TPerson  implements java.io.Serializable {
+public class TClaimBillingProvider  extends org.sen.schemas.data.TPerson  implements java.io.Serializable {
     private java.lang.String providerIdentifier;
 
     private java.lang.String providerSuffix;
@@ -111,16 +111,16 @@ public class TClaimBillingProvider  extends org.delta.schemas.data.TPerson  impl
         new org.apache.axis.description.TypeDesc(TClaimBillingProvider.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tClaim>billingProvider"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tClaim>billingProvider"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("providerIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "providerIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "providerIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("providerSuffix");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "providerSuffix"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "providerSuffix"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

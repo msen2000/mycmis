@@ -11,8 +11,8 @@
       <properties>
 		<build.version>1.2.0-SNAPSHOT</build.version>
       	<build.number>Not Supplied</build.number>
-         <database.username>delta</database.username>
-	 <database.password>delta</database.password>
+         <database.username>sen</database.username>
+	 <database.password>sen</database.password>
 	 <oracle.host>localhost</oracle.host>
 	 <oracle.port>1521</oracle.port>
 	 <oracle.server.sid>orcl</oracle.server.sid>
@@ -36,8 +36,8 @@
       <properties>
 		<build.version>1.2.0-SNAPSHOT</build.version>
       	<build.number>Not Supplied</build.number>
-        <database.username>delta</database.username>
-        <database.password>delta</database.password>
+        <database.username>sen</database.username>
+        <database.password>sen</database.password>
         <oracle.host>rc-sun64a.ut.dentegra.lab</oracle.host>
         <oracle.port>1521</oracle.port>
         <oracle.server.sid>a3dev01</oracle.server.sid>
@@ -60,8 +60,8 @@
       <properties>
 		<build.version>1.2.0-SNAPSHOT</build.version>
       	<build.number>Not Supplied</build.number>
-        <database.username>delta</database.username>
-        <database.password>delta</database.password>
+        <database.username>sen</database.username>
+        <database.password>sen</database.password>
         <oracle.host>rc-sun64a.ut.dentegra.lab</oracle.host>
         <oracle.port>1521</oracle.port>
         <oracle.server.sid>a3dev01</oracle.server.sid>

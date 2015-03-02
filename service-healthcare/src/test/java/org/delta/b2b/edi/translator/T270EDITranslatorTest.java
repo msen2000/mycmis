@@ -1,7 +1,7 @@
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
-import org.delta.b2b.edi.translator.EDITranslator;
-import org.delta.b2b.edi.translator.T270EDITranslator;
+import org.sen.b2b.edi.translator.EDITranslator;
+import org.sen.b2b.edi.translator.T270EDITranslator;
 
 import junit.framework.TestCase;
 

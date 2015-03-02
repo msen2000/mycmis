@@ -1,4 +1,4 @@
-package org.delta.b2b.xml.marshaller;
+package org.sen.b2b.xml.marshaller;
 
 public class XMLMarshallerFactory {
 

@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -16,7 +16,7 @@ public class TGroup  implements java.io.Serializable {
 
     private java.lang.String groupName;
 
-    private org.delta.schemas.data.TDivision division;
+    private org.sen.schemas.data.TDivision division;
 
     public TGroup() {
     }
@@ -24,7 +24,7 @@ public class TGroup  implements java.io.Serializable {
     public TGroup(
            java.lang.String groupNumber,
            java.lang.String groupName,
-           org.delta.schemas.data.TDivision division) {
+           org.sen.schemas.data.TDivision division) {
            this.groupNumber = groupNumber;
            this.groupName = groupName;
            this.division = division;
@@ -76,7 +76,7 @@ public class TGroup  implements java.io.Serializable {
      * 
      * @return division
      */
-    public org.delta.schemas.data.TDivision getDivision() {
+    public org.sen.schemas.data.TDivision getDivision() {
         return division;
     }
 
@@ -86,7 +86,7 @@ public class TGroup  implements java.io.Serializable {
      * 
      * @param division
      */
-    public void setDivision(org.delta.schemas.data.TDivision division) {
+    public void setDivision(org.sen.schemas.data.TDivision division) {
         this.division = division;
     }
 
@@ -140,23 +140,23 @@ public class TGroup  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TGroup.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tGroup"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tGroup"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("groupNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "groupNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "groupNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("groupName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "groupName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "groupName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("division");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "division"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tDivision"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "division"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tDivision"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -1,17 +1,17 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.L2000A;
-import org.delta.b2b.edi.t276.L2000B;
-import org.delta.b2b.edi.t276.L2000C;
-import org.delta.b2b.edi.t276.L2000D;
-import org.delta.b2b.edi.t276.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t276.*;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.L2000A;
+import org.sen.b2b.edi.t276.L2000B;
+import org.sen.b2b.edi.t276.L2000C;
+import org.sen.b2b.edi.t276.L2000D;
+import org.sen.b2b.edi.t276.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t276.*;
 
 /**
  * @author ca31085

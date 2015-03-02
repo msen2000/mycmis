@@ -1,4 +1,4 @@
-package org.delta.services;
+package org.sen.services;
 
 import java.math.BigDecimal;
 import java.security.InvalidParameterException;
@@ -12,10 +12,10 @@ import java.util.List;
 import org.apache.commons.lang.time.DateUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.delta.crossplane.domain.enrollment.Enrollee;
-import org.delta.crossplane.domain.enrollment.PrimaryEnrolleeContract;
-import org.delta.schemas.data.SEnrolleeType;
-import org.delta.schemas.data.STimeUnitType;
+import org.sen.crossplane.domain.enrollment.Enrollee;
+import org.sen.crossplane.domain.enrollment.PrimaryEnrolleeContract;
+import org.sen.schemas.data.SEnrolleeType;
+import org.sen.schemas.data.STimeUnitType;
 
 public class IVRUtil {
     private static final Log LOG =
@@ -188,13 +188,13 @@ public class IVRUtil {
 		if ( beginDate == null )
 			throw new IllegalArgumentException("begin Date can not be null");
 		Date today = new Date();
-		if ( today.before(org.delta.crossplane.common.util.DateUtils.endOfDay(beginDate)) )
+		if ( today.before(org.sen.crossplane.common.util.DateUtils.endOfDay(beginDate)) )
 				return 1;
 		else { //today after begin date
 			if ( endDate == null )
 				return 0;
 			else {
-				if ( today.before(org.delta.crossplane.common.util.DateUtils.endOfDay(endDate)) )
+				if ( today.before(org.sen.crossplane.common.util.DateUtils.endOfDay(endDate)) )
 					return 0;
 				else
 					return -1;

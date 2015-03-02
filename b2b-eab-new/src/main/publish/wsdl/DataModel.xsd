@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:data="http://schemas.delta.org/data" targetNamespace="http://schemas.delta.org/data" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:data="http://schemas.sen.org/data" targetNamespace="http://schemas.sen.org/data" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:complexType name="tPerson">
 		<xs:annotation>
 			<xs:documentation>The definition of a person object</xs:documentation>
@@ -588,7 +588,7 @@
 			<xs:documentation>The definition of a claim payment object (whole claim)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="deltaPaidAmount" type="xs:double">
+			<xs:element name="senPaidAmount" type="xs:double">
 				<xs:annotation>
 					<xs:documentation>The total amount paid for the claim</xs:documentation>
 				</xs:annotation>
@@ -697,12 +697,12 @@
 					<xs:documentation>The submitted amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="deltaPaidAmount" type="xs:double">
+			<xs:element name="senPaidAmount" type="xs:double">
 				<xs:annotation>
 					<xs:documentation>The Sen Den paid amount associated with the line item</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="deltaPercentageAmount" type="xs:double" minOccurs="0">
+			<xs:element name="senPercentageAmount" type="xs:double" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>The Sen Den paid percentage amount associated with the line item</xs:documentation>
 				</xs:annotation>

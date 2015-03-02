@@ -1,15 +1,15 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t271.L2000C;
-import org.delta.b2b.edi.t271.L2100C;
-import org.delta.b2b.edi.t271.L2110C;
-import org.delta.b2b.edi.t271.SDMGSubscriberDemographicInformation;
-import org.delta.b2b.edi.t271.SHLSubscriberLevel;
-import org.delta.b2b.edi.t271.SNM1SubscriberName;
-import org.delta.b2b.edi.t271.SREFSubscriberAdditionalIdentification;
-import org.delta.b2b.edi.t271.STRNSubscriberTraceNumber;
+import org.sen.b2b.edi.t271.L2000C;
+import org.sen.b2b.edi.t271.L2100C;
+import org.sen.b2b.edi.t271.L2110C;
+import org.sen.b2b.edi.t271.SDMGSubscriberDemographicInformation;
+import org.sen.b2b.edi.t271.SHLSubscriberLevel;
+import org.sen.b2b.edi.t271.SNM1SubscriberName;
+import org.sen.b2b.edi.t271.SREFSubscriberAdditionalIdentification;
+import org.sen.b2b.edi.t271.STRNSubscriberTraceNumber;
 
 public class L2000CGenerator {
 

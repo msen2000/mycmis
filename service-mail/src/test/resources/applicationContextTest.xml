@@ -3,7 +3,7 @@
 
 	<!--
 		- Spring context for mail service. Requires the following properties
-		to be predefined: - - 1. email.smtp.host e.g., smtp.delta.org - -
+		to be predefined: - - 1. email.smtp.host e.g., smtp.sen.org - -
 		Sen Den - - @author Narendran Chandrasekaran -
 	-->
 <beans>
@@ -22,7 +22,7 @@
 		<property name="host" value="${email.smtp.host}" />
 	</bean>
 	
-			<bean id="emailService" class="org.delta.crossplane.mail.service.impl.EmailServiceImpl">
+			<bean id="emailService" class="org.sen.crossplane.mail.service.impl.EmailServiceImpl">
 				<property name="emailSender" ref="emailSender" />
 				<property name="testing">
 					<value>${email.istesting}</value>
@@ -32,7 +32,7 @@
 				</property>
 			</bean-->
 			
-			<import resource="classpath:/org/delta/crossplane/mail/service/MailService.ctx.xml" />
+			<import resource="classpath:/org/sen/crossplane/mail/service/MailService.ctx.xml" />
 	
- 	<!-- import resource="classpath:/org/delta/crossplane/mail/service/MailService.ctx.xml" /-->
+ 	<!-- import resource="classpath:/org/sen/crossplane/mail/service/MailService.ctx.xml" /-->
 </beans>

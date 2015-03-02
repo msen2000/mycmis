@@ -1,14 +1,14 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.header;
+package org.sen.b2b.edi.handler.header;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.EST01TransactionSetIdentifierCode;
-import org.delta.b2b.edi.t271.EST02TransactionSetControlNumber;
-import org.delta.b2b.edi.t271.EST03ImplementationConventionReference;
-import org.delta.b2b.edi.t271.SSTTransactionSetHeader;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.EST01TransactionSetIdentifierCode;
+import org.sen.b2b.edi.t271.EST02TransactionSetControlNumber;
+import org.sen.b2b.edi.t271.EST03ImplementationConventionReference;
+import org.sen.b2b.edi.t271.SSTTransactionSetHeader;
+import org.sen.b2b.edi.t271.T271;
 
 /**
  * @author ca31085

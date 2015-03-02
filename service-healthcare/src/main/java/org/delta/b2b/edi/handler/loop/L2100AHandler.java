@@ -1,9 +1,9 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
-import org.delta.b2b.edi.handler.element.NM1SourceHandler;
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.L2100A;
-import org.delta.b2b.edi.t270.SNM1InformationSourceName;
+import org.sen.b2b.edi.handler.element.NM1SourceHandler;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.L2100A;
+import org.sen.b2b.edi.t270.SNM1InformationSourceName;
 
 public class L2100AHandler {
 	

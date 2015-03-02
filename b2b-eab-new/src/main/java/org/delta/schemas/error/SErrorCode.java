@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.error;
+package org.sen.schemas.error;
 
 public class SErrorCode implements java.io.Serializable {
     private java.lang.String _value_;
@@ -60,7 +60,7 @@ public class SErrorCode implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SErrorCode.class);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "sErrorCode"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "sErrorCode"));
     }
     /**
      * Return type metadata object

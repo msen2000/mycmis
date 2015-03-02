@@ -1,4 +1,4 @@
-package org.delta.crossplane.mail.request;
+package org.sen.crossplane.mail.request;
 
 import java.io.Serializable;
 

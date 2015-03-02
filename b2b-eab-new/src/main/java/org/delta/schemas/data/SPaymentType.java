@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class SPaymentType implements java.io.Serializable {
     private java.lang.String _value_;
@@ -70,7 +70,7 @@ public class SPaymentType implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SPaymentType.class);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sPaymentType"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sPaymentType"));
     }
     /**
      * Return type metadata object

@@ -1,4 +1,4 @@
-package org.delta.services.eligibilityAndBenefits.facade.impl;
+package org.sen.services.eligibilityAndBenefits.facade.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,36 +15,36 @@ import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateUtils;
-import org.delta.crossplane.benefits.service.BenefitsService;
-import org.delta.crossplane.domain.Address;
-import org.delta.crossplane.domain.Amount;
-import org.delta.crossplane.domain.Person;
-import org.delta.crossplane.domain.benefits.BenefitCounter;
-import org.delta.crossplane.domain.benefits.BenefitPackage;
-import org.delta.crossplane.domain.benefits.DeductiblesMaximums;
-import org.delta.crossplane.domain.benefits.ProcedureClass2;
-import org.delta.crossplane.domain.benefits.ProcedureCode;
-import org.delta.crossplane.domain.benefits.ProcedureCode2;
-import org.delta.crossplane.domain.benefits.TreatmentType;
-import org.delta.crossplane.domain.benefits.WaitingPeriod;
-import org.delta.crossplane.domain.eligibility.EnrolleeEligibility;
-import org.delta.crossplane.domain.enrollment.Division;
-import org.delta.crossplane.domain.enrollment.Enrollee;
-import org.delta.crossplane.domain.enrollment.PrimaryEnrolleeContract;
-import org.delta.crossplane.domain.group.Group;
-import org.delta.crossplane.domain.provider.SecondaryIdentifier;
-import org.delta.crossplane.domain.provider.SecondaryIdentifier.IdentifierCode;
-import org.delta.crossplane.domain.provider.TierCode;
-import org.delta.crossplane.eligibility.exception.NoPersonFoundException;
-import org.delta.crossplane.eligibility.service.EligibilityService;
-import org.delta.schemas.data.*;
-import org.delta.services.BenefitPackageNotFoundException;
-import org.delta.services.IVRUtil;
-import org.delta.services.MissingParameterException;
-import org.delta.services.OperationException;
-import org.delta.services.SpringApplicationContext;
-import org.delta.services.UnknownCodeException;
-import org.delta.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade;
+import org.sen.crossplane.benefits.service.BenefitsService;
+import org.sen.crossplane.domain.Address;
+import org.sen.crossplane.domain.Amount;
+import org.sen.crossplane.domain.Person;
+import org.sen.crossplane.domain.benefits.BenefitCounter;
+import org.sen.crossplane.domain.benefits.BenefitPackage;
+import org.sen.crossplane.domain.benefits.DeductiblesMaximums;
+import org.sen.crossplane.domain.benefits.ProcedureClass2;
+import org.sen.crossplane.domain.benefits.ProcedureCode;
+import org.sen.crossplane.domain.benefits.ProcedureCode2;
+import org.sen.crossplane.domain.benefits.TreatmentType;
+import org.sen.crossplane.domain.benefits.WaitingPeriod;
+import org.sen.crossplane.domain.eligibility.EnrolleeEligibility;
+import org.sen.crossplane.domain.enrollment.Division;
+import org.sen.crossplane.domain.enrollment.Enrollee;
+import org.sen.crossplane.domain.enrollment.PrimaryEnrolleeContract;
+import org.sen.crossplane.domain.group.Group;
+import org.sen.crossplane.domain.provider.SecondaryIdentifier;
+import org.sen.crossplane.domain.provider.SecondaryIdentifier.IdentifierCode;
+import org.sen.crossplane.domain.provider.TierCode;
+import org.sen.crossplane.eligibility.exception.NoPersonFoundException;
+import org.sen.crossplane.eligibility.service.EligibilityService;
+import org.sen.schemas.data.*;
+import org.sen.services.BenefitPackageNotFoundException;
+import org.sen.services.IVRUtil;
+import org.sen.services.MissingParameterException;
+import org.sen.services.OperationException;
+import org.sen.services.SpringApplicationContext;
+import org.sen.services.UnknownCodeException;
+import org.sen.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade;
 
 public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefitsIVRFacade {
 	
@@ -422,19 +422,19 @@ public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefi
 				
 		//determine coverageStatus: active/future(start before the end of the following month)/inactive
 		Date today = new Date();
-		if ( today.after(org.delta.crossplane.common.util.DateUtils.startOfDay(tc.getCoverageStartDate())) 
+		if ( today.after(org.sen.crossplane.common.util.DateUtils.startOfDay(tc.getCoverageStartDate())) 
 				&& ( tc.getCoverageEndDate()==null 
-						|| today.before(org.delta.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate()))) ) {
+						|| today.before(org.sen.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate()))) ) {
 			tc.setCoverageStatus(SStatusType.active);
 		}
 		else if ( tc.getCoverageEndDate()!=null 
-				&& today.after(org.delta.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate())) ) {
+				&& today.after(org.sen.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate())) ) {
 			tc.setCoverageStatus(SStatusType.inactive);
 		}
 		else {
 			Date futureDay = getLastDayOfNextMonth();
-			if ( tc.getCoverageStartDate().after(org.delta.crossplane.common.util.DateUtils.endOfDay(today))
-				&& tc.getCoverageStartDate().before(org.delta.crossplane.common.util.DateUtils.endOfDay(futureDay)) ) {
+			if ( tc.getCoverageStartDate().after(org.sen.crossplane.common.util.DateUtils.endOfDay(today))
+				&& tc.getCoverageStartDate().before(org.sen.crossplane.common.util.DateUtils.endOfDay(futureDay)) ) {
 					tc.setCoverageStatus(SStatusType.pending);
 			}
 			else {
@@ -447,8 +447,8 @@ public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefi
 		    if ( ten[i].getEligibilityStatus().equals(SStatusType.active)
 					&& tc != null
 					&& tc.getCoverageEndDate() != null
-					&& today.after(org.delta.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate()))){
-				// CQ defect # DELTA00060351
+					&& today.after(org.sen.crossplane.common.util.DateUtils.endOfDay(tc.getCoverageEndDate()))){
+				// CQ defect # sen00060351
 		    	ten[i].setEligibilityStatus(SStatusType.inactive);
 			} 
 		}	
@@ -531,8 +531,8 @@ public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefi
 			for(int i = 0; i < eeList.size(); i++) {
 				effectiveDate = eeList.get(i).getEnrolleeEligibilityEffectiveDate();
 				endDate = eeList.get(i).getEnrolleeEligibilityEndDate();
-				if( effectiveDate.after(org.delta.crossplane.common.util.DateUtils.endOfDay(new Date())) &&
-						effectiveDate.before(org.delta.crossplane.common.util.DateUtils.endOfDay(futureDay)) ) {
+				if( effectiveDate.after(org.sen.crossplane.common.util.DateUtils.endOfDay(new Date())) &&
+						effectiveDate.before(org.sen.crossplane.common.util.DateUtils.endOfDay(futureDay)) ) {
 					enrollee.setEligibilityStatus(SStatusType.pending);
 					
 					if ( eeList.get(i).getEnrolleeEligibilityEndDate() != null ) {
@@ -548,8 +548,8 @@ public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefi
 				
 				else{
 					// eligibility inactive , effective date and end date in the past 
-					if(effectiveDate.before(org.delta.crossplane.common.util.DateUtils.startOfDay(new Date())) &&
-						endDate.before(org.delta.crossplane.common.util.DateUtils.startOfDay(new Date()))				
+					if(effectiveDate.before(org.sen.crossplane.common.util.DateUtils.startOfDay(new Date())) &&
+						endDate.before(org.sen.crossplane.common.util.DateUtils.startOfDay(new Date()))				
 					){
 						
 						if ( eeList.get(i).getEnrolleeEligibilityEndDate() != null ) {
@@ -563,7 +563,7 @@ public class EligibilityAndBenefitsIVRFacadeImpl implements EligibilityAndBenefi
 						
 					} 
 					
-					if(effectiveDate.after(org.delta.crossplane.common.util.DateUtils.endOfDay(futureDay))){
+					if(effectiveDate.after(org.sen.crossplane.common.util.DateUtils.endOfDay(futureDay))){
 						
 						if ( eeList.get(i).getEnrolleeEligibilityEffectiveDate() != null ) {
 							enrollee.setEffectiveDate(eeList.get(i).getEnrolleeEligibilityEffectiveDate());

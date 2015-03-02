@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class B2BEligibilityAndBenefitsRequest  implements java.io.Serializable {
     private java.util.Date DOB;
@@ -226,40 +226,40 @@ public class B2BEligibilityAndBenefitsRequest  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(B2BEligibilityAndBenefitsRequest.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">B2BEligibilityAndBenefitsRequest"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">B2BEligibilityAndBenefitsRequest"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("DOB");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "DOB"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "DOB"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "FirstName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "FirstName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "LastName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "LastName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("personIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "PersonIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "PersonIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "EnrolleeIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "EnrolleeIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "EnrolleeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "EnrolleeType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

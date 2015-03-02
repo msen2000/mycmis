@@ -5,46 +5,46 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class TBenefitInfo  implements java.io.Serializable {
-    private org.delta.schemas.data.TcoAmountType coPaymentAmount;
+    private org.sen.schemas.data.TcoAmountType coPaymentAmount;
 
     private boolean contractYearOrCalendar;
 
-    private org.delta.schemas.data.TLifeTimeAnnualType lifeTimeAnnual;
+    private org.sen.schemas.data.TLifeTimeAnnualType lifeTimeAnnual;
 
-    private org.delta.schemas.data.TFamilyIndividualType familyIndividual;
+    private org.sen.schemas.data.TFamilyIndividualType familyIndividual;
 
     private boolean isDeductibleExemption;
 
     private int waitingPeriod;
 
-    private org.delta.schemas.data.TAmountType maximumAmount;
+    private org.sen.schemas.data.TAmountType maximumAmount;
 
-    private org.delta.schemas.data.TAmountType remainingMaximumAmount;
+    private org.sen.schemas.data.TAmountType remainingMaximumAmount;
 
-    private org.delta.schemas.data.TAmountType deductiblesAmount;
+    private org.sen.schemas.data.TAmountType deductiblesAmount;
 
-    private org.delta.schemas.data.TAmountType deductiblesRemainingAmount;
+    private org.sen.schemas.data.TAmountType deductiblesRemainingAmount;
 
-    private org.delta.schemas.data.TBenefitClassCodeType benefitClassCode;
+    private org.sen.schemas.data.TBenefitClassCodeType benefitClassCode;
 
     public TBenefitInfo() {
     }
 
     public TBenefitInfo(
-           org.delta.schemas.data.TcoAmountType coPaymentAmount,
+           org.sen.schemas.data.TcoAmountType coPaymentAmount,
            boolean contractYearOrCalendar,
-           org.delta.schemas.data.TLifeTimeAnnualType lifeTimeAnnual,
-           org.delta.schemas.data.TFamilyIndividualType familyIndividual,
+           org.sen.schemas.data.TLifeTimeAnnualType lifeTimeAnnual,
+           org.sen.schemas.data.TFamilyIndividualType familyIndividual,
            boolean isDeductibleExemption,
            int waitingPeriod,
-           org.delta.schemas.data.TAmountType maximumAmount,
-           org.delta.schemas.data.TAmountType remainingMaximumAmount,
-           org.delta.schemas.data.TAmountType deductiblesAmount,
-           org.delta.schemas.data.TAmountType deductiblesRemainingAmount,
-           org.delta.schemas.data.TBenefitClassCodeType benefitClassCode) {
+           org.sen.schemas.data.TAmountType maximumAmount,
+           org.sen.schemas.data.TAmountType remainingMaximumAmount,
+           org.sen.schemas.data.TAmountType deductiblesAmount,
+           org.sen.schemas.data.TAmountType deductiblesRemainingAmount,
+           org.sen.schemas.data.TBenefitClassCodeType benefitClassCode) {
            this.coPaymentAmount = coPaymentAmount;
            this.contractYearOrCalendar = contractYearOrCalendar;
            this.lifeTimeAnnual = lifeTimeAnnual;
@@ -64,7 +64,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return coPaymentAmount
      */
-    public org.delta.schemas.data.TcoAmountType getCoPaymentAmount() {
+    public org.sen.schemas.data.TcoAmountType getCoPaymentAmount() {
         return coPaymentAmount;
     }
 
@@ -74,7 +74,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param coPaymentAmount
      */
-    public void setCoPaymentAmount(org.delta.schemas.data.TcoAmountType coPaymentAmount) {
+    public void setCoPaymentAmount(org.sen.schemas.data.TcoAmountType coPaymentAmount) {
         this.coPaymentAmount = coPaymentAmount;
     }
 
@@ -104,7 +104,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return lifeTimeAnnual
      */
-    public org.delta.schemas.data.TLifeTimeAnnualType getLifeTimeAnnual() {
+    public org.sen.schemas.data.TLifeTimeAnnualType getLifeTimeAnnual() {
         return lifeTimeAnnual;
     }
 
@@ -114,7 +114,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param lifeTimeAnnual
      */
-    public void setLifeTimeAnnual(org.delta.schemas.data.TLifeTimeAnnualType lifeTimeAnnual) {
+    public void setLifeTimeAnnual(org.sen.schemas.data.TLifeTimeAnnualType lifeTimeAnnual) {
         this.lifeTimeAnnual = lifeTimeAnnual;
     }
 
@@ -124,7 +124,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return familyIndividual
      */
-    public org.delta.schemas.data.TFamilyIndividualType getFamilyIndividual() {
+    public org.sen.schemas.data.TFamilyIndividualType getFamilyIndividual() {
         return familyIndividual;
     }
 
@@ -134,7 +134,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param familyIndividual
      */
-    public void setFamilyIndividual(org.delta.schemas.data.TFamilyIndividualType familyIndividual) {
+    public void setFamilyIndividual(org.sen.schemas.data.TFamilyIndividualType familyIndividual) {
         this.familyIndividual = familyIndividual;
     }
 
@@ -184,7 +184,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return maximumAmount
      */
-    public org.delta.schemas.data.TAmountType getMaximumAmount() {
+    public org.sen.schemas.data.TAmountType getMaximumAmount() {
         return maximumAmount;
     }
 
@@ -194,7 +194,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param maximumAmount
      */
-    public void setMaximumAmount(org.delta.schemas.data.TAmountType maximumAmount) {
+    public void setMaximumAmount(org.sen.schemas.data.TAmountType maximumAmount) {
         this.maximumAmount = maximumAmount;
     }
 
@@ -204,7 +204,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return remainingMaximumAmount
      */
-    public org.delta.schemas.data.TAmountType getRemainingMaximumAmount() {
+    public org.sen.schemas.data.TAmountType getRemainingMaximumAmount() {
         return remainingMaximumAmount;
     }
 
@@ -214,7 +214,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param remainingMaximumAmount
      */
-    public void setRemainingMaximumAmount(org.delta.schemas.data.TAmountType remainingMaximumAmount) {
+    public void setRemainingMaximumAmount(org.sen.schemas.data.TAmountType remainingMaximumAmount) {
         this.remainingMaximumAmount = remainingMaximumAmount;
     }
 
@@ -224,7 +224,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return deductiblesAmount
      */
-    public org.delta.schemas.data.TAmountType getDeductiblesAmount() {
+    public org.sen.schemas.data.TAmountType getDeductiblesAmount() {
         return deductiblesAmount;
     }
 
@@ -234,7 +234,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param deductiblesAmount
      */
-    public void setDeductiblesAmount(org.delta.schemas.data.TAmountType deductiblesAmount) {
+    public void setDeductiblesAmount(org.sen.schemas.data.TAmountType deductiblesAmount) {
         this.deductiblesAmount = deductiblesAmount;
     }
 
@@ -244,7 +244,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return deductiblesRemainingAmount
      */
-    public org.delta.schemas.data.TAmountType getDeductiblesRemainingAmount() {
+    public org.sen.schemas.data.TAmountType getDeductiblesRemainingAmount() {
         return deductiblesRemainingAmount;
     }
 
@@ -254,7 +254,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param deductiblesRemainingAmount
      */
-    public void setDeductiblesRemainingAmount(org.delta.schemas.data.TAmountType deductiblesRemainingAmount) {
+    public void setDeductiblesRemainingAmount(org.sen.schemas.data.TAmountType deductiblesRemainingAmount) {
         this.deductiblesRemainingAmount = deductiblesRemainingAmount;
     }
 
@@ -264,7 +264,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @return benefitClassCode
      */
-    public org.delta.schemas.data.TBenefitClassCodeType getBenefitClassCode() {
+    public org.sen.schemas.data.TBenefitClassCodeType getBenefitClassCode() {
         return benefitClassCode;
     }
 
@@ -274,7 +274,7 @@ public class TBenefitInfo  implements java.io.Serializable {
      * 
      * @param benefitClassCode
      */
-    public void setBenefitClassCode(org.delta.schemas.data.TBenefitClassCodeType benefitClassCode) {
+    public void setBenefitClassCode(org.sen.schemas.data.TBenefitClassCodeType benefitClassCode) {
         this.benefitClassCode = benefitClassCode;
     }
 
@@ -364,71 +364,71 @@ public class TBenefitInfo  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TBenefitInfo.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitInfo"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitInfo"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coPaymentAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "CoPaymentAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tcoAmountType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "CoPaymentAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tcoAmountType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contractYearOrCalendar");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "ContractYearOrCalendar"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "ContractYearOrCalendar"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lifeTimeAnnual");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "LifeTimeAnnual"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tLifeTimeAnnualType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "LifeTimeAnnual"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tLifeTimeAnnualType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("familyIndividual");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "FamilyIndividual"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tFamilyIndividualType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "FamilyIndividual"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tFamilyIndividualType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("isDeductibleExemption");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "IsDeductibleExemption"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "IsDeductibleExemption"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("waitingPeriod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "WaitingPeriod"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "WaitingPeriod"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("maximumAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "MaximumAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAmountType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "MaximumAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAmountType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("remainingMaximumAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "RemainingMaximumAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAmountType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "RemainingMaximumAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAmountType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("deductiblesAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "DeductiblesAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAmountType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "DeductiblesAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAmountType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("deductiblesRemainingAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "DeductiblesRemainingAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAmountType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "DeductiblesRemainingAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAmountType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitClassCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "BenefitClassCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitClassCodeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "BenefitClassCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitClassCodeType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

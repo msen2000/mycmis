@@ -1,4 +1,4 @@
-package org.delta.mobile.helloandroid;
+package org.sen.mobile.helloandroid;
 
 import android.app.Activity;
 import android.os.Bundle;

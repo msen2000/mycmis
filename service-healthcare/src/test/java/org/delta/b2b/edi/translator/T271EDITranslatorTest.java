@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
 import junit.framework.TestCase;
 

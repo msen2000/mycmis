@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.services.eligibilityAndBenefits;
+package org.sen.services.eligibilityAndBenefits;
 
 public class GetB2BEligibilityAndBenefits  implements java.io.Serializable {
     private java.util.Date DOB;
@@ -226,40 +226,40 @@ public class GetB2BEligibilityAndBenefits  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(GetB2BEligibilityAndBenefits.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", ">getB2BEligibilityAndBenefits"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", ">getB2BEligibilityAndBenefits"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("DOB");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "DOB"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "DOB"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("firstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "FirstName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "FirstName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("lastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "LastName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "LastName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("personIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "PersonIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "PersonIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "EnrolleeIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "EnrolleeIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("enrolleeType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "EnrolleeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "EnrolleeType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

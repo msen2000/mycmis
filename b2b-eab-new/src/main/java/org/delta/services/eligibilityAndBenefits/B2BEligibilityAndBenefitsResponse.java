@@ -5,16 +5,16 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.services.eligibilityAndBenefits;
+package org.sen.services.eligibilityAndBenefits;
 
 public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TContractListResponses response;
+    private org.sen.schemas.data.TContractListResponses response;
 
     public B2BEligibilityAndBenefitsResponse() {
     }
 
     public B2BEligibilityAndBenefitsResponse(
-           org.delta.schemas.data.TContractListResponses response) {
+           org.sen.schemas.data.TContractListResponses response) {
            this.response = response;
     }
 
@@ -24,7 +24,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @return response
      */
-    public org.delta.schemas.data.TContractListResponses getResponse() {
+    public org.sen.schemas.data.TContractListResponses getResponse() {
         return response;
     }
 
@@ -34,7 +34,7 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
      * 
      * @param response
      */
-    public void setResponse(org.delta.schemas.data.TContractListResponses response) {
+    public void setResponse(org.sen.schemas.data.TContractListResponses response) {
         this.response = response;
     }
 
@@ -76,11 +76,11 @@ public class B2BEligibilityAndBenefitsResponse  implements java.io.Serializable 
         new org.apache.axis.description.TypeDesc(B2BEligibilityAndBenefitsResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", ">B2BEligibilityAndBenefitsResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", ">B2BEligibilityAndBenefitsResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("response");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "Response"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tContractListResponses"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "Response"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tContractListResponses"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

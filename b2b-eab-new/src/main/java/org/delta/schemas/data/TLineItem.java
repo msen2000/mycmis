@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -16,7 +16,7 @@ public class TLineItem  implements java.io.Serializable {
     private java.lang.String toothCode;
 
     /* Tooth Surface Codese */
-    private org.delta.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes;
+    private org.sen.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes;
 
     /* The procedure code that was performed on this individual lineItem */
     private java.lang.String procedureCode;
@@ -28,11 +28,11 @@ public class TLineItem  implements java.io.Serializable {
     private double submittedAmount;
 
     /* The Sen Den paid amount associated with the line item */
-    private double deltaPaidAmount;
+    private double senPaidAmount;
 
     /* The Sen Den paid percentage amount associated with the
      * line item */
-    private java.lang.Double deltaPercentageAmount;
+    private java.lang.Double senPercentageAmount;
 
     /* The Patient payment amount associated with the line item */
     private double patientPaidPayment;
@@ -62,7 +62,7 @@ public class TLineItem  implements java.io.Serializable {
     private java.util.Date processingDate;
 
     /* Explanation Codes */
-    private org.delta.schemas.data.TExCode[] explanationCodes;
+    private org.sen.schemas.data.TExCode[] explanationCodes;
 
     /* The service line status indicator */
     private java.lang.Object serviceLineStatusIndicator;
@@ -75,7 +75,7 @@ public class TLineItem  implements java.io.Serializable {
 
     /* The payment associated with the lineItem. The full payment
      * is referenced in the check payment */
-    private org.delta.schemas.data.TPayment payment;
+    private org.sen.schemas.data.TPayment payment;
 
     /* Sequence Number */
     private java.lang.String sequenceNumber;
@@ -91,12 +91,12 @@ public class TLineItem  implements java.io.Serializable {
 
     public TLineItem(
            java.lang.String toothCode,
-           org.delta.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes,
+           org.sen.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes,
            java.lang.String procedureCode,
            java.lang.String procedureCodeName,
            double submittedAmount,
-           double deltaPaidAmount,
-           java.lang.Double deltaPercentageAmount,
+           double senPaidAmount,
+           java.lang.Double senPercentageAmount,
            double patientPaidPayment,
            double primePaidAmount,
            double deductible,
@@ -106,11 +106,11 @@ public class TLineItem  implements java.io.Serializable {
            double patientCopayAmount,
            java.util.Date dateOfService,
            java.util.Date processingDate,
-           org.delta.schemas.data.TExCode[] explanationCodes,
+           org.sen.schemas.data.TExCode[] explanationCodes,
            java.lang.Object serviceLineStatusIndicator,
            java.lang.String servicingProviderIdentifier,
            java.lang.Double otherInsurancePaidAmount,
-           org.delta.schemas.data.TPayment payment,
+           org.sen.schemas.data.TPayment payment,
            java.lang.String sequenceNumber,
            java.lang.String servicingProviderFirstName,
            java.lang.String servicingProviderLastName) {
@@ -119,8 +119,8 @@ public class TLineItem  implements java.io.Serializable {
            this.procedureCode = procedureCode;
            this.procedureCodeName = procedureCodeName;
            this.submittedAmount = submittedAmount;
-           this.deltaPaidAmount = deltaPaidAmount;
-           this.deltaPercentageAmount = deltaPercentageAmount;
+           this.senPaidAmount = senPaidAmount;
+           this.senPercentageAmount = senPercentageAmount;
            this.patientPaidPayment = patientPaidPayment;
            this.primePaidAmount = primePaidAmount;
            this.deductible = deductible;
@@ -166,7 +166,7 @@ public class TLineItem  implements java.io.Serializable {
      * 
      * @return toothSurfaceCodes   * Tooth Surface Codese
      */
-    public org.delta.schemas.data.SToothSurfaceCodeType[] getToothSurfaceCodes() {
+    public org.sen.schemas.data.SToothSurfaceCodeType[] getToothSurfaceCodes() {
         return toothSurfaceCodes;
     }
 
@@ -176,15 +176,15 @@ public class TLineItem  implements java.io.Serializable {
      * 
      * @param toothSurfaceCodes   * Tooth Surface Codese
      */
-    public void setToothSurfaceCodes(org.delta.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes) {
+    public void setToothSurfaceCodes(org.sen.schemas.data.SToothSurfaceCodeType[] toothSurfaceCodes) {
         this.toothSurfaceCodes = toothSurfaceCodes;
     }
 
-    public org.delta.schemas.data.SToothSurfaceCodeType getToothSurfaceCodes(int i) {
+    public org.sen.schemas.data.SToothSurfaceCodeType getToothSurfaceCodes(int i) {
         return this.toothSurfaceCodes[i];
     }
 
-    public void setToothSurfaceCodes(int i, org.delta.schemas.data.SToothSurfaceCodeType _value) {
+    public void setToothSurfaceCodes(int i, org.sen.schemas.data.SToothSurfaceCodeType _value) {
         this.toothSurfaceCodes[i] = _value;
     }
 
@@ -250,44 +250,44 @@ public class TLineItem  implements java.io.Serializable {
 
 
     /**
-     * Gets the deltaPaidAmount value for this TLineItem.
+     * Gets the senPaidAmount value for this TLineItem.
      * 
-     * @return deltaPaidAmount   * The Sen Den paid amount associated with the line item
+     * @return senPaidAmount   * The Sen Den paid amount associated with the line item
      */
-    public double getDeltaPaidAmount() {
-        return deltaPaidAmount;
+    public double getsenPaidAmount() {
+        return senPaidAmount;
     }
 
 
     /**
-     * Sets the deltaPaidAmount value for this TLineItem.
+     * Sets the senPaidAmount value for this TLineItem.
      * 
-     * @param deltaPaidAmount   * The Sen Den paid amount associated with the line item
+     * @param senPaidAmount   * The Sen Den paid amount associated with the line item
      */
-    public void setDeltaPaidAmount(double deltaPaidAmount) {
-        this.deltaPaidAmount = deltaPaidAmount;
+    public void setsenPaidAmount(double senPaidAmount) {
+        this.senPaidAmount = senPaidAmount;
     }
 
 
     /**
-     * Gets the deltaPercentageAmount value for this TLineItem.
+     * Gets the senPercentageAmount value for this TLineItem.
      * 
-     * @return deltaPercentageAmount   * The Sen Den paid percentage amount associated with the
+     * @return senPercentageAmount   * The Sen Den paid percentage amount associated with the
      * line item
      */
-    public java.lang.Double getDeltaPercentageAmount() {
-        return deltaPercentageAmount;
+    public java.lang.Double getsenPercentageAmount() {
+        return senPercentageAmount;
     }
 
 
     /**
-     * Sets the deltaPercentageAmount value for this TLineItem.
+     * Sets the senPercentageAmount value for this TLineItem.
      * 
-     * @param deltaPercentageAmount   * The Sen Den paid percentage amount associated with the
+     * @param senPercentageAmount   * The Sen Den paid percentage amount associated with the
      * line item
      */
-    public void setDeltaPercentageAmount(java.lang.Double deltaPercentageAmount) {
-        this.deltaPercentageAmount = deltaPercentageAmount;
+    public void setsenPercentageAmount(java.lang.Double senPercentageAmount) {
+        this.senPercentageAmount = senPercentageAmount;
     }
 
 
@@ -476,7 +476,7 @@ public class TLineItem  implements java.io.Serializable {
      * 
      * @return explanationCodes   * Explanation Codes
      */
-    public org.delta.schemas.data.TExCode[] getExplanationCodes() {
+    public org.sen.schemas.data.TExCode[] getExplanationCodes() {
         return explanationCodes;
     }
 
@@ -486,15 +486,15 @@ public class TLineItem  implements java.io.Serializable {
      * 
      * @param explanationCodes   * Explanation Codes
      */
-    public void setExplanationCodes(org.delta.schemas.data.TExCode[] explanationCodes) {
+    public void setExplanationCodes(org.sen.schemas.data.TExCode[] explanationCodes) {
         this.explanationCodes = explanationCodes;
     }
 
-    public org.delta.schemas.data.TExCode getExplanationCodes(int i) {
+    public org.sen.schemas.data.TExCode getExplanationCodes(int i) {
         return this.explanationCodes[i];
     }
 
-    public void setExplanationCodes(int i, org.delta.schemas.data.TExCode _value) {
+    public void setExplanationCodes(int i, org.sen.schemas.data.TExCode _value) {
         this.explanationCodes[i] = _value;
     }
 
@@ -565,7 +565,7 @@ public class TLineItem  implements java.io.Serializable {
      * @return payment   * The payment associated with the lineItem. The full payment
      * is referenced in the check payment
      */
-    public org.delta.schemas.data.TPayment getPayment() {
+    public org.sen.schemas.data.TPayment getPayment() {
         return payment;
     }
 
@@ -576,7 +576,7 @@ public class TLineItem  implements java.io.Serializable {
      * @param payment   * The payment associated with the lineItem. The full payment
      * is referenced in the check payment
      */
-    public void setPayment(org.delta.schemas.data.TPayment payment) {
+    public void setPayment(org.sen.schemas.data.TPayment payment) {
         this.payment = payment;
     }
 
@@ -665,10 +665,10 @@ public class TLineItem  implements java.io.Serializable {
              (this.procedureCodeName!=null &&
               this.procedureCodeName.equals(other.getProcedureCodeName()))) &&
             this.submittedAmount == other.getSubmittedAmount() &&
-            this.deltaPaidAmount == other.getDeltaPaidAmount() &&
-            ((this.deltaPercentageAmount==null && other.getDeltaPercentageAmount()==null) || 
-             (this.deltaPercentageAmount!=null &&
-              this.deltaPercentageAmount.equals(other.getDeltaPercentageAmount()))) &&
+            this.senPaidAmount == other.getsenPaidAmount() &&
+            ((this.senPercentageAmount==null && other.getsenPercentageAmount()==null) || 
+             (this.senPercentageAmount!=null &&
+              this.senPercentageAmount.equals(other.getsenPercentageAmount()))) &&
             this.patientPaidPayment == other.getPatientPaidPayment() &&
             this.primePaidAmount == other.getPrimePaidAmount() &&
             this.deductible == other.getDeductible() &&
@@ -740,9 +740,9 @@ public class TLineItem  implements java.io.Serializable {
             _hashCode += getProcedureCodeName().hashCode();
         }
         _hashCode += new Double(getSubmittedAmount()).hashCode();
-        _hashCode += new Double(getDeltaPaidAmount()).hashCode();
-        if (getDeltaPercentageAmount() != null) {
-            _hashCode += getDeltaPercentageAmount().hashCode();
+        _hashCode += new Double(getsenPaidAmount()).hashCode();
+        if (getsenPercentageAmount() != null) {
+            _hashCode += getsenPercentageAmount().hashCode();
         }
         _hashCode += new Double(getPatientPaidPayment()).hashCode();
         _hashCode += new Double(getPrimePaidAmount()).hashCode();
@@ -800,160 +800,160 @@ public class TLineItem  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TLineItem.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tLineItem"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tLineItem"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("toothCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "toothCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "toothCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("toothSurfaceCodes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "toothSurfaceCodes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sToothSurfaceCodeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "toothSurfaceCodes"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sToothSurfaceCodeType"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("procedureCodeName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "procedureCodeName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "procedureCodeName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("submittedAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "submittedAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "submittedAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deltaPaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deltaPaidAmount"));
+        elemField.setFieldName("senPaidAmount");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "senPaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deltaPercentageAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deltaPercentageAmount"));
+        elemField.setFieldName("senPercentageAmount");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "senPercentageAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("patientPaidPayment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "patientPaidPayment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "patientPaidPayment"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("primePaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "primePaidAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "primePaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("deductible");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deductible"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "deductible"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("approvedAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "approvedAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "approvedAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("allowedAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "allowedAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "allowedAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("patientCopayPercentage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "patientCopayPercentage"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "patientCopayPercentage"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("patientCopayAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "patientCopayAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "patientCopayAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dateOfService");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "dateOfService"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "dateOfService"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("processingDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "processingDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "processingDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("explanationCodes");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "explanationCodes"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tExCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "explanationCodes"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tExCode"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("serviceLineStatusIndicator");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "serviceLineStatusIndicator"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "serviceLineStatusIndicator"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("servicingProviderIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "servicingProviderIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "servicingProviderIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("otherInsurancePaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "otherInsurancePaidAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "otherInsurancePaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "payment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPayment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "payment"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPayment"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sequenceNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sequenceNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sequenceNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("servicingProviderFirstName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "servicingProviderFirstName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "servicingProviderFirstName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("servicingProviderLastName");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "servicingProviderLastName"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "servicingProviderLastName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

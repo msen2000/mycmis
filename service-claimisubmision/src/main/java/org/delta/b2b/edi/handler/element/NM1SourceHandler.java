@@ -1,18 +1,18 @@
-package org.delta.b2b.edi.handler.element;
+package org.sen.b2b.edi.handler.element;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t837.ENM101EntityIdentifierCode;
-import org.delta.b2b.edi.t837.ENM102EntityTypeQualifier;
-import org.delta.b2b.edi.t837.ENM103NameLastOrOrganizationName;
-import org.delta.b2b.edi.t837.ENM104NameFirst;
-import org.delta.b2b.edi.t837.ENM105NameMiddle;
-import org.delta.b2b.edi.t837.ENM106NamePrefix;
-import org.delta.b2b.edi.t837.ENM107NameSuffix;
-import org.delta.b2b.edi.t837.ENM108IdentificationCodeQualifier;
-import org.delta.b2b.edi.t837.ENM109IdentificationCode;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t837.ENM101EntityIdentifierCode;
+import org.sen.b2b.edi.t837.ENM102EntityTypeQualifier;
+import org.sen.b2b.edi.t837.ENM103NameLastOrOrganizationName;
+import org.sen.b2b.edi.t837.ENM104NameFirst;
+import org.sen.b2b.edi.t837.ENM105NameMiddle;
+import org.sen.b2b.edi.t837.ENM106NamePrefix;
+import org.sen.b2b.edi.t837.ENM107NameSuffix;
+import org.sen.b2b.edi.t837.ENM108IdentificationCodeQualifier;
+import org.sen.b2b.edi.t837.ENM109IdentificationCode;
 
 public class NM1SourceHandler {
 

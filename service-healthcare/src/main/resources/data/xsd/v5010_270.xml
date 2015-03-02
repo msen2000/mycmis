@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p:T-270 Standard="HIPAA" xmlns:p="http://www.delta.org/b2b/edi/t270" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.delta.org/b2b/edi/t270 v5010_270.xsd ">
+<p:T-270 Standard="HIPAA" xmlns:p="http://www.sen.org/b2b/edi/t270" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sen.org/b2b/edi/t270 v5010_270.xsd ">
   <p:S-ISA-Interchange_Control_Header>
     <p:E-ISA01-Authorization_Information_Qualifier>00</p:E-ISA01-Authorization_Information_Qualifier>
     <p:E-ISA02-Authorization_Information>p:E-ISA02-Authorization_Information</p:E-ISA02-Authorization_Information>

@@ -5,13 +5,13 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The definition of a provider object
  */
-public class TProvider  extends org.delta.schemas.data.TPerson  implements java.io.Serializable {
+public class TProvider  extends org.sen.schemas.data.TPerson  implements java.io.Serializable {
     /* Maps to the Provider Category, either M or I for Multiple and
      * Individual, respectively. */
     private java.lang.String providerType;
@@ -20,16 +20,16 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
     private java.lang.String providerIdentifier;
 
     /* The secondary identifiers */
-    private org.delta.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers;
+    private org.sen.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers;
 
     /* The practice location/facilities the provider works at */
-    private org.delta.schemas.data.TPracticeLocation[] practiceLocations;
+    private org.sen.schemas.data.TPracticeLocation[] practiceLocations;
 
     /* The contracts this provider has */
-    private org.delta.schemas.data.TProviderContract[] contracts;
+    private org.sen.schemas.data.TProviderContract[] contracts;
 
     /* The affiliated providers */
-    private org.delta.schemas.data.TProvider[] affiliatedProviders;
+    private org.sen.schemas.data.TProvider[] affiliatedProviders;
 
     public TProvider() {
     }
@@ -39,10 +39,10 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
            java.lang.String lastName,
            java.lang.String providerType,
            java.lang.String providerIdentifier,
-           org.delta.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers,
-           org.delta.schemas.data.TPracticeLocation[] practiceLocations,
-           org.delta.schemas.data.TProviderContract[] contracts,
-           org.delta.schemas.data.TProvider[] affiliatedProviders) {
+           org.sen.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers,
+           org.sen.schemas.data.TPracticeLocation[] practiceLocations,
+           org.sen.schemas.data.TProviderContract[] contracts,
+           org.sen.schemas.data.TProvider[] affiliatedProviders) {
         super(
             firstName,
             lastName);
@@ -102,7 +102,7 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return secondaryIdentifiers   * The secondary identifiers
      */
-    public org.delta.schemas.data.TSecondaryProviderIdentifier[] getSecondaryIdentifiers() {
+    public org.sen.schemas.data.TSecondaryProviderIdentifier[] getSecondaryIdentifiers() {
         return secondaryIdentifiers;
     }
 
@@ -112,15 +112,15 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param secondaryIdentifiers   * The secondary identifiers
      */
-    public void setSecondaryIdentifiers(org.delta.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers) {
+    public void setSecondaryIdentifiers(org.sen.schemas.data.TSecondaryProviderIdentifier[] secondaryIdentifiers) {
         this.secondaryIdentifiers = secondaryIdentifiers;
     }
 
-    public org.delta.schemas.data.TSecondaryProviderIdentifier getSecondaryIdentifiers(int i) {
+    public org.sen.schemas.data.TSecondaryProviderIdentifier getSecondaryIdentifiers(int i) {
         return this.secondaryIdentifiers[i];
     }
 
-    public void setSecondaryIdentifiers(int i, org.delta.schemas.data.TSecondaryProviderIdentifier _value) {
+    public void setSecondaryIdentifiers(int i, org.sen.schemas.data.TSecondaryProviderIdentifier _value) {
         this.secondaryIdentifiers[i] = _value;
     }
 
@@ -130,7 +130,7 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return practiceLocations   * The practice location/facilities the provider works at
      */
-    public org.delta.schemas.data.TPracticeLocation[] getPracticeLocations() {
+    public org.sen.schemas.data.TPracticeLocation[] getPracticeLocations() {
         return practiceLocations;
     }
 
@@ -140,15 +140,15 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param practiceLocations   * The practice location/facilities the provider works at
      */
-    public void setPracticeLocations(org.delta.schemas.data.TPracticeLocation[] practiceLocations) {
+    public void setPracticeLocations(org.sen.schemas.data.TPracticeLocation[] practiceLocations) {
         this.practiceLocations = practiceLocations;
     }
 
-    public org.delta.schemas.data.TPracticeLocation getPracticeLocations(int i) {
+    public org.sen.schemas.data.TPracticeLocation getPracticeLocations(int i) {
         return this.practiceLocations[i];
     }
 
-    public void setPracticeLocations(int i, org.delta.schemas.data.TPracticeLocation _value) {
+    public void setPracticeLocations(int i, org.sen.schemas.data.TPracticeLocation _value) {
         this.practiceLocations[i] = _value;
     }
 
@@ -158,7 +158,7 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return contracts   * The contracts this provider has
      */
-    public org.delta.schemas.data.TProviderContract[] getContracts() {
+    public org.sen.schemas.data.TProviderContract[] getContracts() {
         return contracts;
     }
 
@@ -168,15 +168,15 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param contracts   * The contracts this provider has
      */
-    public void setContracts(org.delta.schemas.data.TProviderContract[] contracts) {
+    public void setContracts(org.sen.schemas.data.TProviderContract[] contracts) {
         this.contracts = contracts;
     }
 
-    public org.delta.schemas.data.TProviderContract getContracts(int i) {
+    public org.sen.schemas.data.TProviderContract getContracts(int i) {
         return this.contracts[i];
     }
 
-    public void setContracts(int i, org.delta.schemas.data.TProviderContract _value) {
+    public void setContracts(int i, org.sen.schemas.data.TProviderContract _value) {
         this.contracts[i] = _value;
     }
 
@@ -186,7 +186,7 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @return affiliatedProviders   * The affiliated providers
      */
-    public org.delta.schemas.data.TProvider[] getAffiliatedProviders() {
+    public org.sen.schemas.data.TProvider[] getAffiliatedProviders() {
         return affiliatedProviders;
     }
 
@@ -196,15 +196,15 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
      * 
      * @param affiliatedProviders   * The affiliated providers
      */
-    public void setAffiliatedProviders(org.delta.schemas.data.TProvider[] affiliatedProviders) {
+    public void setAffiliatedProviders(org.sen.schemas.data.TProvider[] affiliatedProviders) {
         this.affiliatedProviders = affiliatedProviders;
     }
 
-    public org.delta.schemas.data.TProvider getAffiliatedProviders(int i) {
+    public org.sen.schemas.data.TProvider getAffiliatedProviders(int i) {
         return this.affiliatedProviders[i];
     }
 
-    public void setAffiliatedProviders(int i, org.delta.schemas.data.TProvider _value) {
+    public void setAffiliatedProviders(int i, org.sen.schemas.data.TProvider _value) {
         this.affiliatedProviders[i] = _value;
     }
 
@@ -308,44 +308,44 @@ public class TProvider  extends org.delta.schemas.data.TPerson  implements java.
         new org.apache.axis.description.TypeDesc(TProvider.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProvider"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProvider"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("providerType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "providerType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "providerType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("providerIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "providerIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "providerIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("secondaryIdentifiers");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "secondaryIdentifiers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tSecondaryProviderIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "secondaryIdentifiers"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tSecondaryProviderIdentifier"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("practiceLocations");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "practiceLocations"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPracticeLocation"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "practiceLocations"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPracticeLocation"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("contracts");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "contracts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProviderContract"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "contracts"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProviderContract"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("affiliatedProviders");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "affiliatedProviders"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProvider"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "affiliatedProviders"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProvider"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);

@@ -1,13 +1,13 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.handler.element.NM1DependetHandler;
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.*;
+import org.sen.b2b.edi.handler.element.NM1DependetHandler;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.*;
 
 public class L2000DHandler {
 

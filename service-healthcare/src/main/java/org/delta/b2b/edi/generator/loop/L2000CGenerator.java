@@ -1,8 +1,8 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t270.*;
+import org.sen.b2b.edi.t270.*;
 
 public class L2000CGenerator {
 

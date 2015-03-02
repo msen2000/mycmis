@@ -1,19 +1,19 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.segment;
+package org.sen.b2b.edi.handler.segment;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t271.EBHT01HierarchicalStructureCode;
-import org.delta.b2b.edi.t271.EBHT02TransactionSetPurposeCode;
-import org.delta.b2b.edi.t271.EBHT03ReferenceIdentification;
-import org.delta.b2b.edi.t271.EBHT04Date;
-import org.delta.b2b.edi.t271.EBHT05Time;
-import org.delta.b2b.edi.t271.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t271.T271;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t271.EBHT01HierarchicalStructureCode;
+import org.sen.b2b.edi.t271.EBHT02TransactionSetPurposeCode;
+import org.sen.b2b.edi.t271.EBHT03ReferenceIdentification;
+import org.sen.b2b.edi.t271.EBHT04Date;
+import org.sen.b2b.edi.t271.EBHT05Time;
+import org.sen.b2b.edi.t271.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t271.T271;
 
 /**
  * @author ca31085

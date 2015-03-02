@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -19,10 +19,10 @@ public class TLimitation  implements java.io.Serializable {
     private java.lang.Integer timePeriodQuantity;
 
     /* The overall time period associated with the limitation */
-    private org.delta.schemas.data.STimeUnitType timePeriodUnit;
+    private org.sen.schemas.data.STimeUnitType timePeriodUnit;
 
     /* Additional qualification of time limit */
-    private org.delta.schemas.data.SLimitationQualifier limitationQualifier;
+    private org.sen.schemas.data.SLimitationQualifier limitationQualifier;
 
     public TLimitation() {
     }
@@ -30,8 +30,8 @@ public class TLimitation  implements java.io.Serializable {
     public TLimitation(
            java.lang.Integer quantity,
            java.lang.Integer timePeriodQuantity,
-           org.delta.schemas.data.STimeUnitType timePeriodUnit,
-           org.delta.schemas.data.SLimitationQualifier limitationQualifier) {
+           org.sen.schemas.data.STimeUnitType timePeriodUnit,
+           org.sen.schemas.data.SLimitationQualifier limitationQualifier) {
            this.quantity = quantity;
            this.timePeriodQuantity = timePeriodQuantity;
            this.timePeriodUnit = timePeriodUnit;
@@ -84,7 +84,7 @@ public class TLimitation  implements java.io.Serializable {
      * 
      * @return timePeriodUnit   * The overall time period associated with the limitation
      */
-    public org.delta.schemas.data.STimeUnitType getTimePeriodUnit() {
+    public org.sen.schemas.data.STimeUnitType getTimePeriodUnit() {
         return timePeriodUnit;
     }
 
@@ -94,7 +94,7 @@ public class TLimitation  implements java.io.Serializable {
      * 
      * @param timePeriodUnit   * The overall time period associated with the limitation
      */
-    public void setTimePeriodUnit(org.delta.schemas.data.STimeUnitType timePeriodUnit) {
+    public void setTimePeriodUnit(org.sen.schemas.data.STimeUnitType timePeriodUnit) {
         this.timePeriodUnit = timePeriodUnit;
     }
 
@@ -104,7 +104,7 @@ public class TLimitation  implements java.io.Serializable {
      * 
      * @return limitationQualifier   * Additional qualification of time limit
      */
-    public org.delta.schemas.data.SLimitationQualifier getLimitationQualifier() {
+    public org.sen.schemas.data.SLimitationQualifier getLimitationQualifier() {
         return limitationQualifier;
     }
 
@@ -114,7 +114,7 @@ public class TLimitation  implements java.io.Serializable {
      * 
      * @param limitationQualifier   * Additional qualification of time limit
      */
-    public void setLimitationQualifier(org.delta.schemas.data.SLimitationQualifier limitationQualifier) {
+    public void setLimitationQualifier(org.sen.schemas.data.SLimitationQualifier limitationQualifier) {
         this.limitationQualifier = limitationQualifier;
     }
 
@@ -174,32 +174,32 @@ public class TLimitation  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TLimitation.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tLimitation"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tLimitation"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("quantity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "quantity"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "quantity"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("timePeriodQuantity");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "timePeriodQuantity"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "timePeriodQuantity"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("timePeriodUnit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "timePeriodUnit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sTimeUnitType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "timePeriodUnit"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sTimeUnitType"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("limitationQualifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "limitationQualifier"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sLimitationQualifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "limitationQualifier"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sLimitationQualifier"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -13,7 +13,7 @@ package org.delta.schemas.data;
  */
 public class TExCode  implements java.io.Serializable {
     /* The explanation Category */
-    private org.delta.schemas.data.SServiceLineExplanationCategoryType explanationCategory;
+    private org.sen.schemas.data.SServiceLineExplanationCategoryType explanationCategory;
 
     /* The explanation code */
     private java.lang.String explanationCode;
@@ -25,7 +25,7 @@ public class TExCode  implements java.io.Serializable {
     }
 
     public TExCode(
-           org.delta.schemas.data.SServiceLineExplanationCategoryType explanationCategory,
+           org.sen.schemas.data.SServiceLineExplanationCategoryType explanationCategory,
            java.lang.String explanationCode,
            java.lang.String explanationCodeDescription) {
            this.explanationCategory = explanationCategory;
@@ -39,7 +39,7 @@ public class TExCode  implements java.io.Serializable {
      * 
      * @return explanationCategory   * The explanation Category
      */
-    public org.delta.schemas.data.SServiceLineExplanationCategoryType getExplanationCategory() {
+    public org.sen.schemas.data.SServiceLineExplanationCategoryType getExplanationCategory() {
         return explanationCategory;
     }
 
@@ -49,7 +49,7 @@ public class TExCode  implements java.io.Serializable {
      * 
      * @param explanationCategory   * The explanation Category
      */
-    public void setExplanationCategory(org.delta.schemas.data.SServiceLineExplanationCategoryType explanationCategory) {
+    public void setExplanationCategory(org.sen.schemas.data.SServiceLineExplanationCategoryType explanationCategory) {
         this.explanationCategory = explanationCategory;
     }
 
@@ -143,22 +143,22 @@ public class TExCode  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TExCode.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tExCode"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tExCode"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("explanationCategory");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "explanationCategory"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sServiceLineExplanationCategoryType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "explanationCategory"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sServiceLineExplanationCategoryType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("explanationCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "explanationCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "explanationCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("explanationCodeDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "explanationCodeDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "explanationCodeDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

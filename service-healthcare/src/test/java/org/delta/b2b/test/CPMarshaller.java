@@ -1,4 +1,4 @@
-package org.delta.b2b.test;
+package org.sen.b2b.test;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,8 +9,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 
-//import org.delta.edi.v270.ObjectFactory;
-//import org.delta.edi.v270.Person;
+//import org.sen.edi.v270.ObjectFactory;
+//import org.sen.edi.v270.Person;
 
 
 
@@ -20,7 +20,7 @@ import javax.xml.bind.Unmarshaller;
 public class CPMarshaller {
 /*
 	private JAXBContext jc;
-	String contextPath = "org.delta.edi.v270";
+	String contextPath = "org.sen.edi.v270";
 
 
 	public String marshall() throws Exception {

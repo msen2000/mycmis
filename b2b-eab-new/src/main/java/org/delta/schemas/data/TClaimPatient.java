@@ -5,13 +5,13 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
-public class TClaimPatient  extends org.delta.schemas.data.TPerson  implements java.io.Serializable {
+public class TClaimPatient  extends org.sen.schemas.data.TPerson  implements java.io.Serializable {
     private java.lang.String memberNumber;
 
     /* The relation type (Relationship to primary enrollee) */
-    private org.delta.schemas.data.SEnrolleeType relationshipCode;
+    private org.sen.schemas.data.SEnrolleeType relationshipCode;
 
     /* The date of birth of the person */
     private java.util.Date dateOfBirth;
@@ -26,7 +26,7 @@ public class TClaimPatient  extends org.delta.schemas.data.TPerson  implements j
            java.lang.String firstName,
            java.lang.String lastName,
            java.lang.String memberNumber,
-           org.delta.schemas.data.SEnrolleeType relationshipCode,
+           org.sen.schemas.data.SEnrolleeType relationshipCode,
            java.util.Date dateOfBirth,
            boolean privacyFlag) {
         super(
@@ -64,7 +64,7 @@ public class TClaimPatient  extends org.delta.schemas.data.TPerson  implements j
      * 
      * @return relationshipCode   * The relation type (Relationship to primary enrollee)
      */
-    public org.delta.schemas.data.SEnrolleeType getRelationshipCode() {
+    public org.sen.schemas.data.SEnrolleeType getRelationshipCode() {
         return relationshipCode;
     }
 
@@ -74,7 +74,7 @@ public class TClaimPatient  extends org.delta.schemas.data.TPerson  implements j
      * 
      * @param relationshipCode   * The relation type (Relationship to primary enrollee)
      */
-    public void setRelationshipCode(org.delta.schemas.data.SEnrolleeType relationshipCode) {
+    public void setRelationshipCode(org.sen.schemas.data.SEnrolleeType relationshipCode) {
         this.relationshipCode = relationshipCode;
     }
 
@@ -170,28 +170,28 @@ public class TClaimPatient  extends org.delta.schemas.data.TPerson  implements j
         new org.apache.axis.description.TypeDesc(TClaimPatient.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tClaim>patient"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tClaim>patient"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("memberNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "memberNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "memberNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("relationshipCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "relationshipCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sEnrolleeType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "relationshipCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sEnrolleeType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dateOfBirth");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "dateOfBirth"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "dateOfBirth"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("privacyFlag");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "privacyFlag"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "privacyFlag"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

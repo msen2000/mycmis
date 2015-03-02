@@ -5,31 +5,31 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.services.eligibilityAndBenefits;
+package org.sen.services.eligibilityAndBenefits;
 
 import java.rmi.RemoteException;
 
-import org.delta.schemas.data.TBenefitPackageInquiryResponse;
-import org.delta.schemas.data.TContractListResponse;
-import org.delta.schemas.data.TContractListResponses;
-import org.delta.schemas.data.TProcedureCodeAndName;
-import org.delta.schemas.error.SDomainType;
-import org.delta.schemas.error.TInquiryError;
-import org.delta.services.OperationException;
-import org.delta.services.SpringApplicationContext;
-import org.delta.services.TInquiryErrorConverter;
-import org.delta.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade;
+import org.sen.schemas.data.TBenefitPackageInquiryResponse;
+import org.sen.schemas.data.TContractListResponse;
+import org.sen.schemas.data.TContractListResponses;
+import org.sen.schemas.data.TProcedureCodeAndName;
+import org.sen.schemas.error.SDomainType;
+import org.sen.schemas.error.TInquiryError;
+import org.sen.services.OperationException;
+import org.sen.services.SpringApplicationContext;
+import org.sen.services.TInquiryErrorConverter;
+import org.sen.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade;
 
-public class EligibilityAndBenefitsServiceBindingImpl implements org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType{
+public class EligibilityAndBenefitsServiceBindingImpl implements org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType{
 	private EligibilityAndBenefitsIVRFacade eligibilityIVRFacade;
 
 	/*
-	public java.lang.String getEligibilityByEnrolleeIdentifier(java.lang.String enrolleeIdentifier, java.util.Date enrolleeBirthDate) throws java.rmi.RemoteException, org.delta.schemas.error.TInquiryError {
+	public java.lang.String getEligibilityByEnrolleeIdentifier(java.lang.String enrolleeIdentifier, java.util.Date enrolleeBirthDate) throws java.rmi.RemoteException, org.sen.schemas.error.TInquiryError {
 		return "Hello World";		
 	}
 	*/
 	
-	public org.delta.schemas.data.TContractListResponses getB2BEligibilityAndBenefits(java.util.Date DOB, java.lang.String firstName, java.lang.String lastName, java.lang.String personIdentifier, java.lang.String enrolleeIdentifier, java.lang.String enrolleeType) throws java.rmi.RemoteException, org.delta.schemas.error.TInquiryError {
+	public org.sen.schemas.data.TContractListResponses getB2BEligibilityAndBenefits(java.util.Date DOB, java.lang.String firstName, java.lang.String lastName, java.lang.String personIdentifier, java.lang.String enrolleeIdentifier, java.lang.String enrolleeType) throws java.rmi.RemoteException, org.sen.schemas.error.TInquiryError {
 		try {
 			TContractListResponse cont = getEligibilityIVRFacade().getEligibilityByEnrolleeIdentifier(enrolleeIdentifier, DOB);
 			TBenefitPackageInquiryResponse bp = getEligibilityIVRFacade().getBenefitPackage("CPP00001", null, null, null, null);
@@ -46,7 +46,7 @@ public class EligibilityAndBenefitsServiceBindingImpl implements org.delta.servi
 	}
 	
 	/*
-	public org.delta.schemas.data.TBenefitPackageInquiryResponse getBenefitPackageByPackageIdentifier(String packageIdentifier, String contractIdentifier, String memberNumber, String personIdentifier, String[] procedureCode) throws RemoteException, TInquiryError {
+	public org.sen.schemas.data.TBenefitPackageInquiryResponse getBenefitPackageByPackageIdentifier(String packageIdentifier, String contractIdentifier, String memberNumber, String personIdentifier, String[] procedureCode) throws RemoteException, TInquiryError {
         try {
         	return getEligibilityIVRFacade().getBenefitPackage(packageIdentifier, contractIdentifier, memberNumber, personIdentifier, procedureCode);
         }

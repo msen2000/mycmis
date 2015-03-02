@@ -1,22 +1,22 @@
-package org.delta.b2b.edi.handler.element;
+package org.sen.b2b.edi.handler.element;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.ENM101EntityIdentifierCode1;
-import org.delta.b2b.edi.t270.ENM102EntityTypeQualifier;
-import org.delta.b2b.edi.t270.ENM103NameLastOrOrganizationName;
-import org.delta.b2b.edi.t270.ENM104NameFirst;
-import org.delta.b2b.edi.t270.ENM105NameMiddle;
-import org.delta.b2b.edi.t270.ENM106NamePrefix;
-import org.delta.b2b.edi.t270.ENM107NameSuffix;
-import org.delta.b2b.edi.t270.ENM108IdentificationCodeQualifier1;
-import org.delta.b2b.edi.t270.ENM109IdentificationCode;
-import org.delta.b2b.edi.t270.ENM110EntityRelationshipCode;
-import org.delta.b2b.edi.t270.ENM111EntityIdentifierCode;
-import org.delta.b2b.edi.t270.ENM112NameLastOrOrganizationName;
-import org.delta.b2b.edi.t270.SNM1InformationReceiverName;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.ENM101EntityIdentifierCode1;
+import org.sen.b2b.edi.t270.ENM102EntityTypeQualifier;
+import org.sen.b2b.edi.t270.ENM103NameLastOrOrganizationName;
+import org.sen.b2b.edi.t270.ENM104NameFirst;
+import org.sen.b2b.edi.t270.ENM105NameMiddle;
+import org.sen.b2b.edi.t270.ENM106NamePrefix;
+import org.sen.b2b.edi.t270.ENM107NameSuffix;
+import org.sen.b2b.edi.t270.ENM108IdentificationCodeQualifier1;
+import org.sen.b2b.edi.t270.ENM109IdentificationCode;
+import org.sen.b2b.edi.t270.ENM110EntityRelationshipCode;
+import org.sen.b2b.edi.t270.ENM111EntityIdentifierCode;
+import org.sen.b2b.edi.t270.ENM112NameLastOrOrganizationName;
+import org.sen.b2b.edi.t270.SNM1InformationReceiverName;
 
 public class NM1ReceiverHandler {
 	

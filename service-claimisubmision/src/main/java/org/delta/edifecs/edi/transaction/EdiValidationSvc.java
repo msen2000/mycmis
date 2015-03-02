@@ -1,4 +1,4 @@
-package org.delta.edifecs.edi.transaction;
+package org.sen.edifecs.edi.transaction;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;

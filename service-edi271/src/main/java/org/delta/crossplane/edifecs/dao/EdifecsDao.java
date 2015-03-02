@@ -1,6 +1,6 @@
-package org.delta.crossplane.edifecs.dao;
+package org.sen.crossplane.edifecs.dao;
 
-import org.delta.crossplane.domain.EdifecsRequestResponse;
+import org.sen.crossplane.domain.EdifecsRequestResponse;
 
 public interface EdifecsDao {
 //	public String validateAndTransform(String ediRequest);

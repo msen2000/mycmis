@@ -1,13 +1,13 @@
-package org.delta.b2b.edi.handler.trailer;
+package org.sen.b2b.edi.handler.trailer;
 
 import java.math.BigInteger;
 import java.text.DecimalFormat;
 
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.EIEA01NumberOfIncludedFunctionalGroups;
-import org.delta.b2b.edi.t276.EIEA02InterchangeControlNumber;
-import org.delta.b2b.edi.t276.SIEAInterchangeControlTrailer;
-import org.delta.b2b.edi.t276.T276;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.EIEA01NumberOfIncludedFunctionalGroups;
+import org.sen.b2b.edi.t276.EIEA02InterchangeControlNumber;
+import org.sen.b2b.edi.t276.SIEAInterchangeControlTrailer;
+import org.sen.b2b.edi.t276.T276;
 
 public class IEAHandler {
 	

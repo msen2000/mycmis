@@ -3,11 +3,11 @@
  * Copyrights 2008 Sen Den, Inc. All rights reserved.
  * Sen Den PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  */
-package org.delta.crossplane.edifecs.service;
+package org.sen.crossplane.edifecs.service;
 
-import org.delta.crossplane.common.service.Service;
-import org.delta.crossplane.transport.CrossPlaneTransportException;
-import org.delta.crossplane.edifecs.dao.EdifecsDao;
+import org.sen.crossplane.common.service.Service;
+import org.sen.crossplane.transport.CrossPlaneTransportException;
+import org.sen.crossplane.edifecs.dao.EdifecsDao;
 
 /***************************************************************************************************
  * 

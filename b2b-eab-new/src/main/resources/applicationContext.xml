@@ -27,7 +27,7 @@
 	</bean>	
 
 	<!-- A non-pooling based JMS provider. Will pool later by borrowing code from ActiveMQ -->
-	<bean id="jmsClient" class="org.delta.crossplane.transport.impl.JmsClientImpl">
+	<bean id="jmsClient" class="org.sen.crossplane.transport.impl.JmsClientImpl">
 		<property name="ipAddress">
 			<value>${jms.ip.address}</value>
 		</property>			
@@ -42,18 +42,18 @@
 		</property>
 	</bean>
 
-	<import resource="classpath:/org/delta/crossplane/eligibility/service/EligibilityService.ctx.xml"/>
-	<import resource="classpath:/org/delta/crossplane/benefits/service/BenefitsService.ctx.xml"/>
-	<import resource="classpath:/org/delta/crossplane/claim/service/ClaimService.ctx.xml"/>
+	<import resource="classpath:/org/sen/crossplane/eligibility/service/EligibilityService.ctx.xml"/>
+	<import resource="classpath:/org/sen/crossplane/benefits/service/BenefitsService.ctx.xml"/>
+	<import resource="classpath:/org/sen/crossplane/claim/service/ClaimService.ctx.xml"/>
 
-	<bean id="ivrLoggingInterceptor" class="org.delta.services.interceptor.IVRLoggingInterceptor"/>
+	<bean id="ivrLoggingInterceptor" class="org.sen.services.interceptor.IVRLoggingInterceptor"/>
 
 	<bean id="eligibilityIVRFacade" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="proxyInterfaces">
-			<value>org.delta.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade</value>
+			<value>org.sen.services.eligibilityAndBenefits.facade.EligibilityAndBenefitsIVRFacade</value>
 		</property>
 		<property name="target">
-			<bean id="eligibilityIVRFacadeTarget" class="org.delta.services.eligibilityAndBenefits.facade.impl.EligibilityAndBenefitsIVRFacadeImpl">
+			<bean id="eligibilityIVRFacadeTarget" class="org.sen.services.eligibilityAndBenefits.facade.impl.EligibilityAndBenefitsIVRFacadeImpl">
 				<property name="eligibilityService">
 					<ref bean="eligibilityService"/>
 				</property>

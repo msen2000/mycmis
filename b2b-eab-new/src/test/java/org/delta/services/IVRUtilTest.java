@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.delta.services;
+package org.sen.services;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,35 +31,35 @@ public class IVRUtilTest extends TestCase {
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#toSEnrolleeType(java.lang.String)}.
+	 * Test method for {@link org.sen.services.IVRUtil#toSEnrolleeType(java.lang.String)}.
 	 */
 	public void testToSEnrolleeType() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#isBirthDateInPrimaryEnrolleeContractList(java.util.List, java.util.Date)}.
+	 * Test method for {@link org.sen.services.IVRUtil#isBirthDateInPrimaryEnrolleeContractList(java.util.List, java.util.Date)}.
 	 */
 	public void testIsBirthDateInPrimaryEnrolleeContractList() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#getDoubleFromBigDecimal(java.math.BigDecimal)}.
+	 * Test method for {@link org.sen.services.IVRUtil#getDoubleFromBigDecimal(java.math.BigDecimal)}.
 	 */
 	public void testGetDoubleFromBigDecimal() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#convertToTInquiryError(java.lang.Throwable, org.delta.schemas.error.SDomainType)}.
+	 * Test method for {@link org.sen.services.IVRUtil#convertToTInquiryError(java.lang.Throwable, org.sen.schemas.error.SDomainType)}.
 	 */
 	public void testConvertToTInquiryError() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#isDateInSixMonth(java.util.Date)}.
+	 * Test method for {@link org.sen.services.IVRUtil#isDateInSixMonth(java.util.Date)}.
 	 */
 	public void testIsDateInSixMonth() throws ParseException {
 		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -91,21 +91,21 @@ public class IVRUtilTest extends TestCase {
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#toSTimeUnitType(java.lang.String, int, java.lang.String)}.
+	 * Test method for {@link org.sen.services.IVRUtil#toSTimeUnitType(java.lang.String, int, java.lang.String)}.
 	 */
 	public void testToSTimeUnitType() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#phoneTypeConverter(java.lang.String)}.
+	 * Test method for {@link org.sen.services.IVRUtil#phoneTypeConverter(java.lang.String)}.
 	 */
 	public void testPhoneTypeConverter() {
 		// TODO
 	}
 
 	/**
-	 * Test method for {@link org.delta.services.IVRUtil#comparePeriodToToday(java.util.Date, java.util.Date)}.
+	 * Test method for {@link org.sen.services.IVRUtil#comparePeriodToToday(java.util.Date, java.util.Date)}.
 	 */
 	public void testComparePeriodToToday() {
 		// TODO

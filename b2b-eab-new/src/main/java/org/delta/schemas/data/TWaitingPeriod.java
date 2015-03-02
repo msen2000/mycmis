@@ -5,13 +5,13 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The definition of a waiting period object
  */
-public class TWaitingPeriod  extends org.delta.schemas.data.TDateRange  implements java.io.Serializable {
+public class TWaitingPeriod  extends org.sen.schemas.data.TDateRange  implements java.io.Serializable {
     public TWaitingPeriod() {
     }
 
@@ -55,7 +55,7 @@ public class TWaitingPeriod  extends org.delta.schemas.data.TDateRange  implemen
         new org.apache.axis.description.TypeDesc(TWaitingPeriod.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tWaitingPeriod"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tWaitingPeriod"));
     }
 
     /**

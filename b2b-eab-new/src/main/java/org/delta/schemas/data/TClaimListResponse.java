@@ -5,23 +5,23 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The response of the get claim list call
  */
 public class TClaimListResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TClaim[] claimList;
+    private org.sen.schemas.data.TClaim[] claimList;
 
-    private org.delta.schemas.data.SClaimListResponseStatusType claimResponseStatus;
+    private org.sen.schemas.data.SClaimListResponseStatusType claimResponseStatus;
 
     public TClaimListResponse() {
     }
 
     public TClaimListResponse(
-           org.delta.schemas.data.TClaim[] claimList,
-           org.delta.schemas.data.SClaimListResponseStatusType claimResponseStatus) {
+           org.sen.schemas.data.TClaim[] claimList,
+           org.sen.schemas.data.SClaimListResponseStatusType claimResponseStatus) {
            this.claimList = claimList;
            this.claimResponseStatus = claimResponseStatus;
     }
@@ -32,7 +32,7 @@ public class TClaimListResponse  implements java.io.Serializable {
      * 
      * @return claimList
      */
-    public org.delta.schemas.data.TClaim[] getClaimList() {
+    public org.sen.schemas.data.TClaim[] getClaimList() {
         return claimList;
     }
 
@@ -42,7 +42,7 @@ public class TClaimListResponse  implements java.io.Serializable {
      * 
      * @param claimList
      */
-    public void setClaimList(org.delta.schemas.data.TClaim[] claimList) {
+    public void setClaimList(org.sen.schemas.data.TClaim[] claimList) {
         this.claimList = claimList;
     }
 
@@ -52,7 +52,7 @@ public class TClaimListResponse  implements java.io.Serializable {
      * 
      * @return claimResponseStatus
      */
-    public org.delta.schemas.data.SClaimListResponseStatusType getClaimResponseStatus() {
+    public org.sen.schemas.data.SClaimListResponseStatusType getClaimResponseStatus() {
         return claimResponseStatus;
     }
 
@@ -62,7 +62,7 @@ public class TClaimListResponse  implements java.io.Serializable {
      * 
      * @param claimResponseStatus
      */
-    public void setClaimResponseStatus(org.delta.schemas.data.SClaimListResponseStatusType claimResponseStatus) {
+    public void setClaimResponseStatus(org.sen.schemas.data.SClaimListResponseStatusType claimResponseStatus) {
         this.claimResponseStatus = claimResponseStatus;
     }
 
@@ -118,19 +118,19 @@ public class TClaimListResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TClaimListResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tClaimListResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tClaimListResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tClaim"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tClaim"));
         elemField.setNillable(false);
         elemField.setMinOccurs(0);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claim"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claim"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("claimResponseStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "claimResponseStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sClaimListResponseStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "claimResponseStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sClaimListResponseStatusType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:data="http://schemas.delta.org/data" xmlns:error="http://schemas.delta.org/error" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://services.delta.org/eligibilityAndBenefits" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.delta.org/eligibilityAndBenefits">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:data="http://schemas.sen.org/data" xmlns:error="http://schemas.sen.org/error" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://services.sen.org/eligibilityAndBenefits" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.sen.org/eligibilityAndBenefits">
 	<types>
-		<xs:schema elementFormDefault="qualified" targetNamespace="http://services.delta.org/eligibilityAndBenefits">
-			<xs:import namespace="http://schemas.delta.org/data" schemaLocation="DataModel.xsd"/>
-			<xs:import namespace="http://schemas.delta.org/error" schemaLocation="FaultModel.xsd"/>
+		<xs:schema elementFormDefault="qualified" targetNamespace="http://services.sen.org/eligibilityAndBenefits">
+			<xs:import namespace="http://schemas.sen.org/data" schemaLocation="DataModel.xsd"/>
+			<xs:import namespace="http://schemas.sen.org/error" schemaLocation="FaultModel.xsd"/>
 			<xs:element name="getB2BEligibilityAndBenefits">
 				<xs:complexType>
 					<xs:sequence>

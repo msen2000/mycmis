@@ -5,14 +5,14 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.error;
+package org.sen.schemas.error;
 
 
 /**
  * The definition of an error object
  */
 public class TError  extends org.apache.axis.AxisFault  implements java.io.Serializable {
-    private org.delta.schemas.error.SErrorCode errorCode;
+    private org.sen.schemas.error.SErrorCode errorCode;
 
     private java.lang.String errorDetail;
 
@@ -20,7 +20,7 @@ public class TError  extends org.apache.axis.AxisFault  implements java.io.Seria
     }
 
     public TError(
-           org.delta.schemas.error.SErrorCode errorCode,
+           org.sen.schemas.error.SErrorCode errorCode,
            java.lang.String errorDetail) {
         this.errorCode = errorCode;
         this.errorDetail = errorDetail;
@@ -32,7 +32,7 @@ public class TError  extends org.apache.axis.AxisFault  implements java.io.Seria
      * 
      * @return errorCode
      */
-    public org.delta.schemas.error.SErrorCode getErrorCode() {
+    public org.sen.schemas.error.SErrorCode getErrorCode() {
         return errorCode;
     }
 
@@ -42,7 +42,7 @@ public class TError  extends org.apache.axis.AxisFault  implements java.io.Seria
      * 
      * @param errorCode
      */
-    public void setErrorCode(org.delta.schemas.error.SErrorCode errorCode) {
+    public void setErrorCode(org.sen.schemas.error.SErrorCode errorCode) {
         this.errorCode = errorCode;
     }
 
@@ -110,16 +110,16 @@ public class TError  extends org.apache.axis.AxisFault  implements java.io.Seria
         new org.apache.axis.description.TypeDesc(TError.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "tError"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "tError"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("errorCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/error", "errorCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "sErrorCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/error", "errorCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "sErrorCode"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("errorDetail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/error", "errorDetail"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/error", "errorDetail"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

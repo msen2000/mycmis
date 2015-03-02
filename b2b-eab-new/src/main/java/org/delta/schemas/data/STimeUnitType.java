@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class STimeUnitType implements java.io.Serializable {
     private java.lang.String _value_;
@@ -66,7 +66,7 @@ public class STimeUnitType implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(STimeUnitType.class);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sTimeUnitType"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sTimeUnitType"));
     }
     /**
      * Return type metadata object

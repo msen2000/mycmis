@@ -5,13 +5,13 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The definition of a practice Location object
  */
-public class TPracticeLocation  extends org.delta.schemas.data.TAddress  implements java.io.Serializable {
+public class TPracticeLocation  extends org.sen.schemas.data.TAddress  implements java.io.Serializable {
     /* The practice location identifier */
     private java.lang.String practiceLocationId;
 
@@ -22,7 +22,7 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
     private java.lang.String country;
 
     /* The phone contacts for this practice location */
-    private org.delta.schemas.data.TPhoneNumber[] phone;
+    private org.sen.schemas.data.TPhoneNumber[] phone;
 
     /* The email address */
     private java.lang.String email;
@@ -31,7 +31,7 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
     }
 
     public TPracticeLocation(
-           org.delta.schemas.data.SAddressType addressType,
+           org.sen.schemas.data.SAddressType addressType,
            java.lang.String addressLine1,
            java.lang.String addressLine2,
            java.lang.String city,
@@ -40,7 +40,7 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
            java.lang.String practiceLocationId,
            java.lang.String county,
            java.lang.String country,
-           org.delta.schemas.data.TPhoneNumber[] phone,
+           org.sen.schemas.data.TPhoneNumber[] phone,
            java.lang.String email) {
         super(
             addressLine1,
@@ -122,7 +122,7 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
      * 
      * @return phone   * The phone contacts for this practice location
      */
-    public org.delta.schemas.data.TPhoneNumber[] getPhone() {
+    public org.sen.schemas.data.TPhoneNumber[] getPhone() {
         return phone;
     }
 
@@ -132,15 +132,15 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
      * 
      * @param phone   * The phone contacts for this practice location
      */
-    public void setPhone(org.delta.schemas.data.TPhoneNumber[] phone) {
+    public void setPhone(org.sen.schemas.data.TPhoneNumber[] phone) {
         this.phone = phone;
     }
 
-    public org.delta.schemas.data.TPhoneNumber getPhone(int i) {
+    public org.sen.schemas.data.TPhoneNumber getPhone(int i) {
         return this.phone[i];
     }
 
-    public void setPhone(int i, org.delta.schemas.data.TPhoneNumber _value) {
+    public void setPhone(int i, org.sen.schemas.data.TPhoneNumber _value) {
         this.phone[i] = _value;
     }
 
@@ -234,38 +234,38 @@ public class TPracticeLocation  extends org.delta.schemas.data.TAddress  impleme
         new org.apache.axis.description.TypeDesc(TPracticeLocation.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPracticeLocation"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPracticeLocation"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("practiceLocationId");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "practiceLocationId"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "practiceLocationId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("county");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "county"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "county"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("country");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "country"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "country"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("phone");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "phone"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPhoneNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "phone"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPhoneNumber"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("email");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "email"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "email"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

@@ -1,6 +1,6 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
-import org.delta.b2b.edi.t837.L2000C;
+import org.sen.b2b.edi.t837.L2000C;
 
 public class L2000CGenerator {
 

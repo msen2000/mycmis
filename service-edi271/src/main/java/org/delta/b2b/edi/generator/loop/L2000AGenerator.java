@@ -1,9 +1,9 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
-import org.delta.b2b.edi.t271.L2000A;
-import org.delta.b2b.edi.t271.L2100A;
-import org.delta.b2b.edi.t271.SHLInformationSourceLevel;
-import org.delta.b2b.edi.t271.SNM1InformationSourceName;
+import org.sen.b2b.edi.t271.L2000A;
+import org.sen.b2b.edi.t271.L2100A;
+import org.sen.b2b.edi.t271.SHLInformationSourceLevel;
+import org.sen.b2b.edi.t271.SNM1InformationSourceName;
 
 public class L2000AGenerator {
 

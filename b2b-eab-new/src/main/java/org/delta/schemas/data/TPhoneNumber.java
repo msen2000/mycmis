@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -15,14 +15,14 @@ public class TPhoneNumber  implements java.io.Serializable {
     /* The phoneNumber */
     private java.lang.String phoneNumber;
 
-    private org.delta.schemas.data.SPhoneType phoneType;  // attribute
+    private org.sen.schemas.data.SPhoneType phoneType;  // attribute
 
     public TPhoneNumber() {
     }
 
     public TPhoneNumber(
            java.lang.String phoneNumber,
-           org.delta.schemas.data.SPhoneType phoneType) {
+           org.sen.schemas.data.SPhoneType phoneType) {
            this.phoneNumber = phoneNumber;
            this.phoneType = phoneType;
     }
@@ -53,7 +53,7 @@ public class TPhoneNumber  implements java.io.Serializable {
      * 
      * @return phoneType
      */
-    public org.delta.schemas.data.SPhoneType getPhoneType() {
+    public org.sen.schemas.data.SPhoneType getPhoneType() {
         return phoneType;
     }
 
@@ -63,7 +63,7 @@ public class TPhoneNumber  implements java.io.Serializable {
      * 
      * @param phoneType
      */
-    public void setPhoneType(org.delta.schemas.data.SPhoneType phoneType) {
+    public void setPhoneType(org.sen.schemas.data.SPhoneType phoneType) {
         this.phoneType = phoneType;
     }
 
@@ -111,15 +111,15 @@ public class TPhoneNumber  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TPhoneNumber.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPhoneNumber"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPhoneNumber"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("phoneType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "phoneType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sPhoneType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sPhoneType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("phoneNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "phoneNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "phoneNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

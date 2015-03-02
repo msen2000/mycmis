@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -27,7 +27,7 @@ public class TAddress  implements java.io.Serializable {
     /* The state */
     private java.lang.String state;
 
-    private org.delta.schemas.data.SAddressType addressType;  // attribute
+    private org.sen.schemas.data.SAddressType addressType;  // attribute
 
     public TAddress() {
     }
@@ -38,7 +38,7 @@ public class TAddress  implements java.io.Serializable {
            java.lang.String city,
            java.lang.String zipCode,
            java.lang.String state,
-           org.delta.schemas.data.SAddressType addressType) {
+           org.sen.schemas.data.SAddressType addressType) {
            this.addressLine1 = addressLine1;
            this.addressLine2 = addressLine2;
            this.city = city;
@@ -153,7 +153,7 @@ public class TAddress  implements java.io.Serializable {
      * 
      * @return addressType
      */
-    public org.delta.schemas.data.SAddressType getAddressType() {
+    public org.sen.schemas.data.SAddressType getAddressType() {
         return addressType;
     }
 
@@ -163,7 +163,7 @@ public class TAddress  implements java.io.Serializable {
      * 
      * @param addressType
      */
-    public void setAddressType(org.delta.schemas.data.SAddressType addressType) {
+    public void setAddressType(org.sen.schemas.data.SAddressType addressType) {
         this.addressType = addressType;
     }
 
@@ -235,40 +235,40 @@ public class TAddress  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TAddress.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAddress"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAddress"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("addressType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "addressType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sAddressType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sAddressType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("addressLine1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "addressLine1"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "addressLine1"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("addressLine2");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "addressLine2"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "addressLine2"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("city");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "city"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "city"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("zipCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "zipCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "zipCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("state");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "state"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "state"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

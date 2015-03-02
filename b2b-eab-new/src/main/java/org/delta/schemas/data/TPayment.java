@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -22,7 +22,7 @@ public class TPayment  implements java.io.Serializable {
     private java.lang.Double paymentAmount;
 
     /* Status of payment: */
-    private org.delta.schemas.data.SPaymentStatusType paymentStatus;
+    private org.sen.schemas.data.SPaymentStatusType paymentStatus;
 
     /* As of date for status: Date paid/cashed or printed/sent. */
     private java.util.Date paymentStatusDate;
@@ -34,9 +34,9 @@ public class TPayment  implements java.io.Serializable {
     private java.lang.String taxIdentifer;
 
     /* Indicator that denotes the type of payee */
-    private org.delta.schemas.data.SPayToCode payToIndicatorCode;
+    private org.sen.schemas.data.SPayToCode payToIndicatorCode;
 
-    private org.delta.schemas.data.SPaymentType paymentType;  // attribute
+    private org.sen.schemas.data.SPaymentType paymentType;  // attribute
 
     public TPayment() {
     }
@@ -45,12 +45,12 @@ public class TPayment  implements java.io.Serializable {
            java.lang.String paymentNumber,
            java.util.Date paymentDate,
            java.lang.Double paymentAmount,
-           org.delta.schemas.data.SPaymentStatusType paymentStatus,
+           org.sen.schemas.data.SPaymentStatusType paymentStatus,
            java.util.Date paymentStatusDate,
            java.lang.String accountsPayableCode,
            java.lang.String taxIdentifer,
-           org.delta.schemas.data.SPayToCode payToIndicatorCode,
-           org.delta.schemas.data.SPaymentType paymentType) {
+           org.sen.schemas.data.SPayToCode payToIndicatorCode,
+           org.sen.schemas.data.SPaymentType paymentType) {
            this.paymentNumber = paymentNumber;
            this.paymentDate = paymentDate;
            this.paymentAmount = paymentAmount;
@@ -128,7 +128,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @return paymentStatus   * Status of payment:
      */
-    public org.delta.schemas.data.SPaymentStatusType getPaymentStatus() {
+    public org.sen.schemas.data.SPaymentStatusType getPaymentStatus() {
         return paymentStatus;
     }
 
@@ -138,7 +138,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @param paymentStatus   * Status of payment:
      */
-    public void setPaymentStatus(org.delta.schemas.data.SPaymentStatusType paymentStatus) {
+    public void setPaymentStatus(org.sen.schemas.data.SPaymentStatusType paymentStatus) {
         this.paymentStatus = paymentStatus;
     }
 
@@ -208,7 +208,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @return payToIndicatorCode   * Indicator that denotes the type of payee
      */
-    public org.delta.schemas.data.SPayToCode getPayToIndicatorCode() {
+    public org.sen.schemas.data.SPayToCode getPayToIndicatorCode() {
         return payToIndicatorCode;
     }
 
@@ -218,7 +218,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @param payToIndicatorCode   * Indicator that denotes the type of payee
      */
-    public void setPayToIndicatorCode(org.delta.schemas.data.SPayToCode payToIndicatorCode) {
+    public void setPayToIndicatorCode(org.sen.schemas.data.SPayToCode payToIndicatorCode) {
         this.payToIndicatorCode = payToIndicatorCode;
     }
 
@@ -228,7 +228,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @return paymentType
      */
-    public org.delta.schemas.data.SPaymentType getPaymentType() {
+    public org.sen.schemas.data.SPaymentType getPaymentType() {
         return paymentType;
     }
 
@@ -238,7 +238,7 @@ public class TPayment  implements java.io.Serializable {
      * 
      * @param paymentType
      */
-    public void setPaymentType(org.delta.schemas.data.SPaymentType paymentType) {
+    public void setPaymentType(org.sen.schemas.data.SPaymentType paymentType) {
         this.paymentType = paymentType;
     }
 
@@ -328,63 +328,63 @@ public class TPayment  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TPayment.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tPayment"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tPayment"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("paymentType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "paymentType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sPaymentType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sPaymentType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "paymentNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "paymentNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "paymentDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "paymentDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "paymentAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "paymentAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "paymentStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sPaymentStatusType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "paymentStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sPaymentStatusType"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("paymentStatusDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "paymentStatusDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "paymentStatusDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("accountsPayableCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "AccountsPayableCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "AccountsPayableCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("taxIdentifer");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "taxIdentifer"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "taxIdentifer"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payToIndicatorCode");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "payToIndicatorCode"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sPayToCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "payToIndicatorCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sPayToCode"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

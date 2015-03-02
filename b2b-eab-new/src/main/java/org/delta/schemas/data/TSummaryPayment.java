@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -13,7 +13,7 @@ package org.delta.schemas.data;
  */
 public class TSummaryPayment  implements java.io.Serializable {
     /* The total amount paid for the claim */
-    private double deltaPaidAmount;
+    private double senPaidAmount;
 
     /* The total amount the patient paid for the claim */
     private double patientPaidAmount;
@@ -31,12 +31,12 @@ public class TSummaryPayment  implements java.io.Serializable {
     }
 
     public TSummaryPayment(
-           double deltaPaidAmount,
+           double senPaidAmount,
            double patientPaidAmount,
            java.lang.Double totalSubmittedAmount,
            java.lang.Double totalApprovedAmount,
            java.lang.Double totalOtherInsuranceCarrierPaidAmount) {
-           this.deltaPaidAmount = deltaPaidAmount;
+           this.senPaidAmount = senPaidAmount;
            this.patientPaidAmount = patientPaidAmount;
            this.totalSubmittedAmount = totalSubmittedAmount;
            this.totalApprovedAmount = totalApprovedAmount;
@@ -45,22 +45,22 @@ public class TSummaryPayment  implements java.io.Serializable {
 
 
     /**
-     * Gets the deltaPaidAmount value for this TSummaryPayment.
+     * Gets the senPaidAmount value for this TSummaryPayment.
      * 
-     * @return deltaPaidAmount   * The total amount paid for the claim
+     * @return senPaidAmount   * The total amount paid for the claim
      */
-    public double getDeltaPaidAmount() {
-        return deltaPaidAmount;
+    public double getsenPaidAmount() {
+        return senPaidAmount;
     }
 
 
     /**
-     * Sets the deltaPaidAmount value for this TSummaryPayment.
+     * Sets the senPaidAmount value for this TSummaryPayment.
      * 
-     * @param deltaPaidAmount   * The total amount paid for the claim
+     * @param senPaidAmount   * The total amount paid for the claim
      */
-    public void setDeltaPaidAmount(double deltaPaidAmount) {
-        this.deltaPaidAmount = deltaPaidAmount;
+    public void setsenPaidAmount(double senPaidAmount) {
+        this.senPaidAmount = senPaidAmount;
     }
 
 
@@ -155,7 +155,7 @@ public class TSummaryPayment  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.deltaPaidAmount == other.getDeltaPaidAmount() &&
+            this.senPaidAmount == other.getsenPaidAmount() &&
             this.patientPaidAmount == other.getPatientPaidAmount() &&
             ((this.totalSubmittedAmount==null && other.getTotalSubmittedAmount()==null) || 
              (this.totalSubmittedAmount!=null &&
@@ -177,7 +177,7 @@ public class TSummaryPayment  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += new Double(getDeltaPaidAmount()).hashCode();
+        _hashCode += new Double(getsenPaidAmount()).hashCode();
         _hashCode += new Double(getPatientPaidAmount()).hashCode();
         if (getTotalSubmittedAmount() != null) {
             _hashCode += getTotalSubmittedAmount().hashCode();
@@ -197,36 +197,36 @@ public class TSummaryPayment  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TSummaryPayment.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tSummaryPayment"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tSummaryPayment"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("deltaPaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deltaPaidAmount"));
+        elemField.setFieldName("senPaidAmount");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "senPaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("patientPaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "patientPaidAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "patientPaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("totalSubmittedAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "totalSubmittedAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "totalSubmittedAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("totalApprovedAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "totalApprovedAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "totalApprovedAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("totalOtherInsuranceCarrierPaidAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "totalOtherInsuranceCarrierPaidAmount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "totalOtherInsuranceCarrierPaidAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

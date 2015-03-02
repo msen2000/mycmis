@@ -1,8 +1,8 @@
-package org.delta.crossplane.mail.service;
+package org.sen.crossplane.mail.service;
 
 import java.io.File;
 
-import org.delta.crossplane.mail.request.EmailStatus;
+import org.sen.crossplane.mail.request.EmailStatus;
 import org.springframework.mail.MailException;
 
 public interface EmailService {

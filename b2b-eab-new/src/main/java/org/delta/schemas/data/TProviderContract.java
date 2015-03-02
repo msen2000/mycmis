@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -13,21 +13,21 @@ package org.delta.schemas.data;
  */
 public class TProviderContract  implements java.io.Serializable {
     /* The status of this provider */
-    private org.delta.schemas.data.TProviderContractProviderStatus providerStatus;
+    private org.sen.schemas.data.TProviderContractProviderStatus providerStatus;
 
     /* The participation status of this provider */
     private java.lang.String participationStatus;
 
     /* The specialties of this provider */
-    private org.delta.schemas.data.SSpecialtyCode[] specialties;
+    private org.sen.schemas.data.SSpecialtyCode[] specialties;
 
     public TProviderContract() {
     }
 
     public TProviderContract(
-           org.delta.schemas.data.TProviderContractProviderStatus providerStatus,
+           org.sen.schemas.data.TProviderContractProviderStatus providerStatus,
            java.lang.String participationStatus,
-           org.delta.schemas.data.SSpecialtyCode[] specialties) {
+           org.sen.schemas.data.SSpecialtyCode[] specialties) {
            this.providerStatus = providerStatus;
            this.participationStatus = participationStatus;
            this.specialties = specialties;
@@ -39,7 +39,7 @@ public class TProviderContract  implements java.io.Serializable {
      * 
      * @return providerStatus   * The status of this provider
      */
-    public org.delta.schemas.data.TProviderContractProviderStatus getProviderStatus() {
+    public org.sen.schemas.data.TProviderContractProviderStatus getProviderStatus() {
         return providerStatus;
     }
 
@@ -49,7 +49,7 @@ public class TProviderContract  implements java.io.Serializable {
      * 
      * @param providerStatus   * The status of this provider
      */
-    public void setProviderStatus(org.delta.schemas.data.TProviderContractProviderStatus providerStatus) {
+    public void setProviderStatus(org.sen.schemas.data.TProviderContractProviderStatus providerStatus) {
         this.providerStatus = providerStatus;
     }
 
@@ -79,7 +79,7 @@ public class TProviderContract  implements java.io.Serializable {
      * 
      * @return specialties   * The specialties of this provider
      */
-    public org.delta.schemas.data.SSpecialtyCode[] getSpecialties() {
+    public org.sen.schemas.data.SSpecialtyCode[] getSpecialties() {
         return specialties;
     }
 
@@ -89,15 +89,15 @@ public class TProviderContract  implements java.io.Serializable {
      * 
      * @param specialties   * The specialties of this provider
      */
-    public void setSpecialties(org.delta.schemas.data.SSpecialtyCode[] specialties) {
+    public void setSpecialties(org.sen.schemas.data.SSpecialtyCode[] specialties) {
         this.specialties = specialties;
     }
 
-    public org.delta.schemas.data.SSpecialtyCode getSpecialties(int i) {
+    public org.sen.schemas.data.SSpecialtyCode getSpecialties(int i) {
         return this.specialties[i];
     }
 
-    public void setSpecialties(int i, org.delta.schemas.data.SSpecialtyCode _value) {
+    public void setSpecialties(int i, org.sen.schemas.data.SSpecialtyCode _value) {
         this.specialties[i] = _value;
     }
 
@@ -159,23 +159,23 @@ public class TProviderContract  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TProviderContract.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tProviderContract"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tProviderContract"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("providerStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "providerStatus"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tProviderContract>providerStatus"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "providerStatus"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tProviderContract>providerStatus"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("participationStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "participationStatus"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "participationStatus"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("specialties");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "specialties"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sSpecialtyCode"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "specialties"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sSpecialtyCode"));
         elemField.setNillable(false);
         elemField.setMaxOccursUnbounded(true);
         typeDesc.addFieldDesc(elemField);

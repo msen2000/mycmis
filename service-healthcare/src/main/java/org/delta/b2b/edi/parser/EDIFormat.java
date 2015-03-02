@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.delta.b2b.edi.parser;
+package org.sen.b2b.edi.parser;
 
 /**
  * @author ca31085

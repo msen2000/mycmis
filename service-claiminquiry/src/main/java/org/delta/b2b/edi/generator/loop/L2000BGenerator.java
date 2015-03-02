@@ -1,11 +1,11 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 import java.util.List;
 
-import org.delta.b2b.edi.t276.L2000B;
-import org.delta.b2b.edi.t276.L2100B;
-import org.delta.b2b.edi.t276.SHLInformationReceiverLevel;
-import org.delta.b2b.edi.t276.SNM1InformationReceiverName;
+import org.sen.b2b.edi.t276.L2000B;
+import org.sen.b2b.edi.t276.L2100B;
+import org.sen.b2b.edi.t276.SHLInformationReceiverLevel;
+import org.sen.b2b.edi.t276.SNM1InformationReceiverName;
 
 public class L2000BGenerator {
 

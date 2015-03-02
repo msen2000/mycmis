@@ -1,24 +1,24 @@
 /**
  * 
  */
-package org.delta.b2b.edi.generator;
+package org.sen.b2b.edi.generator;
 
 import java.util.List;
 
-import org.delta.b2b.edi.generator.loop.L2000AGenerator;
-import org.delta.b2b.edi.generator.loop.L2000BGenerator;
-import org.delta.b2b.edi.generator.loop.L2000CGenerator;
-import org.delta.b2b.edi.t837.L2000A;
-import org.delta.b2b.edi.t837.L2000B;
-import org.delta.b2b.edi.t837.L2000C;
-import org.delta.b2b.edi.t837.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t837.SGEFunctionalGroupTrailer;
-import org.delta.b2b.edi.t837.SGSFunctionalGroupHeader;
-import org.delta.b2b.edi.t837.SIEAInterchangeControlTrailer;
-import org.delta.b2b.edi.t837.SISAInterchangeControlHeader;
-import org.delta.b2b.edi.t837.SSETransactionSetTrailer;
-import org.delta.b2b.edi.t837.SSTTransactionSetHeader;
-import org.delta.b2b.edi.t837.T837;
+import org.sen.b2b.edi.generator.loop.L2000AGenerator;
+import org.sen.b2b.edi.generator.loop.L2000BGenerator;
+import org.sen.b2b.edi.generator.loop.L2000CGenerator;
+import org.sen.b2b.edi.t837.L2000A;
+import org.sen.b2b.edi.t837.L2000B;
+import org.sen.b2b.edi.t837.L2000C;
+import org.sen.b2b.edi.t837.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t837.SGEFunctionalGroupTrailer;
+import org.sen.b2b.edi.t837.SGSFunctionalGroupHeader;
+import org.sen.b2b.edi.t837.SIEAInterchangeControlTrailer;
+import org.sen.b2b.edi.t837.SISAInterchangeControlHeader;
+import org.sen.b2b.edi.t837.SSETransactionSetTrailer;
+import org.sen.b2b.edi.t837.SSTTransactionSetHeader;
+import org.sen.b2b.edi.t837.T837;
 
 /**
  * @author ca31085

@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -15,11 +15,11 @@ package org.delta.schemas.data;
 public class TTreatmentSummary  implements java.io.Serializable {
     private java.lang.String tierType;
 
-    private org.delta.schemas.data.TCopayment copayment;
+    private org.sen.schemas.data.TCopayment copayment;
 
     private boolean frequencyLimitationType;
 
-    private org.delta.schemas.data.TWaitingPeriod waitingPeriod;
+    private org.sen.schemas.data.TWaitingPeriod waitingPeriod;
 
     private boolean preApprovalRequired;
 
@@ -32,9 +32,9 @@ public class TTreatmentSummary  implements java.io.Serializable {
 
     public TTreatmentSummary(
            java.lang.String tierType,
-           org.delta.schemas.data.TCopayment copayment,
+           org.sen.schemas.data.TCopayment copayment,
            boolean frequencyLimitationType,
-           org.delta.schemas.data.TWaitingPeriod waitingPeriod,
+           org.sen.schemas.data.TWaitingPeriod waitingPeriod,
            boolean preApprovalRequired,
            boolean deductibleExemption,
            java.lang.Boolean maximumExemption) {
@@ -73,7 +73,7 @@ public class TTreatmentSummary  implements java.io.Serializable {
      * 
      * @return copayment
      */
-    public org.delta.schemas.data.TCopayment getCopayment() {
+    public org.sen.schemas.data.TCopayment getCopayment() {
         return copayment;
     }
 
@@ -83,7 +83,7 @@ public class TTreatmentSummary  implements java.io.Serializable {
      * 
      * @param copayment
      */
-    public void setCopayment(org.delta.schemas.data.TCopayment copayment) {
+    public void setCopayment(org.sen.schemas.data.TCopayment copayment) {
         this.copayment = copayment;
     }
 
@@ -113,7 +113,7 @@ public class TTreatmentSummary  implements java.io.Serializable {
      * 
      * @return waitingPeriod
      */
-    public org.delta.schemas.data.TWaitingPeriod getWaitingPeriod() {
+    public org.sen.schemas.data.TWaitingPeriod getWaitingPeriod() {
         return waitingPeriod;
     }
 
@@ -123,7 +123,7 @@ public class TTreatmentSummary  implements java.io.Serializable {
      * 
      * @param waitingPeriod
      */
-    public void setWaitingPeriod(org.delta.schemas.data.TWaitingPeriod waitingPeriod) {
+    public void setWaitingPeriod(org.sen.schemas.data.TWaitingPeriod waitingPeriod) {
         this.waitingPeriod = waitingPeriod;
     }
 
@@ -249,47 +249,47 @@ public class TTreatmentSummary  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TTreatmentSummary.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tTreatmentSummary"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tTreatmentSummary"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tierType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tierType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tierType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("copayment");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "copayment"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tCopayment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "copayment"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tCopayment"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("frequencyLimitationType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "frequencyLimitationType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "frequencyLimitationType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("waitingPeriod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "waitingPeriod"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tWaitingPeriod"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "waitingPeriod"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tWaitingPeriod"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("preApprovalRequired");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "preApprovalRequired"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "preApprovalRequired"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("deductibleExemption");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deductibleExemption"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "deductibleExemption"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("maximumExemption");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "maximumExemption"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "maximumExemption"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

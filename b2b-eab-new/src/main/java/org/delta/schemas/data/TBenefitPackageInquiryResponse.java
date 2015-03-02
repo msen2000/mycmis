@@ -5,23 +5,23 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The response of the benefits inquiry
  */
 public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
-    private org.delta.schemas.data.TBenefitPackage benefitPackage;
+    private org.sen.schemas.data.TBenefitPackage benefitPackage;
 
-    private org.delta.schemas.data.SSearchResultType status;
+    private org.sen.schemas.data.SSearchResultType status;
 
     public TBenefitPackageInquiryResponse() {
     }
 
     public TBenefitPackageInquiryResponse(
-           org.delta.schemas.data.TBenefitPackage benefitPackage,
-           org.delta.schemas.data.SSearchResultType status) {
+           org.sen.schemas.data.TBenefitPackage benefitPackage,
+           org.sen.schemas.data.SSearchResultType status) {
            this.benefitPackage = benefitPackage;
            this.status = status;
     }
@@ -32,7 +32,7 @@ public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
      * 
      * @return benefitPackage
      */
-    public org.delta.schemas.data.TBenefitPackage getBenefitPackage() {
+    public org.sen.schemas.data.TBenefitPackage getBenefitPackage() {
         return benefitPackage;
     }
 
@@ -42,7 +42,7 @@ public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
      * 
      * @param benefitPackage
      */
-    public void setBenefitPackage(org.delta.schemas.data.TBenefitPackage benefitPackage) {
+    public void setBenefitPackage(org.sen.schemas.data.TBenefitPackage benefitPackage) {
         this.benefitPackage = benefitPackage;
     }
 
@@ -52,7 +52,7 @@ public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
      * 
      * @return status
      */
-    public org.delta.schemas.data.SSearchResultType getStatus() {
+    public org.sen.schemas.data.SSearchResultType getStatus() {
         return status;
     }
 
@@ -62,7 +62,7 @@ public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
      * 
      * @param status
      */
-    public void setStatus(org.delta.schemas.data.SSearchResultType status) {
+    public void setStatus(org.sen.schemas.data.SSearchResultType status) {
         this.status = status;
     }
 
@@ -110,18 +110,18 @@ public class TBenefitPackageInquiryResponse  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TBenefitPackageInquiryResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitPackageInquiryResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitPackageInquiryResponse"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitPackage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "benefitPackage"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitPackage"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "benefitPackage"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitPackage"));
         elemField.setNillable(false);
         elemField.setMinOccurs(0);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("status");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "status"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sSearchResultType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "status"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sSearchResultType"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

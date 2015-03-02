@@ -5,14 +5,14 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
  * The definition of coverage detail
  */
 public class TCoverageDetail  implements java.io.Serializable {
-    private org.delta.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit;
+    private org.sen.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit;
 
     private java.lang.Integer childCoveredAge;
 
@@ -25,7 +25,7 @@ public class TCoverageDetail  implements java.io.Serializable {
     private java.lang.Integer adultOrthoCoveredAge;
 
     /* The incentive plan */
-    private org.delta.schemas.data.TCoverageDetailIncentivePlan incentivePlan;
+    private org.sen.schemas.data.TCoverageDetailIncentivePlan incentivePlan;
 
     private java.lang.String programType;
 
@@ -33,13 +33,13 @@ public class TCoverageDetail  implements java.io.Serializable {
     }
 
     public TCoverageDetail(
-           org.delta.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit,
+           org.sen.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit,
            java.lang.Integer childCoveredAge,
            java.lang.Integer studentCoveredAge,
            java.lang.Integer childOrthoCoveredAge,
            java.lang.Integer studentOrthoCoveredAge,
            java.lang.Integer adultOrthoCoveredAge,
-           org.delta.schemas.data.TCoverageDetailIncentivePlan incentivePlan,
+           org.sen.schemas.data.TCoverageDetailIncentivePlan incentivePlan,
            java.lang.String programType) {
            this.coordinationOfBenefit = coordinationOfBenefit;
            this.childCoveredAge = childCoveredAge;
@@ -57,7 +57,7 @@ public class TCoverageDetail  implements java.io.Serializable {
      * 
      * @return coordinationOfBenefit
      */
-    public org.delta.schemas.data.TCoverageDetailCoordinationOfBenefit getCoordinationOfBenefit() {
+    public org.sen.schemas.data.TCoverageDetailCoordinationOfBenefit getCoordinationOfBenefit() {
         return coordinationOfBenefit;
     }
 
@@ -67,7 +67,7 @@ public class TCoverageDetail  implements java.io.Serializable {
      * 
      * @param coordinationOfBenefit
      */
-    public void setCoordinationOfBenefit(org.delta.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit) {
+    public void setCoordinationOfBenefit(org.sen.schemas.data.TCoverageDetailCoordinationOfBenefit coordinationOfBenefit) {
         this.coordinationOfBenefit = coordinationOfBenefit;
     }
 
@@ -177,7 +177,7 @@ public class TCoverageDetail  implements java.io.Serializable {
      * 
      * @return incentivePlan   * The incentive plan
      */
-    public org.delta.schemas.data.TCoverageDetailIncentivePlan getIncentivePlan() {
+    public org.sen.schemas.data.TCoverageDetailIncentivePlan getIncentivePlan() {
         return incentivePlan;
     }
 
@@ -187,7 +187,7 @@ public class TCoverageDetail  implements java.io.Serializable {
      * 
      * @param incentivePlan   * The incentive plan
      */
-    public void setIncentivePlan(org.delta.schemas.data.TCoverageDetailIncentivePlan incentivePlan) {
+    public void setIncentivePlan(org.sen.schemas.data.TCoverageDetailIncentivePlan incentivePlan) {
         this.incentivePlan = incentivePlan;
     }
 
@@ -291,59 +291,59 @@ public class TCoverageDetail  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TCoverageDetail.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tCoverageDetail"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tCoverageDetail"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coordinationOfBenefit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "coordinationOfBenefit"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tCoverageDetail>coordinationOfBenefit"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "coordinationOfBenefit"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tCoverageDetail>coordinationOfBenefit"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("childCoveredAge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "childCoveredAge"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "childCoveredAge"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("studentCoveredAge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "studentCoveredAge"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "studentCoveredAge"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("childOrthoCoveredAge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "childOrthoCoveredAge"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "childOrthoCoveredAge"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("studentOrthoCoveredAge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "studentOrthoCoveredAge"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "studentOrthoCoveredAge"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("adultOrthoCoveredAge");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "adultOrthoCoveredAge"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "adultOrthoCoveredAge"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("incentivePlan");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "incentivePlan"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", ">tCoverageDetail>incentivePlan"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "incentivePlan"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", ">tCoverageDetail>incentivePlan"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("programType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "programType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "programType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

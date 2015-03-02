@@ -1,21 +1,21 @@
 /**
  * 
  */
-package org.delta.b2b.edi.handler.segment;
+package org.sen.b2b.edi.handler.segment;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.EBHT01HierarchicalStructureCode;
-import org.delta.b2b.edi.t270.EBHT02TransactionSetPurposeCode;
-import org.delta.b2b.edi.t270.EBHT03ReferenceIdentification;
-import org.delta.b2b.edi.t270.EBHT04Date;
-import org.delta.b2b.edi.t270.EBHT05Time;
-import org.delta.b2b.edi.t270.EBHT06TransactionTypeCode;
-import org.delta.b2b.edi.t270.ENM109IdentificationCode;
-import org.delta.b2b.edi.t270.SBHTBeginningOfHierarchicalTransaction;
-import org.delta.b2b.edi.t270.T270;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.EBHT01HierarchicalStructureCode;
+import org.sen.b2b.edi.t270.EBHT02TransactionSetPurposeCode;
+import org.sen.b2b.edi.t270.EBHT03ReferenceIdentification;
+import org.sen.b2b.edi.t270.EBHT04Date;
+import org.sen.b2b.edi.t270.EBHT05Time;
+import org.sen.b2b.edi.t270.EBHT06TransactionTypeCode;
+import org.sen.b2b.edi.t270.ENM109IdentificationCode;
+import org.sen.b2b.edi.t270.SBHTBeginningOfHierarchicalTransaction;
+import org.sen.b2b.edi.t270.T270;
 
 /**
  * @author ca31085

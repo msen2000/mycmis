@@ -1,18 +1,18 @@
-package org.delta.b2b.edi.handler.loop;
+package org.sen.b2b.edi.handler.loop;
 
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.handler.element.NM1ReceiverHandler;
-import org.delta.b2b.edi.parser.Row;
-import org.delta.b2b.edi.t276.EREF01ReferenceIdentificationQualifier;
-import org.delta.b2b.edi.t276.EREF02ReferenceIdentification;
-import org.delta.b2b.edi.t276.L2000B;
-import org.delta.b2b.edi.t276.L2100B;
-import org.delta.b2b.edi.t276.ObjectFactory;
-import org.delta.b2b.edi.t276.SNM1InformationReceiverName;
+import org.sen.b2b.edi.handler.element.NM1ReceiverHandler;
+import org.sen.b2b.edi.parser.Row;
+import org.sen.b2b.edi.t276.EREF01ReferenceIdentificationQualifier;
+import org.sen.b2b.edi.t276.EREF02ReferenceIdentification;
+import org.sen.b2b.edi.t276.L2000B;
+import org.sen.b2b.edi.t276.L2100B;
+import org.sen.b2b.edi.t276.ObjectFactory;
+import org.sen.b2b.edi.t276.SNM1InformationReceiverName;
 
 public class L2000BHandler {
 	private L2000B l2000b;

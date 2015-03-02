@@ -1,9 +1,9 @@
-package org.delta.b2b.edi.transaction;
+package org.sen.b2b.edi.transaction;
 
-import org.delta.b2b.edi.parser.EDIParser;
-import org.delta.b2b.edi.parser.EDIParserFactory;
-import org.delta.b2b.edi.t271.T271;
-import org.delta.b2b.xml.marshaller.XML271Marshaller;
+import org.sen.b2b.edi.parser.EDIParser;
+import org.sen.b2b.edi.parser.EDIParserFactory;
+import org.sen.b2b.edi.t271.T271;
+import org.sen.b2b.xml.marshaller.XML271Marshaller;
 
 public class T271EDIProcessor implements EDIProcessor {
 	

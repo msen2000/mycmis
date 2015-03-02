@@ -1,4 +1,4 @@
-package org.delta.crossplane.mail.service.impl;
+package org.sen.crossplane.mail.service.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,10 +23,10 @@ import javax.xml.transform.stream.StreamSource;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.delta.crossplane.mail.request.EmailStatus;
-import org.delta.crossplane.mail.service.EmailService;
-import org.delta.crossplane.messages.mail.request.EmailServiceRequest;
-import org.delta.crossplane.messages.mail.request.EmailServiceRequestType.EmailAttachmentType;
+import org.sen.crossplane.mail.request.EmailStatus;
+import org.sen.crossplane.mail.service.EmailService;
+import org.sen.crossplane.messages.mail.request.EmailServiceRequest;
+import org.sen.crossplane.messages.mail.request.EmailServiceRequestType.EmailAttachmentType;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -37,7 +37,7 @@ public class EmailServiceImpl implements EmailService {
 
 	private static final Log logger = LogFactory.getLog(EmailServiceImpl.class);
 
-	private static final String RESQUEST_PREFIX = "org.delta.crossplane.messages.mail.request";
+	private static final String RESQUEST_PREFIX = "org.sen.crossplane.messages.mail.request";
 
 	private JavaMailSender emailSender;
 

@@ -1,6 +1,6 @@
-package org.delta.services;
+package org.sen.services;
 
-import org.delta.crossplane.exception.CrossPlaneRuntimeException;
+import org.sen.crossplane.exception.CrossPlaneRuntimeException;
 
 public class IVRServiceException extends CrossPlaneRuntimeException {
 

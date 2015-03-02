@@ -3,7 +3,7 @@
 
 	<!--
 		- Spring context for mail service. Requires the following properties
-		to be predefined: - - 1. email.smtp.host e.g., smtp.delta.org - -
+		to be predefined: - - 1. email.smtp.host e.g., smtp.sen.org - -
 		Sen Den - - @author Narendran Chandrasekaran -
 	-->
 <beans>
@@ -12,10 +12,10 @@
 	</bean>
 	<bean id="emailService" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="proxyInterfaces">
-			<value>org.delta.crossplane.mail.service.EmailService</value>
+			<value>org.sen.crossplane.mail.service.EmailService</value>
 		</property>
 		<property name="target">
-			<bean class="org.delta.crossplane.mail.service.impl.EmailServiceImpl">
+			<bean class="org.sen.crossplane.mail.service.impl.EmailServiceImpl">
 				<property name="emailSender" ref="emailSender" />
 				<property name="testing">
 					<value>${email.istesting}</value>
@@ -29,10 +29,10 @@
 	
 	<bean id="faxService" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="proxyInterfaces">
-			<value>org.delta.crossplane.mail.service.FaxService</value>
+			<value>org.sen.crossplane.mail.service.FaxService</value>
 		</property>
 		<property name="target">
-			<bean class="org.delta.crossplane.mail.service.impl.FaxServiceImpl">
+			<bean class="org.sen.crossplane.mail.service.impl.FaxServiceImpl">
 				
 				<property name="testing">
 					<value>${fax.istesting}</value>

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.delta.b2b.edi.parser;
+package org.sen.b2b.edi.parser;
 
 import java.util.ArrayList;
 import java.util.List;

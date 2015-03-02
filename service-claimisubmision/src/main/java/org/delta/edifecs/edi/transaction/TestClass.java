@@ -1,4 +1,4 @@
-package org.delta.edifecs.edi.transaction;
+package org.sen.edifecs.edi.transaction;
 
 //import com.edifecs.xengine.utils.XEUtils;
 

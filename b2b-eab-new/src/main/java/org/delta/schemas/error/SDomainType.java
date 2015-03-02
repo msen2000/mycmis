@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.error;
+package org.sen.schemas.error;
 
 public class SDomainType implements java.io.Serializable {
     private java.lang.String _value_;
@@ -62,7 +62,7 @@ public class SDomainType implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SDomainType.class);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "sDomainType"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "sDomainType"));
     }
     /**
      * Return type metadata object

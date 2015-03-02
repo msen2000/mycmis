@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.services.eligibilityAndBenefits;
+package org.sen.services.eligibilityAndBenefits;
 
-public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.client.Service implements org.delta.services.eligibilityAndBenefits.B2BEligibilityAndBenefitsService {
+public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.client.Service implements org.sen.services.eligibilityAndBenefits.B2BEligibilityAndBenefitsService {
 
 /**
  * The B2B Eligibility and Benefits Service
@@ -43,7 +43,7 @@ public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.cli
         EligibilityAndBenefitsServicePortWSDDServiceName = name;
     }
 
-    public org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType getEligibilityAndBenefitsServicePort() throws javax.xml.rpc.ServiceException {
+    public org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType getEligibilityAndBenefitsServicePort() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(EligibilityAndBenefitsServicePort_address);
@@ -54,9 +54,9 @@ public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.cli
         return getEligibilityAndBenefitsServicePort(endpoint);
     }
 
-    public org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType getEligibilityAndBenefitsServicePort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType getEligibilityAndBenefitsServicePort(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub _stub = new org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub(portAddress, this);
+            org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub _stub = new org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub(portAddress, this);
             _stub.setPortName(getEligibilityAndBenefitsServicePortWSDDServiceName());
             return _stub;
         }
@@ -76,8 +76,8 @@ public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.cli
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType.class.isAssignableFrom(serviceEndpointInterface)) {
-                org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub _stub = new org.delta.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub(new java.net.URL(EligibilityAndBenefitsServicePort_address), this);
+            if (org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServicePortType.class.isAssignableFrom(serviceEndpointInterface)) {
+                org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub _stub = new org.sen.services.eligibilityAndBenefits.EligibilityAndBenefitsServiceBindingStub(new java.net.URL(EligibilityAndBenefitsServicePort_address), this);
                 _stub.setPortName(getEligibilityAndBenefitsServicePortWSDDServiceName());
                 return _stub;
             }
@@ -109,7 +109,7 @@ public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.cli
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "B2BEligibilityAndBenefitsService");
+        return new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "B2BEligibilityAndBenefitsService");
     }
 
     private java.util.HashSet ports = null;
@@ -117,7 +117,7 @@ public class B2BEligibilityAndBenefitsServiceLocator extends org.apache.axis.cli
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://services.delta.org/eligibilityAndBenefits", "EligibilityAndBenefitsServicePort"));
+            ports.add(new javax.xml.namespace.QName("http://services.sen.org/eligibilityAndBenefits", "EligibilityAndBenefitsServicePort"));
         }
         return ports.iterator();
     }

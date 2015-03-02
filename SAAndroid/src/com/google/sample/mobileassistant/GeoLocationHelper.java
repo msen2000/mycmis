@@ -69,27 +69,27 @@ class GeoLocationHelper {
     }
 
     // Check whether the new location fix is newer or older
-    long timeDelta = location.getTime() - currentBestLocation.getTime();
-    boolean isNewer = timeDelta > 0;
+    long timesen = location.getTime() - currentBestLocation.getTime();
+    boolean isNewer = timesen > 0;
 
     // If the current location fix has been taken more than two minutes prior to
     // the new location fix then use the new location because the user has likely moved.
-    if (timeDelta > TWO_MINUTES_IN_MILLISECONDS) {
+    if (timesen > TWO_MINUTES_IN_MILLISECONDS) {
       return true;
     }
 
     // If the "new" location fix is more than two minutes older, we assume it is worse
-    if (timeDelta < -TWO_MINUTES_IN_MILLISECONDS) {
+    if (timesen < -TWO_MINUTES_IN_MILLISECONDS) {
       return false;
     }
 
     // Check whether the new location fix is more or less accurate
     // The accuracy returned by Location.getAccuracy() is expressed in meters 
     // and the lower the value the more accurate the location is.
-    int accuracyDelta = (int) (location.getAccuracy() - currentBestLocation.getAccuracy());
-    boolean isMoreAccurate = accuracyDelta < 0;
-    boolean isEquallyAccurate = accuracyDelta == 0;
-    boolean isSlightlyLessAccurate = (accuracyDelta > 0) && (accuracyDelta <= 200);
+    int accuracysen = (int) (location.getAccuracy() - currentBestLocation.getAccuracy());
+    boolean isMoreAccurate = accuracysen < 0;
+    boolean isEquallyAccurate = accuracysen == 0;
+    boolean isSlightlyLessAccurate = (accuracysen > 0) && (accuracysen <= 200);
 
     // Check if the old and new location are from the same provider
     boolean isFromSameProvider =

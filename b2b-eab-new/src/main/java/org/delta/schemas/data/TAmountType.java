@@ -5,12 +5,12 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class TAmountType  implements java.io.Serializable, org.apache.axis.encoding.SimpleType {
     private double _value;
 
-    private org.delta.schemas.data.SCopaymentType amountType;  // attribute
+    private org.sen.schemas.data.SCopaymentType amountType;  // attribute
 
     public TAmountType() {
     }
@@ -54,7 +54,7 @@ public class TAmountType  implements java.io.Serializable, org.apache.axis.encod
      * 
      * @return amountType
      */
-    public org.delta.schemas.data.SCopaymentType getAmountType() {
+    public org.sen.schemas.data.SCopaymentType getAmountType() {
         return amountType;
     }
 
@@ -64,7 +64,7 @@ public class TAmountType  implements java.io.Serializable, org.apache.axis.encod
      * 
      * @param amountType
      */
-    public void setAmountType(org.delta.schemas.data.SCopaymentType amountType) {
+    public void setAmountType(org.sen.schemas.data.SCopaymentType amountType) {
         this.amountType = amountType;
     }
 
@@ -108,11 +108,11 @@ public class TAmountType  implements java.io.Serializable, org.apache.axis.encod
         new org.apache.axis.description.TypeDesc(TAmountType.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tAmountType"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tAmountType"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("amountType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "amountType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sCopaymentType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sCopaymentType"));
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("_value");

@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.parser;
+package org.sen.b2b.edi.parser;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,24 +10,24 @@ import java.util.StringTokenizer;
 import javax.xml.transform.sax.TransformerHandler;
 import javax.xml.transform.stream.StreamResult;
 
-import org.delta.b2b.edi.generator.T837EDIGenerator;
-import org.delta.b2b.edi.handler.element.HLHandler;
-import org.delta.b2b.edi.handler.header.GSHandler;
-import org.delta.b2b.edi.handler.header.ISAHandler;
-import org.delta.b2b.edi.handler.header.STHandler;
-import org.delta.b2b.edi.handler.loop.L2000AHandler;
-import org.delta.b2b.edi.handler.loop.L2000BHandler;
-import org.delta.b2b.edi.handler.loop.L2000CHandler;
-import org.delta.b2b.edi.handler.segment.BHTHandler;
-import org.delta.b2b.edi.handler.trailer.GEHandler;
-import org.delta.b2b.edi.handler.trailer.IEAHandler;
-import org.delta.b2b.edi.handler.trailer.SEHandler;
-import org.delta.b2b.edi.t837.L2000A;
-import org.delta.b2b.edi.t837.L2000B;
-import org.delta.b2b.edi.t837.L2000C;
-import org.delta.b2b.edi.t837.ObjectFactory;
-import org.delta.b2b.edi.t837.T837;
-import org.delta.b2b.xml.marshaller.XML837Marshaller;
+import org.sen.b2b.edi.generator.T837EDIGenerator;
+import org.sen.b2b.edi.handler.element.HLHandler;
+import org.sen.b2b.edi.handler.header.GSHandler;
+import org.sen.b2b.edi.handler.header.ISAHandler;
+import org.sen.b2b.edi.handler.header.STHandler;
+import org.sen.b2b.edi.handler.loop.L2000AHandler;
+import org.sen.b2b.edi.handler.loop.L2000BHandler;
+import org.sen.b2b.edi.handler.loop.L2000CHandler;
+import org.sen.b2b.edi.handler.segment.BHTHandler;
+import org.sen.b2b.edi.handler.trailer.GEHandler;
+import org.sen.b2b.edi.handler.trailer.IEAHandler;
+import org.sen.b2b.edi.handler.trailer.SEHandler;
+import org.sen.b2b.edi.t837.L2000A;
+import org.sen.b2b.edi.t837.L2000B;
+import org.sen.b2b.edi.t837.L2000C;
+import org.sen.b2b.edi.t837.ObjectFactory;
+import org.sen.b2b.edi.t837.T837;
+import org.sen.b2b.xml.marshaller.XML837Marshaller;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 

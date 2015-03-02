@@ -5,22 +5,22 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.error;
+package org.sen.schemas.error;
 
 
 /**
  * The definition of an inquiry error
  */
-public class TInquiryError  extends org.delta.schemas.error.TError  implements java.io.Serializable {
-    private org.delta.schemas.error.SDomainType domainType;  // attribute
+public class TInquiryError  extends org.sen.schemas.error.TError  implements java.io.Serializable {
+    private org.sen.schemas.error.SDomainType domainType;  // attribute
 
     public TInquiryError() {
     }
 
     public TInquiryError(
-           org.delta.schemas.error.SErrorCode errorCode,
+           org.sen.schemas.error.SErrorCode errorCode,
            java.lang.String errorDetail,
-           org.delta.schemas.error.SDomainType domainType) {
+           org.sen.schemas.error.SDomainType domainType) {
         super(
             errorCode,
             errorDetail);
@@ -33,7 +33,7 @@ public class TInquiryError  extends org.delta.schemas.error.TError  implements j
      * 
      * @return domainType
      */
-    public org.delta.schemas.error.SDomainType getDomainType() {
+    public org.sen.schemas.error.SDomainType getDomainType() {
         return domainType;
     }
 
@@ -43,7 +43,7 @@ public class TInquiryError  extends org.delta.schemas.error.TError  implements j
      * 
      * @param domainType
      */
-    public void setDomainType(org.delta.schemas.error.SDomainType domainType) {
+    public void setDomainType(org.sen.schemas.error.SDomainType domainType) {
         this.domainType = domainType;
     }
 
@@ -85,11 +85,11 @@ public class TInquiryError  extends org.delta.schemas.error.TError  implements j
         new org.apache.axis.description.TypeDesc(TInquiryError.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "tInquiryError"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "tInquiryError"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("domainType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "domainType"));
-        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/error", "sDomainType"));
+        attrField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/error", "sDomainType"));
         typeDesc.addFieldDesc(attrField);
     }
 

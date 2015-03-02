@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EmailServiceRequest>
 	<EmailFrom>{0}</EmailFrom>
-	<EmailSubject>Ready to Run Delta Bump and Compare</EmailSubject>
+	<EmailSubject>Ready to Run sen Bump and Compare</EmailSubject>
 	<EmailBody>
 	<![CDATA[
 		<html>

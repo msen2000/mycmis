@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -380,80 +380,80 @@ public class TMaximumDeductible  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TMaximumDeductible.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tMaximumDeductible"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tMaximumDeductible"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("tierType");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tierType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tierType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("description");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "description"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "description"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("level");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "level"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "level"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("appliesTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "appliesTo"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "appliesTo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("timeUnit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "timeUnit"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "timeUnit"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("intervalNumber");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "intervalNumber"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "intervalNumber"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("intervalUnitDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "intervalUnitDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "intervalUnitDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("amount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "amount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("accumulationBeginDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "accumulationBeginDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "accumulationBeginDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("accumulationEndDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "accumulationEndDate"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "accumulationEndDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("remaining");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "remaining"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "remaining"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "double"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

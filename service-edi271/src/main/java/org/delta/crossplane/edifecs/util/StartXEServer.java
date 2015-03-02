@@ -1,4 +1,4 @@
-package org.delta.crossplane.edifecs.util;
+package org.sen.crossplane.edifecs.util;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

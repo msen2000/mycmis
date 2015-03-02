@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.delta.org/b2b/edi/t276" xmlns="http://www.delta.org/b2b/edi/t276" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sen.org/b2b/edi/t276" xmlns="http://www.sen.org/b2b/edi/t276" elementFormDefault="qualified">
 	<xsd:annotation>
 		<xsd:appinfo>
 			<FileName>C:\Senthil\02 PROJECTS\EDI\276_277\5010_276.ecs</FileName>

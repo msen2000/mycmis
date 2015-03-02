@@ -1,4 +1,4 @@
-package org.delta.b2b.edi.generator.loop;
+package org.sen.b2b.edi.generator.loop;
 
 
 public class L2000DGenerator {

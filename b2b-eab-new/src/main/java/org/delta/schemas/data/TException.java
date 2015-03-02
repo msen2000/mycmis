@@ -5,10 +5,10 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class TException  implements java.io.Serializable {
-    private org.delta.schemas.data.TExceptionType exception;
+    private org.sen.schemas.data.TExceptionType exception;
 
     private java.lang.String exceptionDescription;
 
@@ -16,7 +16,7 @@ public class TException  implements java.io.Serializable {
     }
 
     public TException(
-           org.delta.schemas.data.TExceptionType exception,
+           org.sen.schemas.data.TExceptionType exception,
            java.lang.String exceptionDescription) {
            this.exception = exception;
            this.exceptionDescription = exceptionDescription;
@@ -28,7 +28,7 @@ public class TException  implements java.io.Serializable {
      * 
      * @return exception
      */
-    public org.delta.schemas.data.TExceptionType getException() {
+    public org.sen.schemas.data.TExceptionType getException() {
         return exception;
     }
 
@@ -38,7 +38,7 @@ public class TException  implements java.io.Serializable {
      * 
      * @param exception
      */
-    public void setException(org.delta.schemas.data.TExceptionType exception) {
+    public void setException(org.sen.schemas.data.TExceptionType exception) {
         this.exception = exception;
     }
 
@@ -106,16 +106,16 @@ public class TException  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TException.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tException"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tException"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("exception");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "Exception"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tExceptionType"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "Exception"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tExceptionType"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("exceptionDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "ExceptionDescription"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "ExceptionDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

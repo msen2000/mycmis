@@ -1,12 +1,12 @@
 /**
  * 
  */
-package org.delta.b2b.edi.translator;
+package org.sen.b2b.edi.translator;
 
-import org.delta.b2b.edi.parser.EDIParser;
-import org.delta.b2b.edi.parser.EDIParserFactory;
-import org.delta.b2b.xml.marshaller.XMLMarshaller;
-import org.delta.b2b.xml.marshaller.XMLMarshallerFactory;
+import org.sen.b2b.edi.parser.EDIParser;
+import org.sen.b2b.edi.parser.EDIParserFactory;
+import org.sen.b2b.xml.marshaller.XMLMarshaller;
+import org.sen.b2b.xml.marshaller.XMLMarshallerFactory;
 
 /**
  * @author ca31085

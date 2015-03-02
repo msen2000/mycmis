@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -111,7 +111,7 @@ public class TSecondaryProviderIdentifier  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TSecondaryProviderIdentifier.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tSecondaryProviderIdentifier"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tSecondaryProviderIdentifier"));
         org.apache.axis.description.AttributeDesc attrField = new org.apache.axis.description.AttributeDesc();
         attrField.setFieldName("idType");
         attrField.setXmlName(new javax.xml.namespace.QName("", "idType"));
@@ -119,7 +119,7 @@ public class TSecondaryProviderIdentifier  implements java.io.Serializable {
         typeDesc.addFieldDesc(attrField);
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("idValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "idValue"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "idValue"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

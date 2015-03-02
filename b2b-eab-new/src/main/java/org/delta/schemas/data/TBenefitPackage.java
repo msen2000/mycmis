@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 
 /**
@@ -15,23 +15,23 @@ public class TBenefitPackage  implements java.io.Serializable {
     /* The benefit package identifier */
     private java.lang.String benefitPackageIdentifier;
 
-    private org.delta.schemas.data.TTreatment[] treatmentList;
+    private org.sen.schemas.data.TTreatment[] treatmentList;
 
-    private org.delta.schemas.data.TMaximumDeductible[] deductibles;
+    private org.sen.schemas.data.TMaximumDeductible[] deductibles;
 
-    private org.delta.schemas.data.TMaximumDeductible[] maximums;
+    private org.sen.schemas.data.TMaximumDeductible[] maximums;
 
-    private org.delta.schemas.data.TCoverageDetail coverageDetail;
+    private org.sen.schemas.data.TCoverageDetail coverageDetail;
 
     public TBenefitPackage() {
     }
 
     public TBenefitPackage(
            java.lang.String benefitPackageIdentifier,
-           org.delta.schemas.data.TTreatment[] treatmentList,
-           org.delta.schemas.data.TMaximumDeductible[] deductibles,
-           org.delta.schemas.data.TMaximumDeductible[] maximums,
-           org.delta.schemas.data.TCoverageDetail coverageDetail) {
+           org.sen.schemas.data.TTreatment[] treatmentList,
+           org.sen.schemas.data.TMaximumDeductible[] deductibles,
+           org.sen.schemas.data.TMaximumDeductible[] maximums,
+           org.sen.schemas.data.TCoverageDetail coverageDetail) {
            this.benefitPackageIdentifier = benefitPackageIdentifier;
            this.treatmentList = treatmentList;
            this.deductibles = deductibles;
@@ -65,7 +65,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @return treatmentList
      */
-    public org.delta.schemas.data.TTreatment[] getTreatmentList() {
+    public org.sen.schemas.data.TTreatment[] getTreatmentList() {
         return treatmentList;
     }
 
@@ -75,7 +75,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @param treatmentList
      */
-    public void setTreatmentList(org.delta.schemas.data.TTreatment[] treatmentList) {
+    public void setTreatmentList(org.sen.schemas.data.TTreatment[] treatmentList) {
         this.treatmentList = treatmentList;
     }
 
@@ -85,7 +85,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @return deductibles
      */
-    public org.delta.schemas.data.TMaximumDeductible[] getDeductibles() {
+    public org.sen.schemas.data.TMaximumDeductible[] getDeductibles() {
         return deductibles;
     }
 
@@ -95,7 +95,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @param deductibles
      */
-    public void setDeductibles(org.delta.schemas.data.TMaximumDeductible[] deductibles) {
+    public void setDeductibles(org.sen.schemas.data.TMaximumDeductible[] deductibles) {
         this.deductibles = deductibles;
     }
 
@@ -105,7 +105,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @return maximums
      */
-    public org.delta.schemas.data.TMaximumDeductible[] getMaximums() {
+    public org.sen.schemas.data.TMaximumDeductible[] getMaximums() {
         return maximums;
     }
 
@@ -115,7 +115,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @param maximums
      */
-    public void setMaximums(org.delta.schemas.data.TMaximumDeductible[] maximums) {
+    public void setMaximums(org.sen.schemas.data.TMaximumDeductible[] maximums) {
         this.maximums = maximums;
     }
 
@@ -125,7 +125,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @return coverageDetail
      */
-    public org.delta.schemas.data.TCoverageDetail getCoverageDetail() {
+    public org.sen.schemas.data.TCoverageDetail getCoverageDetail() {
         return coverageDetail;
     }
 
@@ -135,7 +135,7 @@ public class TBenefitPackage  implements java.io.Serializable {
      * 
      * @param coverageDetail
      */
-    public void setCoverageDetail(org.delta.schemas.data.TCoverageDetail coverageDetail) {
+    public void setCoverageDetail(org.sen.schemas.data.TCoverageDetail coverageDetail) {
         this.coverageDetail = coverageDetail;
     }
 
@@ -225,41 +225,41 @@ public class TBenefitPackage  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TBenefitPackage.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tBenefitPackage"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tBenefitPackage"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("benefitPackageIdentifier");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "benefitPackageIdentifier"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "benefitPackageIdentifier"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("treatmentList");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatmentList"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tTreatment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatmentList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tTreatment"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "treatment"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "treatment"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("deductibles");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deductibles"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tMaximumDeductible"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "deductibles"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tMaximumDeductible"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "deductible"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "deductible"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("maximums");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "maximums"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tMaximumDeductible"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "maximums"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tMaximumDeductible"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "maximum"));
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "maximum"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("coverageDetail");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.delta.org/data", "coverageDetail"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "tCoverageDetail"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.sen.org/data", "coverageDetail"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "tCoverageDetail"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

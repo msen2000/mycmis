@@ -1,10 +1,10 @@
-package org.delta.b2b.edi.handler.element;
+package org.sen.b2b.edi.handler.element;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.QName;
 
-import org.delta.b2b.edi.parser.EDIRow;
-import org.delta.b2b.edi.t270.*;
+import org.sen.b2b.edi.parser.EDIRow;
+import org.sen.b2b.edi.t270.*;
 
 public class NM1SourceHandler {
 

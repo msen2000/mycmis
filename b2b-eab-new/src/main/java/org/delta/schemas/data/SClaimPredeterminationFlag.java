@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package org.delta.schemas.data;
+package org.sen.schemas.data;
 
 public class SClaimPredeterminationFlag implements java.io.Serializable {
     private java.lang.String _value_;
@@ -58,7 +58,7 @@ public class SClaimPredeterminationFlag implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SClaimPredeterminationFlag.class);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.delta.org/data", "sClaimPredeterminationFlag"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.sen.org/data", "sClaimPredeterminationFlag"));
     }
     /**
      * Return type metadata object
