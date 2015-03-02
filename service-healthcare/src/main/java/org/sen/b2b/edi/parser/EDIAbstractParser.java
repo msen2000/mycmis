@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 import org.xml.sax.SAXException;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class EDIAbstractParser {

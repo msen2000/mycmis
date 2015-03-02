@@ -19,7 +19,7 @@ import org.sen.b2b.edi.t276.T276;
 import com.sun.xml.bind.StringInputStream;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class XML270Marshaller implements XMLMarshaller {

@@ -4,7 +4,7 @@
 package org.sen.b2b.edi.parser;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class EDIFormat {

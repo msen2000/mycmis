@@ -7,7 +7,7 @@ import org.sen.b2b.edi.t271.T271;
 import org.sen.b2b.edi.util.FileUtil;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class T271EDITranslator extends EDIAbstractTranslator implements EDITranslator {

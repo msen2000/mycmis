@@ -18,7 +18,7 @@ import org.sen.b2b.edi.t270.SBHTBeginningOfHierarchicalTransaction;
 import org.sen.b2b.edi.t270.T270;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class BHTHandler {

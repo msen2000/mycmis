@@ -30,7 +30,7 @@ import org.sen.b2b.edi.t271.SHLSubscriberLevel;
 import org.sen.b2b.edi.t271.T271;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class HLHandler {

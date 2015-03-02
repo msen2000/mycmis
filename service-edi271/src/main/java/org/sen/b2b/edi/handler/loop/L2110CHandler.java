@@ -9,7 +9,7 @@ package org.sen.b2b.edi.handler.loop;
 	317 1500 DTP Subscriber Eligibility/Benefit Date S 20
 	319 1600 AAA Subscriber Request Validation S 9
 	322 2500 MSG Message Text S 10
- * @author ca31085
+ * @author sen
  *
  */
 public class L2110CHandler {

@@ -13,7 +13,7 @@ import org.sen.b2b.edi.t837.SBHTBeginningOfHierarchicalTransaction;
 import org.sen.b2b.edi.t837.T837;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class LoopHandler {

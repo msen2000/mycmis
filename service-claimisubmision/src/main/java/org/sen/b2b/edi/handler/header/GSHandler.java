@@ -9,7 +9,7 @@ import org.sen.b2b.edi.parser.Row;
 import org.sen.b2b.edi.t837.*;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class GSHandler {

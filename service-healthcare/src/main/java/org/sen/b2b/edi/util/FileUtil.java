@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.io.Reader;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class FileUtil {

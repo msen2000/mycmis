@@ -9,7 +9,7 @@ import org.sen.b2b.xml.marshaller.XMLMarshaller;
 import org.sen.b2b.xml.marshaller.XMLMarshallerFactory;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public abstract class EDIAbstractTranslator {

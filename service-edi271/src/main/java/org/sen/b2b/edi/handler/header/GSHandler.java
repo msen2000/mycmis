@@ -18,7 +18,7 @@ import org.sen.b2b.edi.t271.SGSFunctionalGroupHeader;
 import org.sen.b2b.edi.t271.T271;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class GSHandler {

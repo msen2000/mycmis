@@ -8,7 +8,7 @@ import org.sen.b2b.edi.t276.SSTTransactionSetHeader;
 import org.sen.b2b.edi.t276.*;
 
 /**
- * @author ca31085
+ * @author sen
  *
  */
 public class STHandler {
