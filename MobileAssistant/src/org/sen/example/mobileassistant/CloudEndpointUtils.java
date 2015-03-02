@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.io.IOException;
 
 /**
- * Common utilities for working with Cloud Endpoints.
+ * Common utilities for working with Cloud Endpoints.dsdd
  * 
  * If you'd like to test using a locally-running version of your App Engine
  * backend (i.e. running on the Development App Server), you need to set
